@@ -8,7 +8,6 @@ import LatestProperty from "./components/LatestProperty"
 import Service from "./components/Service"
 import PromoBanner from "./components/PromoBanner"
 import Agents from "./components/Agents"
-import Client from "./components/Client"
 import LatestBlog from "./components/LatestBlog"
 import Footer from "./components/Footer"
 function App() {
@@ -25,7 +24,6 @@ function App() {
      <Service/>
       <PromoBanner/>
       <Agents/>
-     <Client/>
     <LatestBlog/>
     <Footer/>
     </div>
