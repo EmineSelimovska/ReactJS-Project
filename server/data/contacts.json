@@ -1,0 +1,16 @@
+{
+    "contact": {
+        "_id":"1",
+        "phone": "+359-773-564-555",
+        "email": "msell@gmail.com"
+
+    },
+
+    "slider": {
+        "_id": "2",
+        "propertyType": "Three-room",
+        "size": "85sq.m",
+        "city": "Plovdiv Bulgaria",
+        "price": "165 000"
+    }
+}

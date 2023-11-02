@@ -6,7 +6,7 @@ export default function Header(props) {
   const [contact, setContact] = useState([]);
 console.log(contact);
   useEffect(() => {
-    fetch(`http://localhost:3030/jsonstore/contact`)
+    fetch(`http://localhost:3030/jsonstore/contacts`)
     .then(response => response.json())
     .then(date => {
       setContact(Object.values(date))
