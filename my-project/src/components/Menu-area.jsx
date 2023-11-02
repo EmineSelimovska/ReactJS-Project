@@ -19,8 +19,8 @@ export default function Menu(){
                 <li className="dropdown">
                   <a className="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span className="caret" /></a>
                   <ul className="dropdown-menu" role="menu">
-                    <li><a href="properties.html">PROPERTIES</a></li>
-                    <li><a href="properties-detail.html">PROPERTIES DETAIL</a></li>
+                    <li><a href="properties.html">FOR RENT</a></li>
+                    <li><a href="properties-detail.html">FOR SALE</a></li>
                   </ul>
                 </li>
                 <li><a href="gallery.html">GALLERY</a></li>
