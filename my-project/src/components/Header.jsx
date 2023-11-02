@@ -5,10 +5,10 @@ import * as dateService from "../servises/dateService";
 export default function Header(props) {
 
   const [contact, setContact] = useState([]);
-console.log(contact);
+  console.log(contact);
   useEffect(() => {
-     dateService.getContact()
-     .then(result => setContact(result))
+    dateService.getContact()
+      .then(result => setContact(result))
 
   }, [])
   return (
@@ -19,14 +19,14 @@ console.log(contact);
             <div className="aa-header-area">
               <div className="row">
                 <div className="col-md-6 col-sm-6 col-xs-6">
-                     {contact.map(c => (
-                      <HeadeLeft 
+                  {contact.map(c => (
+                    <HeadeLeft
                       key={c._id}
                       _id={c._id}
                       phone={c.phone}
                       email={c.email}
-                      />
-                     ))}
+                    />
+                  ))}
                 </div>
                 <div className="col-md-6 col-sm-6 col-xs-6">
                   <div className="aa-header-right">

@@ -14,33 +14,33 @@ export default function AdvanceSearch(){
                   <div className="col-md-2">
                     <div className="aa-single-advance-search">
                       <select>
-                        <option value={0} selected>Category</option>
-                        <option value={1}>Flat</option>
-                        <option value={2}>Land</option>
-                        <option value={3}>Plot</option>
-                        <option value={4}>Commercial</option>
+                        <option >Category</option>
+                        <option >Flat</option>
+                        <option >Land</option>
+                        <option>Plot</option>
+                        <option >Commercial</option>
                       </select>
                     </div>
                   </div>
                   <div className="col-md-2">
                     <div className="aa-single-advance-search">
                       <select>
-                        <option value={0} selected>Type</option>
-                        <option value={1}>Flat</option>
-                        <option value={2}>Land</option>
-                        <option value={3}>Plot</option>
-                        <option value={4}>Commercial</option>
+                        <option >Type</option>
+                        <option >Flat</option>
+                        <option >Land</option>
+                        <option >Plot</option>
+                        <option >Commercial</option>
                       </select>
                     </div>
                   </div>
                   <div className="col-md-2">
                     <div className="aa-single-advance-search">
                       <select>
-                        <option value={0} selected>Type</option>
-                        <option value={1}>Flat</option>
-                        <option value={2}>Land</option>
-                        <option value={3}>Plot</option>
-                        <option value={4}>Commercial</option>
+                        <option >Type</option>
+                        <option>Flat</option>
+                        <option >Land</option>
+                        <option >Plot</option>
+                        <option >Commercial</option>
                       </select>
                     </div>
                   </div>
