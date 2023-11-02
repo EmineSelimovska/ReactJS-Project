@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react"
 import HeadeLeft from "./HeaderLeft";
+import * as dateService from "../servises/dateService";
 
 export default function Header(props) {
 
   const [contact, setContact] = useState([]);
 console.log(contact);
   useEffect(() => {
-    fetch(`http://localhost:3030/jsonstore/contact`)
-    .then(response => response.json())
-    .then(date => {
-      setContact(Object.values(date))
-    })
-    .catch(err => console.log(err))
+     dateService.getContact()
+     .then(result => setContact(result))
 
   }, [])
   return (
