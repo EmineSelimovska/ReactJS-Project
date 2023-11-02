@@ -1,16 +1,190 @@
 {
-    "contact": {
-        "_id":"1",
-        "phone": "+359-773-564-555",
-        "email": "msell@gmail.com"
-
+    
+    "list-1": {
+        "property_id": "1001",
+        "property_type": "Apartment",
+        "address": {
+            "street": "123 Sunshine Street",
+            "city": "Plovdiv",
+            "postcode": "4000"
+        },
+        "price": 90000,
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "square_meters": 80,
+        "year_built": 2015,
+        "description": "Modern apartment in the heart of Plovdiv with great views...",
+        "features": [
+            "Balcony",
+            "Central Heating",
+            "Elevator"
+        ],
+        "listing_agent": {
+            "agent_id": "2001",
+            "name": "Maria Petrova",
+            "contact": {
+                "email": "maria.petrova@example.com",
+                "phone": "+359 888 111 222"
+            }
+        },
+        "status": "For Sale",
+        "date_listed": "2023-11-10",
+        "open_houses": [
+            {
+                "date": "2023-11-15",
+                "time": "3:00 PM - 5:00 PM"
+            }
+        ]
     },
-
-    "slider": {
-        "_id": "2",
-        "propertyType": "Three-room",
-        "size": "85sq.m",
-        "city": "Plovdiv Bulgaria",
-        "price": "165 000"
+    "list-2": {
+        "property_id": "1002",
+        "property_type": "House",
+        "address": {
+            "street": "45 Garden Lane",
+            "city": "Plovdiv",
+            "postcode": "4002"
+        },
+        "price": 220000,
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "square_meters": 160,
+        "year_built": 2010,
+        "description": "Spacious family house with a beautiful garden and garage...",
+        "features": [
+            "Garden",
+            "Garage",
+            "Fireplace"
+        ],
+        "listing_agent": {
+            "agent_id": "2002",
+            "name": "Georgi Ivanov",
+            "contact": {
+                "email": "georgi.ivanov@example.com",
+                "phone": "+359 888 333 444"
+            },
+            "status": "For Sale",
+            "date_listed": "2023-11-11",
+            "open_houses": []
+        }
+    },
+    "list-3": {
+        "property_id": "1003",
+        "property_type": "Villa",
+        "address": {
+            "street": "5 Mountain View Road",
+            "city": "Plovdiv",
+            "postcode": "4003"
+        },
+        "price": 350000,
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "square_meters": 200,
+        "year_built": 2012,
+        "description": "Luxurious villa with a scenic view of the Rhodope Mountains...",
+        "features": [
+            "Swimming Pool",
+            "Spa",
+            "Terrace"
+        ],
+        "listing_agent": {
+            "agent_id": "2003",
+            "name": "Nina Georgieva",
+            "contact": {
+                "email": "nina.georgieva@example.com",
+                "phone": "+359 888 555 666"
+            },
+            "status": "For Sale",
+            "date_listed": "2023-11-15",
+            "open_houses": []
+        }
+    },
+    "list-4": {
+        "property_id": "1004",
+        "property_type": "Land",
+        "address": {
+            "street": "20 Green Acres",
+            "city": "Plovdiv",
+            "postcode": "4004"
+        },
+        "price": 50000,
+        "square_meters": 1000,
+        "description": "Large plot of land suitable for development or farming...",
+        "features": [
+            "Open Land",
+            "Fertile Soil"
+        ],
+        "listing_agent": {
+            "agent_id": "2004",
+            "name": "Stefan Dimitrov",
+            "contact": {
+                "email": "stefan.dimitrov@example.com",
+                "phone": "+359 888 777 888"
+            },
+            "status": "For Sale",
+            "date_listed": "2023-11-20",
+            "open_houses": []
+        }
+    },
+    "list-5": {
+        "property_id": "1005",
+        "property_type": "Commercial Space",
+        "address": {
+            "street": "35 Business Avenue",
+            "city": "Plovdiv",
+            "postcode": "4005"
+        },
+        "price": 120000,
+        "square_meters": 150,
+        "description": "Spacious commercial space in a prime location for businesses...",
+        "features": [
+            "Storefront",
+            "Parking"
+        ],
+        "listing_agent": {
+            "agent_id": "2005",
+            "name": "Ivana Stoyanova",
+            "contact": {
+                "email": "ivana.stoyanova@example.com",
+                "phone": "+359 888 999 000"
+            },
+            "status": "For Sale",
+            "date_listed": "2023-11-25",
+            "open_houses": []
+        }
+    },
+    "list-6": {
+        "property_id": "1006",
+        "property_type": "Studio Apartment",
+        "address": {
+            "street": "15 Artists Lane",
+            "city": "Plovdiv",
+            "postcode": "4006"
+        },
+        "price": 60000,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "square_meters": 45,
+        "year_built": 2018,
+        "description": "Cozy studio apartment for students or young professionals...",
+        "features": [
+            "Security",
+            "Close to Public Transport"
+        ],
+        "listing_agent": {
+            "agent_id": "2006",
+            "name": "Dimitar Popov",
+            "contact": {
+                "email": "dimitar.popov@example.com",
+                "phone": "+359 888 123 789"
+            },
+            "status": "For Sale",
+            "date_listed": "2023-11-30",
+            "open_houses": [
+                {
+                    "date": "2023-12-05",
+                    "time": "2:00 PM - 4:00 PM"
+                }
+            ]
+        }
     }
 }
