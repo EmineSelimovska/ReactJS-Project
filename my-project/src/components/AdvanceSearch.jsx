@@ -70,18 +70,18 @@ export default function AdvanceSearch() {
                     <span>FROM</span>
                     <span id="skip-value-lower" className="example-val">30.00</span>
                     <span>TO</span>
-                    <span id="skip-value-upper" className="example-val">100.00</span>
+                    <span id="skip-value-upper" className="example-val">1000.00</span>
                     <div id="aa-sqrfeet-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="aa-single-filter-search">
-                    <span>PRICE ($)</span>
+                    <span>PRICE (EUR)</span>
                     <span>FROM</span>
                     <span id="skip-value-lower2" className="example-val">30.00</span>
                     <span>TO</span>
-                    <span id="skip-value-upper2" className="example-val">100.00</span>
+                    <span id="skip-value-upper2" className="example-val">500.00</span>
                     <div id="aa-price-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
                     </div>
                   </div>
