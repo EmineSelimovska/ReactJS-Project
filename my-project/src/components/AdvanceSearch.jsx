@@ -17,13 +17,13 @@ export default function AdvanceSearch() {
               <div className="row">
                 <div className="col-md-4">
                   <div className="aa-single-advance-search">
-                    <input type="text" placeholder="Type Your Location" />
+                    <input type="text" placeholder="Location" />
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="aa-single-advance-search">
                     <select >
-                      <option >Category</option>
+                      <option >Property Type</option>
                       {options.map(crt => (
                         <option key={crt.property_id}
                           value={crt.property_type}>{crt.property_type}</option>
@@ -40,7 +40,7 @@ export default function AdvanceSearch() {
                         <option key={crt.property_id}
                           value={crt.square_meters}>{crt.square_meters}</option>
                       ))}
-                
+
                     </select>
                   </div>
                 </div>
