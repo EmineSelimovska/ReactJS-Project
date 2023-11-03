@@ -24,7 +24,6 @@ function App() {
      <Service/>
       <PromoBanner/>
       <Agents/>
-    <LatestBlog/>
     <Footer/>
     </div>
 

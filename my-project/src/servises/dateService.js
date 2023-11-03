@@ -1,6 +1,6 @@
 const baseUrl = `http://localhost:3030/jsonstore/contact`;
 const propUrl = `http://localhost:3030/jsonstore/property`
-
+const optionUrl = `http://localhost:3030/jsonstore/options`
 
 export const getContact = async () => {
     try {
@@ -30,5 +30,13 @@ export const getProperty = async () => {
         return date;
     } catch (err) {
         return err;
+    }
+}
+
+export const getOptions = async () => {
+    try{
+
+    }catch(err){
+
     }
 }
