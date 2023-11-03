@@ -1,80 +1,111 @@
-export default function AdvanceSearch(){
+import { useEffect, useState } from "react"
+import * as dateService from "../servises/dateService"
+export default function AdvanceSearch() {
+  const [options, setOption] = useState([]);
+  console.log(options);
+  useEffect(() => {
+    dateService.getProperty()
+      .then(result => {
+        console.log(result);
+        setfilter(result);
+      })
+
+  }, []);
 
 
-    return(
-        <section id="aa-advance-search">
-        <div className="container">
-          <div className="aa-advance-search-area">
-            <div className="form">
-              <div className="aa-advance-search-top">
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="aa-single-advance-search">
-                      <input type="text" placeholder="Type Your Location" />
-                    </div>
+  const [filter, setfilter] = useState([]);
+
+  const onChange = (value) => {
+    const res = filter.filter(f => f.property_type.toLowerCase().includes(value));
+    setOption(res);
+    if(value === ''){
+      setOption([])
+    }
+  }
+
+  return (
+    <section id="aa-advance-search">
+      <div className="container">
+        <div className="aa-advance-search-area">
+          <div className="form">
+            <div className="aa-advance-search-top">
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="aa-single-advance-search">
+                    <input type="text" placeholder="Type Your Location" />
                   </div>
-                  <div className="col-md-2">
-                    <div className="aa-single-advance-search">
-                      <select>
-                        <option >Category</option>
-                        <option >Flat</option>
-                        <option >Land</option>
-                        <option>Plot</option>
-                        <option >Commercial</option>
-                      </select>
-                    </div>
+                </div>
+                <div className="col-md-2">
+                  <div className="aa-single-advance-search">
+                
+                  <div className="search">
+                  <input type="text" placeholder="Category" onChange={e => onChange(e.target.value)} 
+                    style={{ borderRadius: "2px",
+                    color: "#555",
+                    height: "40px",
+                    padding: "5px",
+                    width: "100%", fontSize: "18px"}}/>
                   </div>
-                  <div className="col-md-2">
-                    <div className="aa-single-advance-search">
-                      <select>
-                        <option >Type</option>
-                        <option >Flat</option>
-                        <option >Land</option>
-                        <option >Plot</option>
-                        <option >Commercial</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-2">
-                    <div className="aa-single-advance-search">
-                      <select>
-                        <option >Type</option>
-                        <option>Flat</option>
-                        <option >Land</option>
-                        <option >Plot</option>
-                        <option >Commercial</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-2">
-                    <div className="aa-single-advance-search">
-                      <input className="aa-search-btn" type="submit" value="Search" />
+                   
+                    <div className="search-category" style={{ background: 'white', padding: '0' }} >
+                      {options.map((d, i) => (
+                        <div key={i}>
+                          {d.property_type}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
+                <div className="col-md-2">
+                  <div className="aa-single-advance-search">
+                    <select>
+                      <option >Type</option>
+                      <option >Flat</option>
+                      <option >Land</option>
+                      <option >Plot</option>
+                      <option >Commercial</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-2">
+                  <div className="aa-single-advance-search">
+                    <select>
+                      <option >Type</option>
+                      <option>Flat</option>
+                      <option >Land</option>
+                      <option >Plot</option>
+                      <option >Commercial</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-2">
+                  <div className="aa-single-advance-search">
+                    <input className="aa-search-btn" type="submit" value="Search" />
+                  </div>
+                </div>
               </div>
-              <div className="aa-advance-search-bottom">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="aa-single-filter-search">
-                      <span>AREA (SQ)</span>
-                      <span>FROM</span>
-                      <span id="skip-value-lower" className="example-val">30.00</span>
-                      <span>TO</span>
-                      <span id="skip-value-upper" className="example-val">100.00</span>
-                      <div id="aa-sqrfeet-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                      </div>
+            </div>
+            <div className="aa-advance-search-bottom">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="aa-single-filter-search">
+                    <span>AREA (SQ)</span>
+                    <span>FROM</span>
+                    <span id="skip-value-lower" className="example-val">30.00</span>
+                    <span>TO</span>
+                    <span id="skip-value-upper" className="example-val">100.00</span>
+                    <div id="aa-sqrfeet-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
                     </div>
                   </div>
-                  <div className="col-md-6">
-                    <div className="aa-single-filter-search">
-                      <span>PRICE ($)</span>
-                      <span>FROM</span>
-                      <span id="skip-value-lower2" className="example-val">30.00</span>
-                      <span>TO</span>
-                      <span id="skip-value-upper2" className="example-val">100.00</span>
-                      <div id="aa-price-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                      </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="aa-single-filter-search">
+                    <span>PRICE ($)</span>
+                    <span>FROM</span>
+                    <span id="skip-value-lower2" className="example-val">30.00</span>
+                    <span>TO</span>
+                    <span id="skip-value-upper2" className="example-val">100.00</span>
+                    <div id="aa-price-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
                     </div>
                   </div>
                 </div>
@@ -82,6 +113,7 @@ export default function AdvanceSearch(){
             </div>
           </div>
         </div>
-      </section>
-    )
+      </div>
+    </section>
+  )
 }

@@ -24,19 +24,9 @@ export const getProperty = async () => {
 
         const date = Object.values(result);
 
-        
-
-       
         return date;
     } catch (err) {
         return err;
     }
 }
 
-export const getOptions = async () => {
-    try{
-
-    }catch(err){
-
-    }
-}
