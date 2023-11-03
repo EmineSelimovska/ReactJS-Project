@@ -20,7 +20,6 @@ function App() {
       <Slider/>
       <AdvanceSearch/>
      <AboutUs/>
-    <LatestProperty/>
      <Service/>
       <PromoBanner/>
       <Agents/>
