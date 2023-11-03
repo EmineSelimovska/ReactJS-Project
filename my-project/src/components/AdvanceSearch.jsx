@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
 import * as dateService from "../servises/dateService";
+
+
 export default function AdvanceSearch() {
+  
   const [options, setOption] = useState([]);
   console.log(options);
+ 
   useEffect(() => {
     dateService.getProperty()
       .then(result => setOption(result))
