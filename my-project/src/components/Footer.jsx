@@ -22,10 +22,9 @@ export default function Footer(){
                   <div className="col-md-6 col-sm-12 col-xs-12">
                     <div className="aa-footer-right">
                       <a href="#">Home</a>
-                      <a href="#">Support</a>
-                      <a href="#">License</a>
-                      <a href="#">FAQ</a>
-                      <a href="#">Privacy &amp; Term</a>
+                      <a href="#">Properties</a>
+                      <a href="#">Blog</a>
+                      <a href="#">Contact</a>
                     </div>
                   </div>
                 </div>
