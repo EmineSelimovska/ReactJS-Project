@@ -1,27 +1,12 @@
 import { useEffect, useState } from "react"
-import * as dateService from "../servises/dateService"
+import * as dateService from "../servises/dateService";
 export default function AdvanceSearch() {
   const [options, setOption] = useState([]);
   console.log(options);
   useEffect(() => {
     dateService.getProperty()
-      .then(result => {
-        console.log(result);
-        setfilter(result);
-      })
-
-  }, []);
-
-
-  const [filter, setfilter] = useState([]);
-
-  const onChange = (value) => {
-    const res = filter.filter(f => f.property_type.toLowerCase().includes(value));
-    setOption(res);
-    if(value === ''){
-      setOption([])
-    }
-  }
+      .then(result => setOption(result))
+  }, [])
 
   return (
     <section id="aa-advance-search">
@@ -37,44 +22,36 @@ export default function AdvanceSearch() {
                 </div>
                 <div className="col-md-2">
                   <div className="aa-single-advance-search">
-                
-                  <div className="search">
-                  <input type="text" placeholder="Category" onChange={e => onChange(e.target.value)} 
-                    style={{ borderRadius: "2px",
-                    color: "#555",
-                    height: "40px",
-                    padding: "5px",
-                    width: "100%", fontSize: "18px"}}/>
-                  </div>
-                   
-                    <div className="search-category" style={{ background: 'white', padding: '0' }} >
-                      {options.map((d, i) => (
-                        <div key={i}>
-                          {d.property_type}
-                        </div>
+                    <select >
+                      <option >Category</option>
+                      {options.map(crt => (
+                        <option key={crt.property_id}
+                          value={crt.property_type}>{crt.property_type}</option>
                       ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="aa-single-advance-search">
-                    <select>
-                      <option >Type</option>
-                      <option >Flat</option>
-                      <option >Land</option>
-                      <option >Plot</option>
-                      <option >Commercial</option>
+
                     </select>
                   </div>
                 </div>
                 <div className="col-md-2">
                   <div className="aa-single-advance-search">
                     <select>
-                      <option >Type</option>
-                      <option>Flat</option>
-                      <option >Land</option>
-                      <option >Plot</option>
-                      <option >Commercial</option>
+                      <option >Square Meters</option>
+                      {options.map(crt => (
+                        <option key={crt.property_id}
+                          value={crt.square_meters}>{crt.square_meters}</option>
+                      ))}
+                
+                    </select>
+                  </div>
+                </div>
+                <div className="col-md-2">
+                  <div className="aa-single-advance-search">
+                    <select>
+                      <option >Year Built</option>
+                      {options.map(crt => (
+                        <option key={crt.property_id}
+                          value={crt.year_built}>{crt.year_built}</option>
+                      ))}
                     </select>
                   </div>
                 </div>

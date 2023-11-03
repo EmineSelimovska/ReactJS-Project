@@ -107,7 +107,10 @@
             "postcode": "4004"
         },
         "price": 50000,
+        "bedrooms": 2,
+        "bathrooms": 1,
         "square_meters": 1000,
+        "year_built": 2013,
         "description": "Large plot of land suitable for development or farming...",
         "features": [
             "Open Land",
@@ -134,7 +137,10 @@
             "postcode": "4005"
         },
         "price": 120000,
+        "bedrooms": 1,
+        "bathrooms": 1,
         "square_meters": 150,
+        "year_built": 2014,
         "description": "Spacious commercial space in a prime location for businesses...",
         "features": [
             "Storefront",
