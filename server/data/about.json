@@ -12,5 +12,33 @@
           "Community Involvement: We are proud to be a part of the Plovdiv community and actively contribute to its growth and development."
 
         ]
-      }
+      },
+
+    "ourService1": {
+        "_id": 3000,
+        "name": "Residential Sales and Rentals",
+        "definition":" This service involves helping clients buy, sell, or rent residential properties such as houses, apartments, and condominiums. We assist in finding the right residential property to meet your needs, whether you're looking to buy, sell, or rent a home."
+    },
+    "ourService2": {
+        "_id": 4000,
+        "name": "Commercial Real Estate",
+        "definition": "Our commercial real estate service specializes in buying, selling, or leasing commercial properties, including office spaces, retail spaces, and industrial properties. We assist businesses in finding the right commercial space to meet their operational needs."
+    },
+    "ourService3": {
+        "_id": 5000,
+        "name": "Investment Properties",
+        "definition": "We offer guidance and assistance in acquiring and managing investment properties, such as rental properties, vacation homes, and real estate investments. Our expertise helps clients make informed decisions for profitable real estate investments."
+    },
+    "ourService4": {
+        "_id": 6000,
+        "name": "Property Management",
+        "definition": "Property management services involve the day-to-day operation, maintenance, and oversight of rental properties on behalf of property owners. We handle tasks such as tenant screening, rent collection, maintenance, and property upkeep to ensure hassle-free property ownership."
+    },
+    "ourService5": {
+        "_id": 7000,
+        "name": "Real Estate Consultation",
+        "definition": "Our real estate consultation service provides expert advice and guidance on various real estate matters. Whether you have questions about buying, selling, investing, or any other real estate-related concerns, our consultation service offers insights and solutions."
+    },
+
+
 }
