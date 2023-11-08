@@ -3,11 +3,13 @@ import * as dataService from "../servises/dateService"
 export default function AboutUs() {
 
   const [about, setAbout] = useState([]);
-
+  console.log(about);
   useEffect(() => {
     dataService.getAbout()
       .then(result => setAbout(result))
   }, [])
+
+
 
   return (
     <section id="aa-about-us">
@@ -40,19 +42,18 @@ export default function AboutUs() {
 
                     {about.map(a => (
 
-                      <h4 key={a._id}>{a.setsUpApart}</h4>
+                      <h4 style={{ paddingTop: "0", paddingBottom: '0' }} key={a._id}>{a.setsUpApart}</h4>
 
                     ))}
-                  
+
                     {about.map(a => (
 
-                      <ul key={a._id}>
-                        <li>{a.apart[0]}</li>
-                        <li>{a.apart[1]}</li>
-                        <li>{a.apart[2]}</li>
-                        <li>{a.apart[3]}</li>
-                        <li>{a.apart[4]}</li>
-                      </ul>
+                      <div key={a._id}>
+                        <div style={{ padding: "0 0 0.5em 0" }}>{a.name1}</div>
+                        <div style={{ padding: "0 0 0.5em 0.2em" }}>{a.name2}</div>
+                        <div style={{ padding: "0 0 0.5em 0.2em" }} >{a.name3}</div>
+                        <div style={{ padding: "0 0 0.5em 0.2em" }} >{a.name4}</div>
+                      </div>
                     ))}
 
                   </div>
