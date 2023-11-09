@@ -2,7 +2,9 @@ import * as dateService from "../servises/dateService";
 import React, { useEffect, useState } from "react"
 import { Slide } from "react-slideshow-image"
 import 'react-slideshow-image/dist/styles.css';
-
+import Header from "./Header";
+import Menu from "./Menu-area";
+import Footer from "./Footer";
 
 const proprietes = {
     duration: 5000,
@@ -35,6 +37,7 @@ export default function Home(props) {
 
         dateService.getAbout()
             .then(result => setAbout(result))
+
     }, [])
 
 
@@ -42,7 +45,9 @@ export default function Home(props) {
 
     return (
         <>
-        
+            <Header />
+
+            <Menu />
             <section id="aa-slider">
 
                 <div className="aa-slider-area">
@@ -226,6 +231,7 @@ export default function Home(props) {
                         <div className="col-md-12">
                             <div className="aa-service-area">
                                 <div className="aa-title">
+                                    {}
                                     <h2>Our Service</h2>
                                     <span />
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
@@ -238,7 +244,7 @@ export default function Home(props) {
                                                     <span className="fa fa-home" />
                                                 </div>
                                                 <div className="aa-single-service-content">
-                                                    <h4><a href="#">Property Sale</a></h4>
+                                                    <h4><a href="#"></a></h4>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
                                                 </div>
                                             </div>
@@ -453,8 +459,8 @@ export default function Home(props) {
                     </div>
                 </div>
             </section>
-        
 
+<Footer/>
         </>
     )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import HeadeLeft from "./HeaderLeft";
 import * as dateService from "../servises/dateService";
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
 
@@ -30,8 +31,8 @@ export default function Header(props) {
                 </div>
                 <div className="col-md-6 col-sm-6 col-xs-6">
                   <div className="aa-header-right">
-                    <a href="register.html" className="aa-register">Register</a>
-                    <a href="signin.html" className="aa-login">Login</a>
+                    <Link to="/register" className="aa-register">Register</Link>
+                    <Link to="/login" className="aa-login">Login</Link>
                   </div>
                 </div>
               </div>

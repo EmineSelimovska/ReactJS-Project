@@ -1,25 +1,30 @@
 import { Link } from "react-router-dom";
+import Header from "./Header";
+import Menu from "./Menu-area";
+import Footer from "./Footer";
+export default function Blog() {
+  return (
+    <>
+      <Header />
 
-export default function Blog(){
-    return(
-      <>
-        <section id="aa-property-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-property-header-inner">
-              <h2>Blog</h2>
-              <ol class="breadcrumb">
-              <li><Link to="/">HOME</Link></li>            
-              <li class="active">BLOG</li>
-            </ol>
+      <Menu />
+      <section id="aa-property-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="aa-property-header-inner">
+                <h2>Blog</h2>
+                <ol class="breadcrumb">
+                  <li><Link to="/">HOME</Link></li>
+                  <li class="active">BLOG</li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
-        <section id="aa-blog">
-        <div className="container" style={{padding: '5em'}}>
+      <section id="aa-blog">
+        <div className="container" style={{ padding: '5em' }}>
           <div className="row">
             <div className="col-md-12">
               <div className="aa-blog-area">
@@ -40,7 +45,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -56,7 +61,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -72,7 +77,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -88,7 +93,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -104,7 +109,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -120,7 +125,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -136,7 +141,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                         <div className="col-md-6 col-sm-6">
@@ -152,7 +157,7 @@ export default function Blog(){
                                 <a className="aa-blog-author" href="#"><i className="fa fa-user" /> Admin</a>
                                 <a className="aa-blog-comments" href="#"><i className="fa fa-comment-o" />6</a>
                               </div>
-                            </div>                   
+                            </div>
                           </article>
                         </div>
                       </div>
@@ -229,7 +234,7 @@ export default function Blog(){
                           <a href="#">Rent</a>
                           <a href="#">Sale</a>
                           <a href="#">Villa</a>
-                        </div>                    
+                        </div>
                       </div>
                       {/* Start single sidebar */}
                       <div className="aa-blog-sidebar-single">
@@ -243,9 +248,9 @@ export default function Blog(){
                             </div>
                             <div className="media-body">
                               <h4 className="media-heading"><a href="#">This is Title</a></h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>                
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                               <span>15 April, 16</span>
-                            </div>              
+                            </div>
                           </div>
                           <div className="media">
                             <div className="media-left">
@@ -255,9 +260,9 @@ export default function Blog(){
                             </div>
                             <div className="media-body">
                               <h4 className="media-heading"><a href="#">This is Title</a></h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>                
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                               <span>15 April, 16</span>
-                            </div>              
+                            </div>
                           </div>
                           <div className="media">
                             <div className="media-left">
@@ -267,19 +272,19 @@ export default function Blog(){
                             </div>
                             <div className="media-body">
                               <h4 className="media-heading"><a href="#">This is Title</a></h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>                
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                               <span>15 April, 16</span>
-                            </div>              
+                            </div>
                           </div>
-                        </div>                    
+                        </div>
                       </div>
                       {/* Start single sidebar */}
-                      <div className="aa-blog-sidebar-single">                    
+                      <div className="aa-blog-sidebar-single">
                         <div className="aa-banner-ads">
                           <a href="#">
                             <img src="img/banner-ads.jpg" alt="banner img" />
                           </a>
-                        </div>                    
+                        </div>
                       </div>
                     </aside>
                   </div>
@@ -289,6 +294,7 @@ export default function Blog(){
           </div>
         </div>
       </section>
-      </>
-    )
+      <Footer/>
+    </>
+  )
 }

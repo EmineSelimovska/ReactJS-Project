@@ -1,7 +1,11 @@
-
+import Header from "./Header";
+import Menu from "./Menu-area";
+import Footer from "./Footer";
     export default function Contact(){
         return(
           <>
+          <Header/>
+          <Menu/>
              <section id="aa-property-header">
       <div class="container">
         <div class="row">
@@ -71,6 +75,7 @@
           </div>
         </div>
       </section>
+      <Footer/>
       </>
         )
     }

@@ -9,17 +9,15 @@ import Header from "./components/Header"
 import Contact from "./components/Contact"
 import Blog from "./components/Blog"
 import NotFound from "./components/NotFound"
-
+import Login from "./components/Login"
 import Preload from "./components/Preloader"
+import Register from "./components/Register"
 function App() {
 
   return (
     <div>
       <Preload />
-      <Header />
-
-      <Menu />
-
+    
       <Routes>
 
         <Route path="/" element={<Home />} />
@@ -27,12 +25,17 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+
+
         <Route path="*" element={<NotFound />} />
 
 
       </Routes>
 
-      <Footer />
+     
     </div>
 
   )

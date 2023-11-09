@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-
+import Header from "./Header";
+import Menu from "./Menu-area";
+import Footer from "./Footer";
 export default function Gallery(){
     return(
       <>
+      <Header/>
+      <Menu/>
       <section id="aa-property-header">
       <div class="container">
         <div class="row">
@@ -194,6 +198,7 @@ export default function Gallery(){
           </div>
         </div>
       </section>
+      <Footer/>
       </>
     )
     }
