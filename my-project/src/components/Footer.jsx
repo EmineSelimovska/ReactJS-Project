@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer(){
     return(
         <footer id="aa-footer">
@@ -13,15 +15,15 @@ export default function Footer(){
                   </div>
                   <div className="col-md-3 col-sm-6 col-xs-12">
                     <div className="aa-footer-middle">
-                      <a href="#"><i className="fa fa-facebook" /></a>
-                      <a href="#"><i className="fa fa-twitter" /></a>
-                      <a href="#"><i className="fa fa-google-plus" /></a>
-                      <a href="#"><i className="fa fa-youtube" /></a>
+                      <Link to="https://www.facebook.com"><i className="fa fa-facebook" /></Link>
+                      <Link to="https://twitter.com"><i className="fa fa-twitter" /></Link>
+                      <Link to="https://www.google.com/account/about/?hl=bg"><i className="fa fa-google-plus" /></Link>
+                      <Link to="https://www.youtube.com"><i className="fa fa-youtube" /></Link>
                     </div>
                   </div>
                   <div className="col-md-6 col-sm-12 col-xs-12">
                     <div className="aa-footer-right">
-                      <a href="#">Home</a>
+                      <a href="/">Home</a>
                       <a href="#">Properties</a>
                       <a href="#">Blog</a>
                       <a href="#">Contact</a>

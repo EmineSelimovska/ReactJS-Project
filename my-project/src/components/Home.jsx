@@ -13,15 +13,14 @@ export default function Home(){
     return(
        <>
        <Preload/>
-        <Header/>
-        <Menu/>
+       
         <Slider/>
         <AdvanceSearch/>
         <AboutUs/>
         <Service/>
         <PromoBanner/>
         <Agents/>
- 
+       
         </>
     )
 }
