@@ -1,14 +1,29 @@
 
     export default function Contact(){
         return(
-            
-<section id="aa-contact">
-        <div className="container">
+          <>
+             <section id="aa-property-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-property-header-inner">
+              <h2>Gallery</h2>
+              <ol class="breadcrumb">
+              <li><a href="#">HOME</a></li>            
+              <li class="active">CONTACT</li>
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section> 
+<section id="aa-contact" >
+        <div className="container" style={{padding: '5em'}}>
           <div className="row">
             <div className="col-md-12">
               <div className="aa-contact-area">
                 <div className="aa-contact-top">
-                  <div className="aa-contact-top-left">
+                  <div className="aa-contact-top-left " style={{}}>
                     <iframe width="100%" height={450} frameBorder={0} allowFullScreen style={{border: 0}} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256" />
                   </div>
                   <div className="aa-contact-top-right">
@@ -56,5 +71,6 @@
           </div>
         </div>
       </section>
+      </>
         )
     }

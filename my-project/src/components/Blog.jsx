@@ -1,7 +1,23 @@
 export default function Blog(){
     return(
+      <>
+        <section id="aa-property-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-property-header-inner">
+              <h2>Gallery</h2>
+              <ol class="breadcrumb">
+              <li><Link to="/">HOME</Link></li>            
+              <li class="active">BLOG</li>
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
         <section id="aa-blog">
-        <div className="container">
+        <div className="container" style={{padding: '5em'}}>
           <div className="row">
             <div className="col-md-12">
               <div className="aa-blog-area">
@@ -271,5 +287,6 @@ export default function Blog(){
           </div>
         </div>
       </section>
+      </>
     )
 }

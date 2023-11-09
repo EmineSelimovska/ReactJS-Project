@@ -1,7 +1,25 @@
+import { Link } from "react-router-dom";
+
 export default function Gallery(){
     return(
+      <>
+      <section id="aa-property-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-property-header-inner">
+              <h2>Gallery</h2>
+              <ol class="breadcrumb">
+              <li><Link to="#">HOME</Link></li>            
+              <li class="active">Gallery</li>
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
         <section id="aa-gallery">
-        <div className="container">
+        <div className="container"style={{padding: '5em'}} >
           <div className="row">
             <div className="col-md-12">
               <div className="aa-gallery-area">
@@ -176,5 +194,6 @@ export default function Gallery(){
           </div>
         </div>
       </section>
+      </>
     )
     }

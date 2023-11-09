@@ -11,7 +11,7 @@ import Slider from "./Slider";
 
 export default function Home(){
     return(
-       <>
+      <>
        <Preload/>
        
         <Slider/>
