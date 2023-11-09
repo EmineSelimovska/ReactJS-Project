@@ -10,7 +10,7 @@ export default function Gallery(){
             <div class="aa-property-header-inner">
               <h2>Gallery</h2>
               <ol class="breadcrumb">
-              <li><Link to="#">HOME</Link></li>            
+              <li><Link to="/">HOME</Link></li>            
               <li class="active">Gallery</li>
             </ol>
             </div>

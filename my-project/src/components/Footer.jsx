@@ -23,10 +23,10 @@ export default function Footer(){
                   </div>
                   <div className="col-md-6 col-sm-12 col-xs-12">
                     <div className="aa-footer-right">
-                      <a href="/">Home</a>
-                      <a href="#">Properties</a>
-                      <a href="#">Blog</a>
-                      <a href="#">Contact</a>
+                      <Link to="/">Home</Link>
+                      <Link to="/properties">Properties</Link>
+                      <Link to="/blog">Blog</Link>
+                      <Link to="/contact">Contact</Link>
                     </div>
                   </div>
                 </div>

@@ -17,16 +17,13 @@ export default function Menu(){
             <div id="navbar" className="navbar-collapse collapse">
               <ul id="top-menu" className="nav navbar-nav navbar-right aa-main-nav">
             
-               
-                <li> <Link to="/properties">PROPERTIES <span className="caret" /></Link></li> 
+              <li> <Link to="/">Home</Link></li> 
+                <li> <Link to="/properties">PROPERTIES </Link></li> 
                 
                 <li><Link to="/gallery">GALLERY</Link></li>
                 <li className="dropdown">
-                  <Link className="dropdown-toggle" data-toggle="dropdown" to="/blog">BLOG <span className="caret" /></Link>
-                  <ul className="dropdown-menu" role="menu">
-                    <li><a href="blog-archive.html">BLOG</a></li>
-                    <li><a href="blog-single.html">BLOG DETAILS</a></li>
-                  </ul>
+                  <Link className="dropdown-toggle" data-toggle="dropdown" to="/blog">BLOG </Link>
+                  
                 </li>
                 <li><Link to="/contact">CONTACT</Link></li>
                
