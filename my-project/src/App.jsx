@@ -1,4 +1,4 @@
-import Preload from "./components/Preloader"
+import Preload from "./components/Home"
 import Header from "./components/Header"
 import Menu from "./components/Menu-area"
 import Slider from "./components/Slider"
@@ -14,15 +14,9 @@ function App() {
 
   return (
     <div>
-      <Preload/>
-      <Header/>
-    <Menu/>
-      <Slider/>
-      <AdvanceSearch/>
-     <AboutUs/>
-     <Service/>
-      <PromoBanner/>
-      <Agents/>
+     
+     <Menu/>
+     
     <Footer/>
     </div>
 
