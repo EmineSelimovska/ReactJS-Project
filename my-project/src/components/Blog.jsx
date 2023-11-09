@@ -8,7 +8,7 @@ export default function Blog(){
         <div class="row">
           <div class="col-md-12">
             <div class="aa-property-header-inner">
-              <h2>Gallery</h2>
+              <h2>Blog</h2>
               <ol class="breadcrumb">
               <li><Link to="/">HOME</Link></li>            
               <li class="active">BLOG</li>

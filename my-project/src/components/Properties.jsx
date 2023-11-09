@@ -8,7 +8,7 @@ export default function Properties(){
       <div className="row">
         <div className="col-md-12">
           <div className="aa-property-header-inner">
-            <h2>Properties Page</h2>
+            <h2>Properties</h2>
             <ol className="breadcrumb">
             <li><Link to="/">HOME</Link></li>            
             <li className="active">PROPERTIES</li>
