@@ -12,11 +12,11 @@ export default function Menu(){
                 <span className="icon-bar" />
               </button>
               
-              <a className="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo" /></a>
+              <Link className="navbar-brand aa-logo-img" to="/"><img src="img/logo.png" alt="logo" /></Link>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
               <ul id="top-menu" className="nav navbar-nav navbar-right aa-main-nav">
-                <li className="active"><Link to="/">HOME</Link></li>
+            
                
                 <li> <Link to="/properties">PROPERTIES <span className="caret" /></Link></li> 
                 
@@ -28,8 +28,8 @@ export default function Menu(){
                     <li><a href="blog-single.html">BLOG DETAILS</a></li>
                   </ul>
                 </li>
-                <li><Link href="/contact">CONTACT</Link></li>
-                <li><a href="404.html">404 PAGE</a></li>
+                <li><Link to="/contact">CONTACT</Link></li>
+               
               </ul>
             </div>
           </div>
