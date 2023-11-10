@@ -233,7 +233,7 @@ export default function Home(props) {
 
                                                 {about.map(a => (
                                                     <div className="aa-single-service-content" key={a._id}>
-                                                        <h4><a href="#">{a.n1}</a></h4>
+                                                        <h4>{a.n1}</h4>
                                                         <p>{a.definition1}</p>
                                                     </div>
 
@@ -248,7 +248,7 @@ export default function Home(props) {
                                                 </div>
                                                 {about.map(a => (
                                                     <div className="aa-single-service-content" key={a._id}>
-                                                        <h4><a href="#">{a.n2}</a></h4>
+                                                        <h4>{a.n2}</h4>
                                                         <p>{a.definition2}</p>
                                                     </div>
 
@@ -262,7 +262,7 @@ export default function Home(props) {
                                                 </div>
                                                 {about.map(a => (
                                                     <div className="aa-single-service-content" key={a._id}>
-                                                        <h4><a href="#">{a.n3}</a></h4>
+                                                        <h4>{a.n3}</h4>
                                                         <p>{a.definition3}</p>
                                                     </div>
 
@@ -276,7 +276,7 @@ export default function Home(props) {
                                                 </div>
                                                 {about.map(a => (
                                                     <div className="aa-single-service-content" key={a._id}>
-                                                        <h4><a href="#">{a.n4}</a></h4>
+                                                        <h4>{a.n4}</h4>
                                                         <p>{a.definition4}</p>
                                                     </div>
 
