@@ -971,7 +971,7 @@ img {
   margin-top: 50px;
 }
 #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider {
-  margin-left: -30px;
+  margin-left: -35px;
 }
 #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li {
   float: left;
@@ -981,6 +981,7 @@ img {
 #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li .aa-single-agents {
   display: inline;
   float: left;
+  padding: 0.5em;
   width: 100%;
 }
 #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li .aa-single-agents .aa-agents-img {
@@ -1016,6 +1017,7 @@ img {
   display: inline;
   float: left;
   width: 100%;
+
 }
 #aa-agents .aa-agents-area .aa-agents-content .aa-agents-slider li .aa-single-agents .aa-agetns-info .aa-agent-social a {
   border: 1px solid #fff;

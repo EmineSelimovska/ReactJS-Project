@@ -173,7 +173,7 @@ export default function Home(props) {
                 </div>
             </section>
 
-            <section id="aa-about-us">
+            <section id="aa-about-us"> 
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -185,39 +185,26 @@ export default function Home(props) {
                                         </div>
                                     </div>
                                     <div className="col-md-7">
-                                        <div className="aa-about-us-right">
-                                            <div className="aa-title">
-                                                <h2>About Us</h2>
-                                                <span />
-                                            </div>
-                                            {about.map(a => (
+                                    <div className="aa-title">
+                                                    <h2>About Us</h2>
+                                                    <span />
+                                                </div>
+                                        {about.map(a => (
+                                            <div className="aa-about-us-right" key={a._id}>
+                                                <p >{a.welcome}</p>
+                                               <h4 style={{ paddingTop: "0", paddingBottom: '0' }}>{a.setsUpApart}</h4>
 
-                                                <p key={a._id}>{a.welcome}</p>
-
-                                            ))}
-                                            {about.map(a => (
-
-                                                <p key={a._id}>{a.mission}</p>
-
-                                            ))}
-
-                                            {about.map(a => (
-
-                                                <h4 style={{ paddingTop: "0", paddingBottom: '0' }} key={a._id}>{a.setsUpApart}</h4>
-
-                                            ))}
-
-                                            {about.map(a => (
-
-                                                <div key={a._id}>
+                                                <div >
                                                     <div style={{ padding: "0 0 0.5em 0" }}>{a.name1}</div>
                                                     <div style={{ padding: "0 0 0.5em 0.2em" }}>{a.name2}</div>
                                                     <div style={{ padding: "0 0 0.5em 0.2em" }} >{a.name3}</div>
                                                     <div style={{ padding: "0 0 0 0.1em" }} >{a.name4}</div>
                                                 </div>
-                                            ))}
 
-                                        </div>
+
+                                            </div>
+
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +213,7 @@ export default function Home(props) {
                 </div>
             </section>
 
-            <section id="aa-service" style={{paddingTop: '5px'}}>
+            <section id="aa-service" style={{ paddingTop: '5px' }}>
                 <div className="container" >
                     <div className="row">
                         <div className="col-md-12">
@@ -316,9 +303,9 @@ export default function Home(props) {
                             <div className="aa-promo-banner-area">
                                 <h3>Find Your Best Property</h3>
                                 <p>Take a look at our offers and don't hesitate to contact us if you have any questions.</p>
-                               <div>
-                               <p> <Link to="/properties" className="aa-view-btn"> View Details</Link></p>
-                               </div>
+                                <div>
+                                    <p> <Link to="/properties" className="aa-view-btn"> View Details</Link></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -333,147 +320,32 @@ export default function Home(props) {
                                 <div className="aa-title">
                                     <h2>Our Agents</h2>
                                     <span />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
+
                                 </div>
-                                <div className="aa-agents-content">
-                                    <ul className="aa-agents-slider">
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-1.png" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">Philip Smith</a></h4>
-                                                    <span>Top Agent</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
+                                <div className="aa-agents-content"  >
+
+                                    {options.map(op => (
+                                        <ul className="aa-agents-slider" key={op.listing_agent.agent_id}>
+                                            <li >
+                                                <div className="aa-single-agents" >
+                                                    <div className="aa-agents-img">
+                                                        <img src={op.listing_agent.img} alt="agent member image" />
+                                                    </div>
+                                                    <div className="aa-agetns-info" >
+                                                        <h4 ><a href="#">{op.listing_agent.name}</a></h4>
+                                                        <span>{op.listing_agent.contact.email}</span>
+                                                        <div className="aa-agent-social">
+                                                            <a href="https://www.facebook.com"><i className="fa fa-facebook" /></a>
+                                                            <a href="https://twitter.com"><i className="fa fa-twitter" /></a>
+                                                            <a href="https://www.linkedin.com"><i className="fa fa-linkedin" /></a>
+                                                            <a href="https://www.google.com/account/about/?hl=bg"><i className="fa fa-google-plus" /></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-5.jpg" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">Adam Barney</a></h4>
-                                                    <span>Expert Agent</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-2.jpeg" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">Paul Walker</a></h4>
-                                                    <span>Director</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-4.jpg" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">John Smith</a></h4>
-                                                    <span>Jr. Agent</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-1.png" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">Philip Smith</a></h4>
-                                                    <span>Top Agent</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-5.jpg" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">Adam Barney</a></h4>
-                                                    <span>Expert Agent</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-3.jpg" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">Paul Walker</a></h4>
-                                                    <span>Director</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="aa-single-agents">
-                                                <div className="aa-agents-img">
-                                                    <img src="img/agents/agent-4.jpg" alt="agent member image" />
-                                                </div>
-                                                <div className="aa-agetns-info">
-                                                    <h4><a href="#">John Smith</a></h4>
-                                                    <span>Jr. Agent</span>
-                                                    <div className="aa-agent-social">
-                                                        <a href="#"><i className="fa fa-facebook" /></a>
-                                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                                        <a href="#"><i className="fa fa-linkedin" /></a>
-                                                        <a href="#"><i className="fa fa-google-plus" /></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                    ))}
+
                                 </div>
                             </div>
                         </div>
