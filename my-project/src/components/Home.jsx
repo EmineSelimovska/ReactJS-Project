@@ -15,16 +15,6 @@ const proprietes = {
     arrows: true
 }
 
-const img = [
-    "img/slider/3.jpg",
-    "img/slider/2.jpg",
-    "img/slider/1.jpg",
-    "img/slider/4.jpg",
-    "img/slider/5.jpg",
-    "img/slider/6.jpg"
-
-]
-
 
 export default function Home(props) {
 
@@ -59,29 +49,34 @@ export default function Home(props) {
 
                             <div className="aa-top-slider-single">
 
-                                <img src={img[1]} alt="img1" />
+                                <img src="img/slider/1.jpg" alt="img1" />
 
 
                             </div>
                             <div className="aa-top-slider-single">
-                                <img src={img[2]} alt="img" />
+                                <img src="img/slider/2.jpg" alt="img" />
 
 
                             </div>
                             <div className="aa-top-slider-single">
-                                <img src={img[3]} alt="img" />
+                                <img src="img/slider/3.jpg" alt="img" />
 
 
                             </div>
                             <div className="aa-top-slider-single">
-                                <img src={img[4]} alt="img" />
+                                <img src="img/slider/4.jpg" alt="img" />
 
 
                             </div>
                             <div className="aa-top-slider-single">
-                                <img src={img[5]} alt="img" />
+                                <img src="img/slider/5.jpg" alt="img" />
 
                             </div>
+                            <div className="aa-top-slider-single">
+                                <img src="img/slider/6.jpg" alt="img" />
+
+                            </div>
+
                         </Slide>
                     </div>
 
@@ -173,7 +168,7 @@ export default function Home(props) {
                 </div>
             </section>
 
-            <section id="aa-about-us"> 
+            <section id="aa-about-us">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -185,14 +180,14 @@ export default function Home(props) {
                                         </div>
                                     </div>
                                     <div className="col-md-7">
-                                    <div className="aa-title">
-                                                    <h2>About Us</h2>
-                                                    <span />
-                                                </div>
+                                        <div className="aa-title">
+                                            <h2>About Us</h2>
+                                            <span />
+                                        </div>
                                         {about.map(a => (
                                             <div className="aa-about-us-right" key={a._id}>
                                                 <p >{a.welcome}</p>
-                                               <h4 style={{ paddingTop: "0", paddingBottom: '0' }}>{a.setsUpApart}</h4>
+                                                <h4 style={{ paddingTop: "0", paddingBottom: '0' }}>{a.setsUpApart}</h4>
 
                                                 <div >
                                                     <div style={{ padding: "0 0 0.5em 0" }}>{a.name1}</div>
