@@ -213,7 +213,7 @@ export default function Home(props) {
                                                     <div style={{ padding: "0 0 0.5em 0" }}>{a.name1}</div>
                                                     <div style={{ padding: "0 0 0.5em 0.2em" }}>{a.name2}</div>
                                                     <div style={{ padding: "0 0 0.5em 0.2em" }} >{a.name3}</div>
-                                                    <div style={{ padding: "0 0 0.5em 0.2em" }} >{a.name4}</div>
+                                                    <div style={{ padding: "0 0 0 0.1em" }} >{a.name4}</div>
                                                 </div>
                                             ))}
 
@@ -226,11 +226,11 @@ export default function Home(props) {
                 </div>
             </section>
 
-            <section id="aa-service">
-                <div className="container">
+            <section id="aa-service" style={{paddingTop: '5px'}}>
+                <div className="container" >
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="aa-service-area">
+                            <div className="aa-service-area"  >
                                 <div className="aa-title">
                                     {about.map(a => (
                                         <h2 key={a._id}>{a.service}</h2>
