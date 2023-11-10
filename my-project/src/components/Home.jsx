@@ -5,6 +5,7 @@ import 'react-slideshow-image/dist/styles.css';
 import Header from "./Header";
 import Menu from "./Menu-area";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const proprietes = {
     duration: 5000,
@@ -315,7 +316,9 @@ export default function Home(props) {
                             <div className="aa-promo-banner-area">
                                 <h3>Find Your Best Property</h3>
                                 <p>Take a look at our offers and don't hesitate to contact us if you have any questions.</p>
-                                <a href="#" className="aa-view-btn">View Details</a>
+                               <div>
+                               <p> <Link to="/properties" className="aa-view-btn"> View Details</Link></p>
+                               </div>
                             </div>
                         </div>
                     </div>
