@@ -231,10 +231,14 @@ export default function Home(props) {
                         <div className="col-md-12">
                             <div className="aa-service-area">
                                 <div className="aa-title">
-                                    {}
-                                    <h2>Our Service</h2>
+                                    {about.map(a => (
+                                        <h2 key={a._id}>{a.service}</h2>
+                                    ))}
                                     <span />
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
+                                    {about.map(a => (
+                                        <p key={a._id}>{a.def}</p>
+                                    ))}
+
                                 </div>
                                 <div className="aa-service-content">
                                     <div className="row">
@@ -243,10 +247,15 @@ export default function Home(props) {
                                                 <div className="aa-service-icon">
                                                     <span className="fa fa-home" />
                                                 </div>
-                                                <div className="aa-single-service-content">
-                                                    <h4><a href="#"></a></h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
-                                                </div>
+
+                                                {about.map(a => (
+                                                    <div className="aa-single-service-content" key={a._id}>
+                                                        <h4><a href="#">{a.n1}</a></h4>
+                                                        <p>{a.definition1}</p>
+                                                    </div>
+
+                                                ))}
+
                                             </div>
                                         </div>
                                         <div className="col-md-3">
@@ -254,10 +263,13 @@ export default function Home(props) {
                                                 <div className="aa-service-icon">
                                                     <span className="fa fa-check" />
                                                 </div>
-                                                <div className="aa-single-service-content">
-                                                    <h4><a href="#">Property Rent</a></h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
-                                                </div>
+                                                {about.map(a => (
+                                                    <div className="aa-single-service-content" key={a._id}>
+                                                        <h4><a href="#">{a.n2}</a></h4>
+                                                        <p>{a.definition2}</p>
+                                                    </div>
+
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="col-md-3">
@@ -265,10 +277,13 @@ export default function Home(props) {
                                                 <div className="aa-service-icon">
                                                     <span className="fa fa-crosshairs" />
                                                 </div>
-                                                <div className="aa-single-service-content">
-                                                    <h4><a href="#">Property Development</a></h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
-                                                </div>
+                                                {about.map(a => (
+                                                    <div className="aa-single-service-content" key={a._id}>
+                                                        <h4><a href="#">{a.n3}</a></h4>
+                                                        <p>{a.definition3}</p>
+                                                    </div>
+
+                                                ))}
                                             </div>
                                         </div>
                                         <div className="col-md-3">
@@ -276,10 +291,13 @@ export default function Home(props) {
                                                 <div className="aa-service-icon">
                                                     <span className="fa fa-bar-chart-o" />
                                                 </div>
-                                                <div className="aa-single-service-content">
-                                                    <h4><a href="#">Market Analysis</a></h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellendus quasi asperiores itaque dolorem at.</p>
-                                                </div>
+                                                {about.map(a => (
+                                                    <div className="aa-single-service-content" key={a._id}>
+                                                        <h4><a href="#">{a.n4}</a></h4>
+                                                        <p>{a.definition4}</p>
+                                                    </div>
+
+                                                ))}
                                             </div>
                                         </div>
                                     </div>
@@ -460,7 +478,7 @@ export default function Home(props) {
                 </div>
             </section>
 
-<Footer/>
+            <Footer />
         </>
     )
 }
