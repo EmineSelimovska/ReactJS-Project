@@ -327,13 +327,13 @@ export default function Home(props) {
                                                         <img src={op.listing_agent.img} alt="agent member image" />
                                                     </div>
                                                     <div className="aa-agetns-info" >
-                                                        <h4 ><a href="#">{op.listing_agent.name}</a></h4>
+                                                        <h4 >{op.listing_agent.name}</h4>
                                                         <span>{op.listing_agent.contact.email}</span>
                                                         <div className="aa-agent-social">
-                                                            <a href="https://www.facebook.com"><i className="fa fa-facebook" /></a>
-                                                            <a href="https://twitter.com"><i className="fa fa-twitter" /></a>
-                                                            <a href="https://www.linkedin.com"><i className="fa fa-linkedin" /></a>
-                                                            <a href="https://www.google.com/account/about/?hl=bg"><i className="fa fa-google-plus" /></a>
+                                                            <Link to="https://www.facebook.com"><i className="fa fa-facebook" /></Link>
+                                                            <Link to="https://twitter.com"><i className="fa fa-twitter" /></Link>
+                                                            <Link to="https://www.linkedin.com"><i className="fa fa-linkedin" /></Link>
+                                                            <Link to="https://www.google.com/account/about/?hl=bg"><i className="fa fa-google-plus" /></Link>
                                                         </div>
                                                     </div>
                                                 </div>
