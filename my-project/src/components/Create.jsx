@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Menu from "./Menu-area";
 import Footer from "./Footer";
+
+import  styles from "./Create.module.css"
 export default function Create(){
     return(
       <>
-      <Header/>
-      <Menu/>
-     
-        <section id="aa-create">
-        <div className="container">
-        <div className="row">
+   
+        <section id={styles.create}>
+        <div className={styles.container}>
+        <div className="row" >
                     <div className="col-md-12">
                         <div className="aa-create-area">
                             <div className="aa-create-form">
@@ -65,7 +65,7 @@ export default function Create(){
                 </div>
         </div>
       </section>
-      <Footer/>
+  
       </>
     )
     }

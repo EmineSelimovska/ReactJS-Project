@@ -1,0 +1,22 @@
+#create{
+    background-image: url("https://static.zawya.com/view/acePublic/alias/contentid/NGFjZWU4OTgtZjM1Yi00/37/1298181272.webp");
+    background-position: center center;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+    width: 100%;
+
+}
+ 
+.container{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     margin: 5em;
+}
+
