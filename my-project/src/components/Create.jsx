@@ -7,23 +7,63 @@ export default function Create(){
       <>
       <Header/>
       <Menu/>
-      <section id="aa-property-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-property-header-inner">
-              <h2>Gallery</h2>
-              <ol class="breadcrumb">
-              <li><Link to="/">HOME</Link></li>            
-              <li class="active">Create</li>
-            </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-      </section>
+     
         <section id="aa-create">
-        
+        <div className="container">
+        <div className="row">
+                    <div className="col-md-12">
+                        <div className="aa-create-area">
+                            <div className="aa-create-form">
+                                <div className="aa-create-form-title">
+                                    <Link className="aa-create-home" to="/">Home</Link>
+                                    <h4>Create property</h4>
+                                </div>
+                                <form className="createform">
+                                    <div className="aa-propertyType-field">
+                                        <label htmlFor="properyType">Property Type </label>
+                                        <input type="propertyType" required="required"   name="propertyType" />
+                                    </div>
+                                    <div className="aa-city-field">
+                                        <label htmlFor="city">City</label>
+                                        <input type="city" required="required"  name="city" />
+                                    </div>
+                                    <div className="aa-street-field">
+                                        <label htmlFor="street">Street </label>
+                                        <input type="street" required="required"   name="street" />
+                                    </div>
+                                    <div className="aa-price-field">
+                                        <label htmlFor="price">Price </label>
+                                        <input type="price" required="required"  name="price" />
+                                    </div>
+                                    <div className="aa-bedrooms-field">
+                                        <label htmlFor="bedrooms">Bedrooms </label>
+                                        <input type="bedrooms" required="required"  name="bedrooms" />
+                                    </div>
+                                    <div className="aa-bathrooms-field">
+                                        <label htmlFor="bathrooms">Bathrooms </label>
+                                        <input type="bathrooms" required="required"  name="bathrooms" />
+                                    </div>
+                                    <div className="aa-squareMeters-field">
+                                        <label htmlFor="squareMeters">Square Meters </label>
+                                        <input type="squareMeters" required="required"  name="squareMeters" />
+                                    </div>
+                                    <div className="aa-yearBuilt-field">
+                                        <label htmlFor="yearBuilt">Year Built </label>
+                                        <input type="yearBuilt" required="required" name="yearBuilt" />
+                                    </div>
+                                    <div className="aa-description-field">
+                                        <label htmlFor="description">More details </label>
+                                        <input type="description" required="required"  name="description" />
+                                    </div>
+                                    <div className="aa-single-submit">
+                                        <input type="submit" value="Create" className="aa-browse-btn" name="Submit" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
       </section>
       <Footer/>
       </>
