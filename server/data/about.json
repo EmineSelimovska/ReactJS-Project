@@ -1,6 +1,6 @@
 {
-    "aboutUs": {
-        "_id": 2000,
+    "3564027f-adcd-4425-b2c0-1253d2387c0c": {
+        "_id":"3564027f-adcd-4425-b2c0-1253d2387c0c",
         "welcome": "Welcome to Msell Real Estate, your trusted partner in the world of real estate in Plovdiv, Bulgaria. With a strong presence in the local real estate market, we have built a reputation for excellence and reliability.",
         "mission": "Our mission is to provide exceptional real estate services to our clients, exceeding their expectations at every step. We aim to simplify the complex world of real estate, offering personalized solutions, and ensuring a smooth and stress-free experience for buyers, sellers, investors, and tenants.",
         "setsUpApart": "What Sets Us Apart:",
@@ -10,13 +10,13 @@
         "name4": "Innovation: We leverage the latest technology and market insights to provide innovative solutions and marketing strategies.",
         "name5": "Community Involvement: We are proud to be a part of the Plovdiv community and actively contribute to its growth and development."
     },
-    "services": {
-        "_id": 4000,
+    "3564027f-adcd-4425-b2c0-1253d2388c0c": {
+        "_id": "3564027f-adcd-4425-b2c0-1253d2388c0c",
         "service": "Our Service",
         "def": "What we offer!"
     },
-    "ourService": {
-        "_id": 3000,
+    "3564027f-adcd-4425-b2c0-1253d2389c0c": {
+        "_id": "3564027f-adcd-4425-b2c0-1253d2389c0c",
         "n1": "Residential Sales and Rentals",
         "definition1": " This service involves helping clients buy, sell, or rent residential properties such as houses, apartments, and condominiums. We assist in finding the right residential property to meet your needs, whether you're looking to buy, sell, or rent a home.",
         "n2": "Commercial Real Estate",

@@ -1,7 +1,7 @@
 {
     
-    "list-1": {
-        "property_id": "1001",
+    "3564027f-adcd-4425-b2c0-1253d11186c1c": {
+        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c1c",
         "property_type": "Apartment",
         "address": {
             "street": "123 Sunshine Street",
@@ -20,7 +20,7 @@
             "Elevator"
         ],
         "listing_agent": {
-            "agent_id": "2001",
+            "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a1a",
             "name": "Marian Petrov",
             "img": "img/agents/agent-1.png",
             "contact": {
@@ -37,8 +37,8 @@
             }
         ]
     },
-    "list-2": {
-        "property_id": "1002",
+    "3564027f-adcd-4425-b2c0-1253d11186c2c": {
+        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c2c",
         "property_type": "House",
         "address": {
             "street": "45 Garden Lane",
@@ -57,7 +57,7 @@
             "Fireplace"
         ],
         "listing_agent": {
-            "agent_id": "2002",
+            "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a2a",
             "name": "Georgi Ivanov",
             "img": "img/agents/agent-5.jpg",
             "contact": {
@@ -69,8 +69,8 @@
             "open_houses": []
         }
     },
-    "list-3": {
-        "property_id": "1003",
+    "3564027f-adcd-4425-b2c0-1253d11186c3c": {
+        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c3c",
         "property_type": "Villa",
         "address": {
             "street": "5 Mountain View Road",
@@ -89,7 +89,7 @@
             "Terrace"
         ],
         "listing_agent": {
-            "agent_id": "2003",
+            "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a3a",
             "name": "Nino Georgiev",
             "img": "img/agents/agent-2.jpeg",
             "contact": {
@@ -101,8 +101,8 @@
             "open_houses": []
         }
     },
-    "list-4": {
-        "property_id": "1004",
+    "3564027f-adcd-4425-b2c0-1253d11186c4c": {
+        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c4c",
         "property_type": "Land",
         "address": {
             "street": "20 Green Acres",
@@ -120,7 +120,7 @@
             "Fertile Soil"
         ],
         "listing_agent": {
-            "agent_id": "2004",
+            "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a4a",
             "name": "Stefan Dimitrov",
             "img": "img/agents/agent-3.jpg",
             "contact": {
@@ -132,8 +132,8 @@
             "open_houses": []
         }
     },
-    "list-5": {
-        "property_id": "1005",
+    "3564027f-adcd-4425-b2c0-1253d11186c5c": {
+        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c5c",
         "property_type": "Commercial Space",
         "address": {
             "street": "35 Business Avenue",
@@ -151,7 +151,7 @@
             "Parking"
         ],
         "listing_agent": {
-            "agent_id": "2005",
+            "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a5a",
             "name": "Ivan Stoyanov",
             "img": "img/agents/agent-4.jpg",
             "contact": {
@@ -163,8 +163,8 @@
             "open_houses": []
         }
     },
-    "list-6": {
-        "property_id": "1006",
+    "3564027f-adcd-4425-b2c0-1253d11186c6c": {
+        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c6c",
         "property_type": "Studio Apartment",
         "address": {
             "street": "15 Artists Lane",
@@ -182,7 +182,7 @@
             "Close to Public Transport"
         ],
         "listing_agent": {
-            "agent_id": "2006",
+            "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a6a",
             "name": "Dimitar Popov",
             "img": "img/agents/agent-6.jpg",
             "contact": {
