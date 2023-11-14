@@ -12,6 +12,38 @@
     width: 100%;
 
 }
+
+#create:before {
+    background-color: rgba(0, 0, 0, 0.8);
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #create .createArea {
+    display: inline;
+    float: left;
+    padding: 20% 20%;
+    width: 120%;
+  }
+
+  #create .createArea .createForm {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: inline;
+    padding: 50px;
+    float: left;
+    width: 150%;
+  }
+
+  #create .createArea .createForm .formTitle {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
  
 .container{
     display: flex;

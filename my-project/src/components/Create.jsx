@@ -12,9 +12,9 @@ export default function Create(){
         <div className={styles.container}>
         <div className="row" >
                     <div className="col-md-12">
-                        <div className="aa-create-area">
-                            <div className="aa-create-form">
-                                <div className="aa-create-form-title">
+                        <div className={styles.createArea}>
+                            <div className={styles.createForm}>
+                                <div className={styles.formTitle}>
                                     <Link className="aa-create-home" to="/">Home</Link>
                                     <h4>Create property</h4>
                                 </div>
