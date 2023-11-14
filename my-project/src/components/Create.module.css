@@ -71,10 +71,12 @@
     margin-bottom: 20px;
   }
 
-  #create .createArea .createForm .propertyTypeField {
+  #create .createArea .createForm .propertyTypeField label {
     color: #000;
     display: inline-block;
     text-align: left;
+    width: 100%;
+  
   }
  
 .container{

@@ -17,7 +17,7 @@ export default function Create(){
                                 </div>
                                 <form className="createform">
                                     <div className={styles.propertyTypeField}>
-                                        <label  htmlFor="properyType">Property Type </label>
+                                        <label  {...styles.label} htmlFor="properyType">Property Type </label>
                                         <input type="propertyType" required="required" name="propertyType" id="propertyType"/>
                                     </div>
                                     <div className="aa-city-field">
