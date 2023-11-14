@@ -44,6 +44,38 @@
     text-align: center;
     width: 100%;
   }
+
+  
+#create .createArea .createForm .formTitle .createHome {
+    color: #0a0909;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  #create .createArea .createForm .formTitle h4 {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  #create .createArea .createForm .propertyTypeField {
+    display: inline;
+    float: left;
+    width: 100%;
+   
+    margin-bottom: 20px;
+  }
+
+  #create .createArea .createForm .propertyTypeField {
+    color: #000;
+    display: inline-block;
+    text-align: left;
+  }
  
 .container{
     display: flex;
