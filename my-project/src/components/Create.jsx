@@ -21,7 +21,7 @@ export default function Create(){
                                         <input type="propertyType" required="required" name="propertyType" id="propertyType"/>
                                     </div>
                                     <div className="aa-city-field">
-                                        <label htmlFor="city">City</label>
+                                        <label htmlFor="city" className={styles.label}>City</label>
                                         <input type="city" required="required"  name="city" id="city" />
                                     </div>
                                     <div className="aa-street-field">
