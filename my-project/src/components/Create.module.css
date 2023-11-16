@@ -25,7 +25,7 @@
 
   #create .createArea {
     display: inline;
-    float: left;
+    float: center;
     padding: 20% 20%;
     width: 120%;
   }
@@ -68,16 +68,83 @@
     float: left;
     width: 100%;
    
-    margin-bottom: 20px;
+    margin-bottom: 3px;
   }
 
-  #create .createArea .createForm .propertyTypeField label {
+  #create .createArea .createForm .propertyTypeField label,
+  #create .createArea .createForm .cityField label,
+  #create .createArea .createForm .streetField label,
+  #create .createArea .createForm .priceField label,
+  #create .createArea .createForm .bedroomsField label,
+  #create .createArea .createForm .bathroomsField label,
+  #create .createArea .createForm .squareMetersField label,
+  #create .createArea .createForm .yearBuiltField label,
+  #create .createArea .createForm .descriptionField label{
     color: #000;
     display: inline-block;
     text-align: left;
     width: 100%;
   
   }
+
+  #create .createArea .createForm .propertyTypeField input[type="propertyType"],
+#create .createArea .createForm .cityField input[type="city"],
+#create .createArea .createForm .streetField input[type="street"], 
+#create .createArea .createForm .priceField input[type="price"],
+#create .createArea .createForm .bedroomsField input[type="bedrooms"],
+#create .createArea .createForm .bathroomsField input[type="bathrooms"],
+#create .createArea .createForm .squareMetersField input[type="squareMeters"], 
+#create .createArea .createForm .yearBuiltField input[type="yearBuilt"]
+  
+ {
+  border: none;
+  color: #555;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#create .createArea .createForm .descriptionField input[type="description"]{
+  border: none;
+  color: #555;
+  margin-bottom: 10px;
+  height: 75px;
+  padding: 5px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#create .createArea .createForm .createSubmit {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+
+#create .createArea .createForm .createSubmit input[type="submit"]{
+  color: #0e0d0d;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 6px 12px;
+  width: 150px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
  
 .container{
     display: flex;
