@@ -17,7 +17,7 @@ export default function Menu(){
             <div id="navbar" className="navbar-collapse collapse">
               <ul id="top-menu" className="nav navbar-nav navbar-right aa-main-nav">
             
-              <li> <Link to="/">Home</Link></li> 
+              <li> <Link to="/">HOME</Link></li> 
                 <li> <Link to="/properties">PROPERTIES </Link></li> 
                 
                 <li><Link to="/create">CREATE</Link></li>
