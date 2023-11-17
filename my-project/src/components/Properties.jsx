@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Menu from "./Menu-area";
 import Footer from "./Footer";
+import * as dateService from "../servises/dateService";
+
 export default function Properties(){
     return(
       <><Header />
@@ -27,32 +29,6 @@ export default function Properties(){
             <div className="row">
               <div className="col-md-8">
                 <div className="aa-properties-content">
-
-                  <div className="aa-properties-content-head">
-                    <div className="aa-properties-content-head-left">
-                      <form action="" className="aa-sort-form">
-                        <label htmlFor="">Sort by</label>
-                        <select name="">
-                          <option value="1" selected="Default">Default</option>
-                          <option value="2">Name</option>
-                          <option value="3">Price</option>
-                          <option value="4">Date</option>
-                        </select>
-                      </form>
-                      <form action="" className="aa-show-form">
-                        <label htmlFor="">Show</label>
-                        <select name="">
-                          <option value="1" selected="12">6</option>
-                          <option value="2">12</option>
-                          <option value="3">24</option>
-                        </select>
-                      </form>
-                    </div>
-                    <div className="aa-properties-content-head-right">
-                      <a id="aa-grid-properties" href="#"><span className="fa fa-th"></span></a>
-                      <a id="aa-list-properties" href="#"><span className="fa fa-list"></span></a>
-                    </div>
-                  </div>
 
                   <div className="aa-properties-content-body">
                     <ul className="aa-properties-nav">
