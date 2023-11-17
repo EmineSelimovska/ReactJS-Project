@@ -12,3 +12,4 @@ Information for my project
 ![](./screenshots/screen-login.png)
 6. Update server
 7. Add Create Page
+![](./screenshots/screen-create.png)
