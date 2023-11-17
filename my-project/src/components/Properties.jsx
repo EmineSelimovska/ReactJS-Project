@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import * as dateService from "../servises/dateService";
 export default function Properties() {
 
+
   const [property, setProperty] = useState([]);
   useEffect(() => {
     dateService.getProperty()
@@ -112,50 +113,33 @@ export default function Properties() {
                         <input type="text" placeholder="Type Your Location" />
                       </div>
                       <div className="aa-single-advance-search">
-                        <select id name>
-                          <option selected value={0}>Category</option>
-                          <option value={1}>Flat</option>
-                          <option value={2}>Land</option>
-                          <option value={3}>Plot</option>
-                          <option value={4}>Commercial</option>
+                        <select >
+                          <option >Property Type</option>
+                          {property.map(crt => (
+                            <option key={crt.property_id}
+                              value={crt.property_type}>{crt.property_type}</option>
+                          ))}
                         </select>
                       </div>
                       <div className="aa-single-advance-search">
-                        <select id name>
-                          <option selected value={0}>Type</option>
-                          <option value={1}>Flat</option>
-                          <option value={2}>Land</option>
-                          <option value={3}>Plot</option>
-                          <option value={4}>Commercial</option>
+                        <select >
+                          <option >Square Meters</option>
+                          {property.map(crt => (
+                            <option key={crt.property_id}
+                              value={crt.square_meters}>{crt.square_meters}</option>
+                          ))}
                         </select>
                       </div>
                       <div className="aa-single-advance-search">
-                        <select id name>
-                          <option selected value={0}>Type</option>
-                          <option value={1}>Flat</option>
-                          <option value={2}>Land</option>
-                          <option value={3}>Plot</option>
-                          <option value={4}>Commercial</option>
+                        <select >
+                          <option >Year Built</option>
+                          {property.map(crt => (
+                            <option key={crt.property_id}
+                              value={crt.year_built}>{crt.year_built}</option>
+                          ))}
                         </select>
                       </div>
-                      <div className="aa-single-filter-search">
-                        <span>AREA (SQ)</span>
-                        <span>FROM</span>
-                        <span id="skip-value-lower" className="example-val">30.00</span>
-                        <span>TO</span>
-                        <span id="skip-value-upper" className="example-val">100.00</span>
-                        <div id="aa-sqrfeet-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                        </div>
-                      </div>
-                      <div className="aa-single-filter-search">
-                        <span>PRICE ($)</span>
-                        <span>FROM</span>
-                        <span id="skip-value-lower2" className="example-val">30.00</span>
-                        <span>TO</span>
-                        <span id="skip-value-upper2" className="example-val">100.00</span>
-                        <div id="aa-price-range" className="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                        </div>
-                      </div>
+
                       <div className="aa-single-advance-search">
                         <input type="submit" defaultValue="Search" className="aa-search-btn" />
                       </div>
