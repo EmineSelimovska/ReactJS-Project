@@ -16,7 +16,7 @@ export default function Login() {
                                 <form className="contactform">
                                     <div className="aa-single-field">
                                         <label htmlFor="email">Email <span className="required">*</span></label>
-                                        <input type="email" required="required" aria-required="true" defaultValue name="email" />
+                                        <input type="email" required="required" aria-required="true"  name="email" />
                                     </div>
                                     <div className="aa-single-field">
                                         <label htmlFor="password">Password <span className="required">*</span></label>
