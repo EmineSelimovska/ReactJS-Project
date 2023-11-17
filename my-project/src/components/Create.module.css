@@ -73,12 +73,11 @@
 
   #create .createArea .createForm .propertyTypeField label,
   #create .createArea .createForm .cityField label,
-  #create .createArea .createForm .streetField label,
   #create .createArea .createForm .priceField label,
   #create .createArea .createForm .bedroomsField label,
   #create .createArea .createForm .bathroomsField label,
   #create .createArea .createForm .squareMetersField label,
-  #create .createArea .createForm .yearBuiltField label,
+  #create .createArea .createForm .propertyImageField label,
   #create .createArea .createForm .descriptionField label{
     color: #000;
     display: inline-block;
@@ -89,12 +88,11 @@
 
   #create .createArea .createForm .propertyTypeField input[type="propertyType"],
 #create .createArea .createForm .cityField input[type="city"],
-#create .createArea .createForm .streetField input[type="street"], 
 #create .createArea .createForm .priceField input[type="price"],
 #create .createArea .createForm .bedroomsField input[type="bedrooms"],
 #create .createArea .createForm .bathroomsField input[type="bathrooms"],
 #create .createArea .createForm .squareMetersField input[type="squareMeters"], 
-#create .createArea .createForm .yearBuiltField input[type="yearBuilt"]
+#create .createArea .createForm .propertyImageField input[type="propertyImage"]
   
  {
   border: none;

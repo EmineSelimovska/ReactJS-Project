@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
-import * as propertyService from '../servises/propertyService';
+import  {create} from '../servises/propertyService';
 import  styles from "./Create.module.css"
 export default function Create(){
 
-    const onCreateSubmitHadler = (e) => {
+    const onCreateSubmitHadler = async (e) => {
     e.preventDefault();
 
     const propertyDate = Object.fromEntries(new FormData(e.currentTarget));
 
     console.log(propertyDate);
+
+
+    const response = await create(propertyDate);
+
+    console.log(response);
     }
   
     return(
@@ -31,10 +36,6 @@ export default function Create(){
                                         <label {...styles.label} htmlFor="city">City</label>
                                         <input type="city" required="required"  name="city" id="city" />
                                     </div>
-                                    <div className={styles.streetField}>
-                                        <label {...styles.label} htmlFor="street">Street </label>
-                                        <input type="street" required="required" name="street" id="street" />
-                                    </div>
                                     <div className={styles.priceField}>
                                         <label {...styles.label} htmlFor="price">Price </label>
                                         <input type="price" required="required"  name="price" id="price"/>
@@ -51,9 +52,9 @@ export default function Create(){
                                         <label {...styles.label} htmlFor="squareMeters">Square Meters </label>
                                         <input type="squareMeters" required="required"  name="squareMeters" id="squareMeters"/>
                                     </div>
-                                    <div className={styles.yearBuiltField}>
-                                        <label {...styles.label} htmlFor="yearBuilt">Year Built </label>
-                                        <input type="yearBuilt" required="required" name="yearBuilt" id="yearBuilt"/>
+                                    <div className={styles.propertyImageFuild}>
+                                        <label {...styles.label} htmlFor="propertyImage">Image </label>
+                                        <input type="propertyImage" required="required" name="propertyImage" id="propertyImage"/>
                                     </div>
                                     <div className={styles.descriptionField}>
                                         <label {...styles.label} htmlFor="description">More details </label>
