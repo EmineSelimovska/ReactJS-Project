@@ -21,10 +21,7 @@ export default function Menu(){
                 <li> <Link to="/properties">PROPERTIES </Link></li> 
                 
                 <li><Link to="/create">CREATE</Link></li>
-                <li className="dropdown">
-                  <Link className="dropdown-toggle" data-toggle="dropdown" to="/blog">BLOG </Link>
-                  
-                </li>
+               
                 <li><Link to="/contact">CONTACT</Link></li>
                
               </ul>
