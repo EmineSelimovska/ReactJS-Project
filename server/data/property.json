@@ -65,11 +65,12 @@
             "contact": {
                 "email": "georgi.ivanov@gmail.com",
                 "phone": "+359 888 333 444"
-            },
-            "status": "For Sale",
-            "date_listed": "2023-11-11",
-            "open_houses": []
-        }
+            }
+           
+        },
+        "status": "For Sale",
+        "date_listed": "2023-11-11",
+        "open_houses": []
     },
     "3564027f-adcd-4425-b2c0-1253d11186c3c": {
         "property_id": "3564027f-adcd-4425-b2c0-1253d11186c3c",
@@ -98,11 +99,12 @@
             "contact": {
                 "email": "nino.georgiev@gmail.com",
                 "phone": "+359 888 555 666"
-            },
-            "status": "For Sale",
+            }
+            
+        },
+        "status": "For Sale",
             "date_listed": "2023-11-15",
             "open_houses": []
-        }
     },
     "3564027f-adcd-4425-b2c0-1253d11186c4c": {
         "property_id": "3564027f-adcd-4425-b2c0-1253d11186c4c",
@@ -130,11 +132,12 @@
             "contact": {
                 "email": "stefan.dimitrov@gmail.com",
                 "phone": "+359 888 777 888"
-            },
-            "status": "For Sale",
+            }
+            
+        },
+        "status": "For Sale",
             "date_listed": "2023-11-20",
             "open_houses": []
-        }
     },
     "3564027f-adcd-4425-b2c0-1253d11186c5c": {
         "property_id": "3564027f-adcd-4425-b2c0-1253d11186c5c",
@@ -162,11 +165,12 @@
             "contact": {
                 "email": "ivan.stoyanov@gmail.com",
                 "phone": "+359 888 999 000"
-            },
-            "status": "For Sale",
-            "date_listed": "2023-11-25",
-            "open_houses": []
-        }
+            }
+          
+        },
+        "status": "For Sale",
+        "date_listed": "2023-11-25",
+        "open_houses": []
     },
     "3564027f-adcd-4425-b2c0-1253d11186c6c": {
         "property_id": "3564027f-adcd-4425-b2c0-1253d11186c6c",
@@ -176,7 +180,7 @@
             "city": "Plovdiv",
             "postcode": "4006"
         },
-        "price": 60000,
+        "price": 1000,
         "bedrooms": 1,
         "bathrooms": 1,
         "square_meters": 45,
@@ -194,15 +198,16 @@
             "contact": {
                 "email": "dimitar.popov@gmail.com",
                 "phone": "+359 888 123 789"
-            },
-            "status": "For Sale",
-            "date_listed": "2023-11-30",
-            "open_houses": [
-                {
-                    "date": "2023-12-05",
-                    "time": "2:00 PM - 4:00 PM"
-                }
-            ]
-        }
+            }
+          
+        },
+        "status": "For Rent",
+        "date_listed": "2023-11-30",
+        "open_houses": [
+            {
+                "date": "2023-12-05",
+                "time": "2:00 PM - 4:00 PM"
+            }
+        ]
     }
 }

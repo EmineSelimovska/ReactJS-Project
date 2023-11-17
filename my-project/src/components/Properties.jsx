@@ -9,8 +9,11 @@ export default function Properties() {
   const [property, setProperty] = useState([]);
   useEffect(() => {
     dateService.getProperty()
-    .then(result => setProperty(result))
+      .then(result => setProperty(result))
+
   }, [])
+
+  console.log(property);
   return (
     <><Header />
       <Menu />
@@ -38,16 +41,19 @@ export default function Properties() {
 
                   <div className="aa-properties-content-body">
                     <ul className="aa-properties-nav">
-                    {property.map(prop => (
-                      <li key={prop.property_id}>
-                     
+                      {property.map(prop => (
+                        <li key={prop.property_id}>
+
                           <article className="aa-properties-item"  >
                             <div className="aa-properties-item-img" >
                               <img alt="img" src={prop.imgProperty} />
                             </div>
-                            <div className="aa-tag for-rent">{prop.status}</div>
-                                
-                            
+
+                            <div className="aa-tag">
+                              {prop.status}
+                            </div>
+
+
                             <div className="aa-properties-item-content" >
                               <div className="aa-properties-info">
                                 <span>{prop.bedrooms} Beds</span>
@@ -66,9 +72,9 @@ export default function Properties() {
                               </div>
                             </div>
                           </article>
-                       
-                      </li>
-                       ))}
+
+                        </li>
+                      ))}
 
                     </ul>
                   </div>

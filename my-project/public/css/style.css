@@ -766,13 +766,9 @@ img {
   position: absolute;
   left: 15px;
   top: -15px;
-}
-.aa-properties-item .for-rent {
   background-color: #20ceb3;
 }
-.aa-properties-item .sold-out {
-  background-color: #ff0000;
-}
+
 .aa-properties-item .aa-properties-item-content {
   background-color: #fff;
   border: 1px solid #ddd;
