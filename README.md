@@ -8,5 +8,7 @@ Information for my project
 4. Router
 ![](./screenshots/screen-home.png)
 5. Add Register and Login Page
+![](./screenshots/screen-register.png)
+![](./screenshots/screen-login.png)
 6. Update server
 7. Add Create Page
