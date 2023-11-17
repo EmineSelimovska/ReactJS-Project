@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
-
+import * as propertyService from '../servises/propertyService';
 import  styles from "./Create.module.css"
 export default function Create(){
+
+    const onCreateSubmitHadler = (e) => {
+    e.preventDefault();
+
+    const propertyDate = Object.fromEntries(new FormData(e.currentTarget));
+
+    console.log(propertyDate);
+    }
+  
     return(
-      <>
-   
         <section id={styles.create}>
         <div className={styles.container}>
         <div className="row" >
@@ -15,7 +22,7 @@ export default function Create(){
                                     <Link className={styles.createHome} to="/">Home</Link>
                                     <h4 className={styles.h4}>Create property</h4>
                                 </div>
-                                <form className="createform">
+                                <form className="createform" onSubmit={onCreateSubmitHadler}>
                                     <div className={styles.propertyTypeField}>
                                         <label  {...styles.label} htmlFor="properyType">Property Type </label>
                                         <input  type="propertyType" required="required" name="propertyType" id="propertyType"/>
@@ -63,6 +70,6 @@ export default function Create(){
         </div>
       </section>
   
-      </>
+      
     )
     }
