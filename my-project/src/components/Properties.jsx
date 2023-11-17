@@ -53,7 +53,6 @@ export default function Properties() {
                               {prop.status}
                             </div>
 
-
                             <div className="aa-properties-item-content" >
                               <div className="aa-properties-info">
                                 <span>{prop.bedrooms} Beds</span>
