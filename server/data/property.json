@@ -13,6 +13,7 @@
         "bathrooms": 1,
         "square_meters": 80,
         "year_built": 2015,
+        "imgProperty": "https://www.bhg.com/thmb/dgy0b4w_W0oUJUxc7M4w3H4AyDo=/1866x0/filters:no_upscale():strip_icc()/living-room-gallery-shelves-l-shaped-couch-ELeyNpyyqpZ8hosOG3EG1X-b5a39646574544e8a75f2961332cd89a.jpg",
         "description": "Modern apartment in the heart of Plovdiv with great views...",
         "features": [
             "Balcony",
@@ -50,6 +51,7 @@
         "bathrooms": 2,
         "square_meters": 160,
         "year_built": 2010,
+        "imgProperty": "https://cdn.homedit.com/wp-content/uploads/2013/07/back-in-time-living-room.jpg",
         "description": "Spacious family house with a beautiful garden and garage...",
         "features": [
             "Garden",
@@ -82,6 +84,7 @@
         "bathrooms": 3,
         "square_meters": 200,
         "year_built": 2012,
+        "imgProperty": "https://assets.isu.pub/document-structure/230322145320-0c25fa1d80284dfdc18cd895d3ecfb01/v1/52f100af439c58ed01fabd398241005c.jpeg",
         "description": "Luxurious villa with a scenic view of the Rhodope Mountains...",
         "features": [
             "Swimming Pool",
@@ -114,6 +117,7 @@
         "bathrooms": 1,
         "square_meters": 1000,
         "year_built": 2013,
+        "imgProperty": "https://was-design.com/wp-content/uploads/2020/05/200114-MS-GEOverlay.jpg",
         "description": "Large plot of land suitable for development or farming...",
         "features": [
             "Open Land",
@@ -145,6 +149,7 @@
         "bathrooms": 1,
         "square_meters": 150,
         "year_built": 2014,
+        "imgProperty": "https://www.bbgreal.com/app/uploads/2020/09/bermondsey-007.jpg",
         "description": "Spacious commercial space in a prime location for businesses...",
         "features": [
             "Storefront",
@@ -176,6 +181,7 @@
         "bathrooms": 1,
         "square_meters": 45,
         "year_built": 2018,
+        "imgProperty": "https://www.essexapartmenthomes.com/-/media/Project/EssexPropertyTrust/Sites/EssexApartmentHomes/Blog/2021/2021-01-12-Studio-vs-One-Bedroom-Apartment-How-They-Measure-Up/Studio-vs-One-Bedroom-Apartment-How-They-Measure-Up-1.jpg",
         "description": "Cozy studio apartment for students or young professionals...",
         "features": [
             "Security",

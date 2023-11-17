@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import Menu from "./Menu-area";
 import Footer from "./Footer";
+import { useEffect, useState } from "react";
 import * as dateService from "../servises/dateService";
+export default function Properties() {
 
-export default function Properties(){
-    return(
-      <><Header />
+  const [property, setProperty] = useState([]);
+  useEffect(() => {
+    dateService.getProperty()
+    .then(result => setProperty(result))
+  }, [])
+  return (
+    <><Header />
       <Menu />
       <div>
         <section id="aa-property-header">
@@ -32,174 +38,38 @@ export default function Properties(){
 
                   <div className="aa-properties-content-body">
                     <ul className="aa-properties-nav">
-                      <li>
-                        <article className="aa-properties-item">
-                          <a className="aa-properties-item-img" href="#">
-                            <img alt="img" src="img/promo-banner.jpg" />
-                          </a>
-                          <div className="aa-tag for-rent">
-                            For Rent
-                          </div>
-                          <div className="aa-properties-item-content">
-                            <div className="aa-properties-info">
-                              <span>5 Rooms</span>
-                              <span>2 Beds</span>
-                              <span>3 Baths</span>
-                              <span>1100 SQ FT</span>
+                    {property.map(prop => (
+                      <li key={prop.property_id}>
+                     
+                          <article className="aa-properties-item"  >
+                            <div className="aa-properties-item-img" >
+                              <img alt="img" src={prop.imgProperty} />
                             </div>
-                            <div className="aa-properties-about">
-                              <h3><a href="#">Appartment Title</a></h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
+                            <div className="aa-tag for-rent">{prop.status}</div>
+                                
+                            
+                            <div className="aa-properties-item-content" >
+                              <div className="aa-properties-info">
+                                <span>{prop.bedrooms} Beds</span>
+                                <span>{prop.bathrooms} Baths</span>
+                                <span>{prop.square_meters} SQ FT</span>
+                              </div>
+                              <div className="aa-properties-about">
+                                <h3><a href="#">{prop.property_type}</a></h3>
+                                <p>{prop.description}</p>
+                              </div>
+                              <div className="aa-properties-detial">
+                                <span className="aa-price">
+                                  ${prop.price}
+                                </span>
+                                <a className="aa-secondary-btn" href="#">View Details</a>
+                              </div>
                             </div>
-                            <div className="aa-properties-detial">
-                              <span className="aa-price">
-                                $35000
-                              </span>
-                              <a className="aa-secondary-btn" href="#">View Details</a>
-                            </div>
-                          </div>
-                        </article>
+                          </article>
+                       
                       </li>
-                      <li>
-                        <article className="aa-properties-item">
-                          <a className="aa-properties-item-img" href="#">
-                            <img alt="img" src="img/item/1.jpg" />
-                          </a>
-                          <div className="aa-tag sold-out">
-                            Sold Out
-                          </div>
-                          <div className="aa-properties-item-content">
-                            <div className="aa-properties-info">
-                              <span>5 Rooms</span>
-                              <span>2 Beds</span>
-                              <span>3 Baths</span>
-                              <span>1100 SQ FT</span>
-                            </div>
-                            <div className="aa-properties-about">
-                              <h3><a href="#">Appartment Title</a></h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
-                            </div>
-                            <div className="aa-properties-detial">
-                              <span className="aa-price">
-                                $35000
-                              </span>
-                              <a className="aa-secondary-btn" href="#">View Details</a>
-                            </div>
-                          </div>
-                        </article>
-                      </li>
-                      <li>
-                        <article className="aa-properties-item">
-                          <a className="aa-properties-item-img" href="#">
-                            <img alt="img" src="img/item/2.jpg" />
-                          </a>
-                          <div className="aa-tag sold-out">
-                            Sold Out
-                          </div>
-                          <div className="aa-properties-item-content">
-                            <div className="aa-properties-info">
-                              <span>5 Rooms</span>
-                              <span>2 Beds</span>
-                              <span>3 Baths</span>
-                              <span>1100 SQ FT</span>
-                            </div>
-                            <div className="aa-properties-about">
-                              <h3><a href="#">Appartment Title</a></h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
-                            </div>
-                            <div className="aa-properties-detial">
-                              <span className="aa-price">
-                                $35000
-                              </span>
-                              <a className="aa-secondary-btn" href="#">View Details</a>
-                            </div>
-                          </div>
-                        </article>
-                      </li>
-                      <li>
-                        <article className="aa-properties-item">
-                          <a className="aa-properties-item-img" href="#">
-                            <img alt="img" src="img/item/5.jpg" />
-                          </a>
-                          <div className="aa-tag for-sale">
-                            For Sale
-                          </div>
-                          <div className="aa-properties-item-content">
-                            <div className="aa-properties-info">
-                              <span>5 Rooms</span>
-                              <span>2 Beds</span>
-                              <span>3 Baths</span>
-                              <span>1100 SQ FT</span>
-                            </div>
-                            <div className="aa-properties-about">
-                              <h3><a href="#">Appartment Title</a></h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
-                            </div>
-                            <div className="aa-properties-detial">
-                              <span className="aa-price">
-                                $35000
-                              </span>
-                              <a className="aa-secondary-btn" href="#">View Details</a>
-                            </div>
-                          </div>
-                        </article>
-                      </li>
-                      <li>
-                        <article className="aa-properties-item">
-                          <a className="aa-properties-item-img" href="#">
-                            <img alt="img" src="img/item/3.jpg" />
-                          </a>
-                          <div className="aa-tag for-rent">
-                            For Rent
-                          </div>
-                          <div className="aa-properties-item-content">
-                            <div className="aa-properties-info">
-                              <span>5 Rooms</span>
-                              <span>2 Beds</span>
-                              <span>3 Baths</span>
-                              <span>1100 SQ FT</span>
-                            </div>
-                            <div className="aa-properties-about">
-                              <h3><a href="#">Appartment Title</a></h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
-                            </div>
-                            <div className="aa-properties-detial">
-                              <span className="aa-price">
-                                $35000
-                              </span>
-                              <a className="aa-secondary-btn" href="#">View Details</a>
-                            </div>
-                          </div>
-                        </article>
-                      </li>
-                      <li>
-                        <article className="aa-properties-item">
-                          <a className="aa-properties-item-img" href="#">
-                            <img alt="img" src="img/item/4.jpg" />
-                          </a>
-                          <div className="aa-tag for-sale">
-                            For Sale
-                          </div>
-                          <div className="aa-properties-item-content">
-                            <div className="aa-properties-info">
-                              <span>5 Rooms</span>
-                              <span>2 Beds</span>
-                              <span>3 Baths</span>
-                              <span>1100 SQ FT</span>
-                            </div>
-                            <div className="aa-properties-about">
-                              <h3><a href="#">Appartment Title</a></h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
-                            </div>
-                            <div className="aa-properties-detial">
-                              <span className="aa-price">
-                                $35000
-                              </span>
-                              <a className="aa-secondary-btn" href="#">View Details</a>
-                            </div>
-                          </div>
-                        </article>
-                      </li>
+                       ))}
+
                     </ul>
                   </div>
 
@@ -333,6 +203,6 @@ export default function Properties(){
         </section>
       </div>
       <Footer />
-      </>
-    )
+    </>
+  )
 }
