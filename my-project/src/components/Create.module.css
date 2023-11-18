@@ -93,7 +93,6 @@
 #create .createArea .createForm .bathroomsField input[type="bathrooms"],
 #create .createArea .createForm .squareMetersField input[type="squareMeters"], 
 #create .createArea .createForm .propertyImageField input[type="propertyImage"]
-  
  {
   border: none;
   color: #555;

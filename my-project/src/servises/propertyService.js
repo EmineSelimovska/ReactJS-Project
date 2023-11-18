@@ -2,7 +2,7 @@ const url = `http://localhost:3030/jsonstore`
 
 
 export const create = async (propertyDate) => {
-   const response = await fetch(`${url}/createProperty`, {
+   const response = await fetch(`${url}/property`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
