@@ -52,7 +52,7 @@ export default function Create(){
                                         <label {...styles.label} htmlFor="squareMeters">Square Meters </label>
                                         <input type="squareMeters" required="required"  name="squareMeters" id="squareMeters"/>
                                     </div>
-                                    <div className={styles.propertyImageFuild}>
+                                    <div className={styles.propertyImageField}>
                                         <label {...styles.label} htmlFor="propertyImage">Image </label>
                                         <input type="propertyImage" required="required" name="propertyImage" id="propertyImage"/>
                                     </div>
