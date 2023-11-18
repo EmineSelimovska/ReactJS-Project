@@ -244,7 +244,7 @@ export default function Home(props) {
                                             <li >
                                                 <div className="aa-single-agents" >
                                                     <div className="aa-agents-img">
-                                                        <img src={op.listing_agent.img} alt="" />
+                                                        <img src={op.listing_agent.imgAgent} alt="" />
                                                     </div>
                                                     <div className="aa-agetns-info" >
                                                         <h4 >{op.listing_agent.name}</h4>

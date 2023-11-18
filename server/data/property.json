@@ -23,7 +23,7 @@
         "listing_agent": {
             "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a1a",
             "name": "Marian Petrov",
-            "img": "img/agents/agent-1.png",
+            "imgAgent": "https://media.licdn.com/dms/image/C4D03AQFyda6c1e2ERw/profile-displayphoto-shrink_200_200/0/1632648750447?e=1701907200&v=beta&t=9Q8KXjNu_Ji9H6b1PKVsBlp7zDdcCeKk5BzWhi0xlDY",
             "contact": {
                 "email": "marian.petrov@gmail.com",
                 "phone": "+359 888 111 222"
@@ -61,7 +61,7 @@
         "listing_agent": {
             "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a2a",
             "name": "Georgi Ivanov",
-            "img": "img/agents/agent-5.jpg",
+            "imgAgent": "https://remax-aphotos-papi.imgix.net/Person/100008212/MainPhoto_cropped/MainPhoto_cropped.jpg?fit=max&auto=format,compress&fm=pjpg&cs=srgb&q=35&h=200",
             "contact": {
                 "email": "georgi.ivanov@gmail.com",
                 "phone": "+359 888 333 444"
@@ -95,7 +95,7 @@
         "listing_agent": {
             "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a3a",
             "name": "Nino Georgiev",
-            "img": "img/agents/agent-2.jpeg",
+            "imgAgent": "https://media.licdn.com/dms/image/C4E03AQHc3w5Fpf8MKA/profile-displayphoto-shrink_200_200/0/1645050185654?e=1700697600&v=beta&t=xXztgMRHcjajmcY7E_Hvnhu--he6vQI4zvvRhtftCR8",
             "contact": {
                 "email": "nino.georgiev@gmail.com",
                 "phone": "+359 888 555 666"
@@ -128,7 +128,7 @@
         "listing_agent": {
             "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a4a",
             "name": "Stefan Dimitrov",
-            "img": "img/agents/agent-3.jpg",
+            "imgAgent": "https://remax-aphotos-papi.imgix.net/Person/100083728/MainPhoto_cropped/MainPhoto_cropped.jpg?fit=max&auto=format,compress&fm=pjpg&cs=srgb&q=35&h=200",
             "contact": {
                 "email": "stefan.dimitrov@gmail.com",
                 "phone": "+359 888 777 888"
@@ -161,7 +161,7 @@
         "listing_agent": {
             "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a5a",
             "name": "Ivan Stoyanov",
-            "img": "img/agents/agent-4.jpg",
+            "imgAgent": "https://images.carriercms.com/image/upload/w_200,c_scale,q_auto,f_auto/v1660918037/supra/people/real-estate-agent-antwann-rhodes-tight-portrait-1x1.jpg",
             "contact": {
                 "email": "ivan.stoyanov@gmail.com",
                 "phone": "+359 888 999 000"
@@ -194,7 +194,7 @@
         "listing_agent": {
             "agent_id": "3564027f-adcd-4425-b2c0-1253d11186a6a",
             "name": "Dimitar Popov",
-            "img": "img/agents/agent-6.jpg",
+            "imgAgent": "https://i1.au.reastatic.net/200x200,gravity=north,quality=70/83ddf939a02dcf909754c949f749b61da1a4de403ad977b6e84d6910a0ac4a44/main.jpg",
             "contact": {
                 "email": "dimitar.popov@gmail.com",
                 "phone": "+359 888 123 789"
