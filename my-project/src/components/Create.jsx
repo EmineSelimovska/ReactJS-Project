@@ -54,6 +54,10 @@ export default function Create(){
                                         <label {...styles.label} htmlFor="propertyImage">Image </label>
                                         <input type="propertyImage" required="required" name="propertyImage" id="propertyImage"/>
                                     </div>
+                                    <div className={styles.statusField}>
+                                        <label {...styles.label} htmlFor="status">Status </label>
+                                        <input type="status" required="required"  name="status" id="status"/>
+                                    </div>
                                     <div className={styles.descriptionField}>
                                         <label {...styles.label} htmlFor="description">More details </label>
                                         <input type="description" required="required"  name="description" id="description"/>
