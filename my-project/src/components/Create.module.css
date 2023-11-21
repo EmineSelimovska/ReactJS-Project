@@ -87,12 +87,12 @@
   
   }
 
-  #create .createArea .createForm .propertyTypeField input[type="propertyType"],
+  #create .createArea .createForm .propertyTypeField input[type="property_type"],
 #create .createArea .createForm .cityField input[type="city"],
 #create .createArea .createForm .priceField input[type="price"],
 #create .createArea .createForm .bedroomsField input[type="bedrooms"],
 #create .createArea .createForm .bathroomsField input[type="bathrooms"],
-#create .createArea .createForm .squareMetersField input[type="squareMeters"], 
+#create .createArea .createForm .squareMetersField input[type="square_meters"], 
 #create .createArea .createForm .propertyImageField input[type="text"],
 #create .createArea .createForm .statusField input[type="status"]
  {

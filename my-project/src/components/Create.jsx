@@ -29,13 +29,13 @@ export default function Create() {
                         <div className={styles.createArea}>
                             <div className={styles.createForm}>
                                 <div className={styles.formTitle}>
-                                    <Link className={styles.createHome} to="/">Home</Link>
+                                    <Link className={styles.createHome} to="/properties">Property</Link>
                                     <h4 className={styles.h4}>Create property</h4>
                                 </div>
                                 <form className="createform" onSubmit={onCreateSubmitHadler}>
                                     <div className={styles.propertyTypeField}>
-                                        <label  {...styles.label} htmlFor="properyType">Property Type </label>
-                                        <input type="propertyType" required="required" name="propertyType" id="propertyType" />
+                                        <label  {...styles.label} htmlFor="propery_type">Property Type </label>
+                                        <input type="property_type" required="required" name="property_type" id="property_type" />
                                     </div>
                                     <div className={styles.cityField}>
                                         <label {...styles.label} htmlFor="city">City</label>
@@ -54,8 +54,8 @@ export default function Create() {
                                         <input type="bathrooms" required="required" name="bathrooms" id="bathrooms" />
                                     </div>
                                     <div className={styles.squareMetersField}>
-                                        <label {...styles.label} htmlFor="squareMeters">Square Meters </label>
-                                        <input type="squareMeters" required="required" name="squareMeters" id="squareMeters" />
+                                        <label {...styles.label} htmlFor="square_meters">Square Meters </label>
+                                        <input type="square_meters" required="required" name="square_meters" id="square_meters" />
                                     </div>
                                     <div className={styles.propertyImageField}>
                                         <label {...styles.label} htmlFor="imgProperty">Image </label>
