@@ -1,7 +1,7 @@
 {
     
     "3564027f-adcd-4425-b2c0-1253d11186c1c": {
-        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c1c",
+        "_id": "3564027f-adcd-4425-b2c0-1253d11186c1c",
         "property_type": "Apartment",
         "address": {
             "street": "123 Sunshine Street",
@@ -30,7 +30,7 @@
         ]
     },    
     "3564027f-adcd-4425-b2c0-1253d11186c2c": {
-        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c2c",
+        "_id": "3564027f-adcd-4425-b2c0-1253d11186c2c",
         "property_type": "House",
         "address": {
             "street": "45 Garden Lane",
@@ -58,7 +58,7 @@
       
   
     "3564027f-adcd-4425-b2c0-1253d11186c3c": {
-        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c3c",
+        "_id": "3564027f-adcd-4425-b2c0-1253d11186c3c",
         "property_type": "Villa",
         "address": {
             "street": "5 Mountain View Road",
@@ -82,7 +82,7 @@
             "open_houses": []
     },
     "3564027f-adcd-4425-b2c0-1253d11186c4c": {
-        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c4c",
+        "_id": "3564027f-adcd-4425-b2c0-1253d11186c4c",
         "property_type": "Land",
         "address": {
             "street": "20 Green Acres",
@@ -105,7 +105,7 @@
             "open_houses": []
     },
     "3564027f-adcd-4425-b2c0-1253d11186c5c": {
-        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c5c",
+        "_id": "3564027f-adcd-4425-b2c0-1253d11186c5c",
         "property_type": "Commercial Space",
         "address": {
             "street": "35 Business Avenue",
@@ -128,7 +128,7 @@
         "open_houses": []
     },
     "3564027f-adcd-4425-b2c0-1253d11186c6c": {
-        "property_id": "3564027f-adcd-4425-b2c0-1253d11186c6c",
+        "_id": "3564027f-adcd-4425-b2c0-1253d11186c6c",
         "property_type": "Studio Apartment",
         "address": {
             "street": "15 Artists Lane",

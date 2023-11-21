@@ -4,10 +4,11 @@ import Menu from "./Menu-area";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import * as dateService from "../servises/dateService";
+
+
 export default function Properties() {
 
-
-  const [property, setProperty] = useState([]);
+const [property, setProperty] = useState([]);
   useEffect(() => {
     dateService.getProperty()
       .then(result => setProperty(result))
@@ -43,7 +44,7 @@ export default function Properties() {
                   <div className="aa-properties-content-body">
                     <ul className="aa-properties-nav">
                       {property.map(prop => (
-                        <li key={prop.property_id}>
+                        <li key={prop._id}>
 
                           <article className="aa-properties-item"  >
                             <div className="aa-properties-item-img" >
