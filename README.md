@@ -13,3 +13,4 @@ Information for my project
 6. Update server
 7. Add Create Page
 ![](./screenshots/screen-create.png)
+8. Add navigation in Create page to Property list
