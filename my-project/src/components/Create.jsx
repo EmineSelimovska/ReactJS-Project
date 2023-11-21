@@ -12,8 +12,6 @@ export default function Create(){
 
 
     const response = await create(propertyDate);
-
-    console.log(response);
     }
   
     return(

@@ -7,7 +7,7 @@ export const create = async (propertyDate) => {
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify
+        body: JSON.stringify(propertyDate)
     })
 
     const result = await response.json();
