@@ -227,7 +227,7 @@ export default function Home(props) {
                 </div>
             </section>
 
-            <section id="aa-agents">
+            {/* <section id="aa-agents">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -266,7 +266,7 @@ export default function Home(props) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <Footer />
         </>
