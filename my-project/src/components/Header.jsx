@@ -22,7 +22,7 @@ export default function Header(props) {
                 <div className="col-md-6 col-sm-6 col-xs-6">
                   {contact.map(c => (
                     <HeadeLeft
-                      key={c._id}
+                      key={c.contact_id}
                       _id={c._id}
                       phone={c.phone}
                       email={c.email}
