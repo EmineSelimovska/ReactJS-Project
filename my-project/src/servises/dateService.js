@@ -32,16 +32,4 @@ export const getAbout = async () => {
 
 }
 
-export const getProperty = async () => {
-    try {
-        const response = await fetch(propUrl);
-        const result = await response.json();
-
-        const date = Object.values(result);
-
-        return date;
-    } catch (err) {
-        return err;
-    }
-}
 

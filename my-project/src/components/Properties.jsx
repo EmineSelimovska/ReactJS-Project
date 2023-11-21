@@ -3,15 +3,16 @@ import Header from "./Header";
 import Menu from "./Menu-area";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
-import * as dateService from "../servises/dateService";
+import * as propertyService from "../servises/propertyService";
 
 
 export default function Properties() {
 
 const [property, setProperty] = useState([]);
   useEffect(() => {
-    dateService.getProperty()
+    propertyService.getAll()
       .then(result => setProperty(result))
+
 
   }, [])
 
@@ -109,7 +110,7 @@ const [property, setProperty] = useState([]);
 
                   <div className="aa-properties-single-sidebar">
                     <h3>Properties Search</h3>
-                    <form action>
+                    <form >
                       <div className="aa-single-advance-search">
                         <input type="text" placeholder="Type Your Location" />
                       </div>
@@ -117,7 +118,7 @@ const [property, setProperty] = useState([]);
                         <select >
                           <option >Property Type</option>
                           {property.map(crt => (
-                            <option key={crt.property_id}
+                            <option key={crt._id}
                               value={crt.property_type}>{crt.property_type}</option>
                           ))}
                         </select>
@@ -126,17 +127,17 @@ const [property, setProperty] = useState([]);
                         <select >
                           <option >Square Meters</option>
                           {property.map(crt => (
-                            <option key={crt.property_id}
+                            <option key={crt._id}
                               value={crt.square_meters}>{crt.square_meters}</option>
                           ))}
                         </select>
                       </div>
                       <div className="aa-single-advance-search">
                         <select >
-                          <option >Year Built</option>
+                          <option >Status</option>
                           {property.map(crt => (
-                            <option key={crt.property_id}
-                              value={crt.year_built}>{crt.year_built}</option>
+                            <option key={crt._id}
+                              value={crt.status}>{crt.status}</option>
                           ))}
                         </select>
                       </div>

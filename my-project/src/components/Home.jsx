@@ -1,4 +1,5 @@
 import * as dateService from "../servises/dateService";
+import * as propertyService from '../servises/propertyService'
 import React, { useEffect, useState } from "react"
 import { Slide } from "react-slideshow-image"
 import 'react-slideshow-image/dist/styles.css';
@@ -24,7 +25,7 @@ export default function Home(props) {
     console.log(options);
 
     useEffect(() => {
-        dateService.getProperty()
+        propertyService.getAll()
             .then(result => setOption(result))
 
         dateService.getAbout()

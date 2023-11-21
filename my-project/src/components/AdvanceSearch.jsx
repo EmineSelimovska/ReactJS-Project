@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import * as dateService from "../servises/dateService";
+import * as propertyService from "../servises/propertyService";
 
 
 export default function AdvanceSearch(){
    const [options, setOption] = useState([]);
 
    useEffect(() => {
-    dateService.getProperty()
+    propertyService.getAll()
     .then(result => setOption(result))
    }, [])
    
@@ -27,7 +27,7 @@ export default function AdvanceSearch(){
                                     <select >
                                         <option >Property Type</option>
                                         {options.map(crt => (
-                                            <option key={crt.property_id}
+                                            <option key={crt._id}
                                                 value={crt.property_type}>{crt.property_type}</option>
                                         ))}
 
@@ -39,7 +39,7 @@ export default function AdvanceSearch(){
                                     <select>
                                         <option >Square Meters</option>
                                         {options.map(crt => (
-                                            <option key={crt.property_id}
+                                            <option key={crt._id}
                                                 value={crt.square_meters}>{crt.square_meters}</option>
                                         ))}
 
@@ -51,7 +51,7 @@ export default function AdvanceSearch(){
                                     <select>
                                         <option >Year Built</option>
                                         {options.map(crt => (
-                                            <option key={crt.property_id}
+                                            <option key={crt._id}
                                                 value={crt.year_built}>{crt.year_built}</option>
                                         ))}
                                     </select>
