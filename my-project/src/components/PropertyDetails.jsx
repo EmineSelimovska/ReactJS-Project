@@ -1,15 +1,30 @@
 import PropertySearch from "./PropertySearch";
 import Header from "./Header";
-import Menu from "./Menu-area";
-import { Link } from "react-router-dom";
-import Footer from "./Footer";
 
-export default function PropertyDetails(){
+import { Link, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import * as propertyService from "../servises/propertyService"
+import Footer from "./Footer";
+import { useEffect, useState } from "react";
+import NotFound from "./NotFound";
+import Menu from "./Menu-area";
+
+export default function PropertyDetails({match}){
+    const navigate = useNavigate()
+    const {propertyId} = useParams();
+    const [property, setProperty] = useState({})
+  
+    useEffect(() => {
+    
+        propertyService.getOne(propertyId)
+        .then(result => setProperty(result));
+    
+    },[propertyId])
     return(
         <>
         <Header />
         
-        <Menu />
+       <Menu/>
             <section id="aa-property-header">
                 <div className="container">
                     <div className="row">
@@ -18,7 +33,7 @@ export default function PropertyDetails(){
                                 <h2>Properties Details</h2>
                                 <ol className="breadcrumb">
                                     <li><Link to="/">HOME</Link></li>
-                                    <li className="active">APPARTMENT TITLE</li>
+                                    <li className="active">{property.property_type}</li>
                                 </ol>
                             </div>
                         </div>
@@ -35,28 +50,18 @@ export default function PropertyDetails(){
                                 {/* Start properties content body */}
                                 <div className="aa-properties-details">
                                     <div className="aa-properties-details-img">
-                                        <img src="img/slider/1.jpg" alt="img" />
+                                        <img src={property.imgProperty} />
                                     </div>
                                     <div className="aa-properties-info">
-                                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, alias!</h2>
-                                        <span className="aa-price">$65000</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptatibus veniam non voluptate, ipsa eius magni aliquid ratione sit, odio reprehenderit in quis repudiandae dolor.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequatur, veritatis, ducimus in aliquam magnam voluptatibus ullam libero fugiat temporibus at, aliquid explicabo placeat eligendi, assumenda magni saepe eius consequuntur.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dicta aliquid, autem, cum, impedit nostrum, rem molestias quisquam ab iure enim totam? Itaque esse ut adipisci officiis nulla repellendus ratione dolore, iste ex doloribus tenetur eos provident quam quasi maxime.</p>
-                                        <h4>Propery Features</h4>
-                                        <ul>
-                                            <li>4 Bedroom</li>
-                                            <li>3 Baths</li>
-                                            <li>Kitchen</li>
-                                            <li>Air Condition</li>
-                                            <li>Belcony</li>
-                                            <li>Gym</li>
-                                            <li>Garden</li>
-                                            <li>CCTV</li>
-                                            <li>Children Play Ground</li>
-                                            <li>Comunity Center</li>
-                                            <li>Security System</li>
-                                        </ul>
+                                        <h2>{property.property_type}</h2>
+                                        <span className="aa-price">${property.price}</span>
+                                        <p>City: {property.city}</p>
+                                        <p>Bedrooms: {property.bedrooms}</p>
+                                        <p>Bathrooms:{property.bathrooms}</p>
+                                        <p>Square Meters: {property.square_meters}</p>
+                                        <p>Year Built: {property.year_built}</p>
+                                        <p>Description: {property.description} </p>
+                                        
                                         <h4>Property Map</h4>
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256" width="100%" height={450} frameBorder={0} style={{ border: 0 }} allowFullScreen />
                                     </div>
@@ -64,10 +69,10 @@ export default function PropertyDetails(){
                                     <div className="aa-properties-social">
                                         <ul>
                                             <li>Share</li>
-                                            <li><a href="#"><i className="fa fa-facebook" /></a></li>
-                                            <li><a href="#"><i className="fa fa-twitter" /></a></li>
-                                            <li><a href="#"><i className="fa fa-google-plus" /></a></li>
-                                            <li><a href="#"><i className="fa fa-pinterest" /></a></li>
+                                            <li><Link to="#"><i className="fa fa-facebook" /></Link></li>
+                                            <li><Link to="#"><i className="fa fa-twitter" /></Link></li>
+                                            <li><Link to="#"><i className="fa fa-google-plus" /></Link></li>
+                                            <li><Link to="#"><i className="fa fa-pinterest" /></Link></li>
                                         </ul>
                                     </div>
                                     {/* Nearby properties */}

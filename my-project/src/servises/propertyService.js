@@ -8,6 +8,11 @@ export const getAll = async () => {
      return Object.values(result)
 }
 
+export const getOne = async (propertyId) => {
+    const result = await request.get(`${url}/${propertyId}`);
+    return result;
+}
+
 export const create = async (propertyDate) => {
     const result = await request.post(url, propertyDate);
     return result;
