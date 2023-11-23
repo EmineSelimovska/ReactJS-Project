@@ -12,7 +12,7 @@ export default function Menu(){
                 <span className="icon-bar" />
               </button>
               
-              <Link className="navbar-brand aa-logo-img" to="/"><img src="img/logo.png" alt="logo" /></Link>
+              <Link className="navbar-brand aa-logo-img" to="/"><img src="../img/logo.png" alt="logo" /></Link>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
               <ul id="top-menu" className="nav navbar-nav navbar-right aa-main-nav">

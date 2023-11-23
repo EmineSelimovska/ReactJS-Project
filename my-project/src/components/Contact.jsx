@@ -7,14 +7,14 @@ import Footer from "./Footer";
           <Header/>
           <Menu/>
              <section id="aa-property-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="aa-property-header-inner">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="aa-property-header-inner">
               <h2>Contact</h2>
-              <ol class="breadcrumb">
+              <ol className="breadcrumb">
               <li><a href="#">HOME</a></li>            
-              <li class="active">CONTACT</li>
+              <li className="active">CONTACT</li>
             </ol>
             </div>
           </div>

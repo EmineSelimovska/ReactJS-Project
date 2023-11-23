@@ -30,7 +30,6 @@ const [property, setProperty] = useState([]);
               <span>{prop.bedrooms} Beds</span>
               <span>{prop.bathrooms} Baths</span>
               <span>{prop.square_meters} SQ FT</span>
-              <span>{prop.year_built} year</span>
             </div>
             <div className="aa-properties-about">
               <h3><Link to={`/properties/${prop._id}`}>{prop.property_type}</Link></h3>

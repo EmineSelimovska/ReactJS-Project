@@ -32,7 +32,7 @@ export default function PropertyDetails({match}){
                             <div className="aa-property-header-inner">
                                 <h2>Properties Details</h2>
                                 <ol className="breadcrumb">
-                                    <li><Link to="/">HOME</Link></li>
+                                    <li><Link to="/properties">Properties</Link></li>
                                     <li className="active">{property.property_type}</li>
                                 </ol>
                             </div>
@@ -69,10 +69,10 @@ export default function PropertyDetails({match}){
                                     <div className="aa-properties-social">
                                         <ul>
                                             <li>Share</li>
-                                            <li><Link to="#"><i className="fa fa-facebook" /></Link></li>
-                                            <li><Link to="#"><i className="fa fa-twitter" /></Link></li>
-                                            <li><Link to="#"><i className="fa fa-google-plus" /></Link></li>
-                                            <li><Link to="#"><i className="fa fa-pinterest" /></Link></li>
+                                            <li><Link to="https://www.facebook.com"><i className="fa fa-facebook" /></Link></li>
+                                            <li><Link to="https://twitter.com"><i className="fa fa-twitter" /></Link></li>
+                                            <li><Link to="https://www.google.com/account/about/?hl=bg"><i className="fa fa-google-plus" /></Link></li>
+                                            <li><Link to="https://www.youtube.com"><i className="fa fa-youtube" /></Link></li>
                                         </ul>
                                     </div>
                                     {/* Nearby properties */}
@@ -86,6 +86,12 @@ export default function PropertyDetails({match}){
                             </aside>
                         </div>
                     </div>
+                </div>
+                <div>
+                {/* <div className="buttons" style={{display:'flex', justifyContent:"center", alignItems: "center", gap:"2em", paddingTop: "1em"}}>
+                    <a href="#" className="button">Edit</a>
+                    <a href="#" className="button">Delete</a>
+                </div> */}
                 </div>
             </section>
     
