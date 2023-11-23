@@ -4,6 +4,7 @@ import Header from "./Header";
 import { Link, } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import * as propertyService from "../servises/propertyService"
+import * as commentService from "../servises/commentService"
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import Menu from "./Menu-area";
@@ -19,7 +20,23 @@ export default function PropertyDetails() {
             .then(result => setProperty(result));
 
     }, [propertyId])
-    return (
+
+
+   const addCommentHandler = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    try{
+        const newComment = await commentService.create(
+            propertyId,
+            formData.get('comment'))
+    }catch(err){
+        return err;
+    }
+ console.log(newComment);
+   }
+    
+   return (
         <>
             <Header />
 
@@ -107,7 +124,7 @@ export default function PropertyDetails() {
                     </div> */}
                     <div className="create-comment" >
                         <label>Add new comment:</label>
-                        <form className="form">
+                        <form className="form" onSubmit={addCommentHandler}>
                             <textarea name="comment" placeholder="Comment......"></textarea>
                             <input className="btn submit" type="submit" value="Add Comment" />
                         </form>
