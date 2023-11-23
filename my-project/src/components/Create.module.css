@@ -110,7 +110,7 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-#create .createArea .createForm .descriptionField input[type="description"]{
+#create .createArea .createForm .descriptionField textarea[type="description"]{
   border: none;
   color: #555;
   margin-bottom: 10px;

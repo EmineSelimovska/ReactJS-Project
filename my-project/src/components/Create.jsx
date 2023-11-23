@@ -70,8 +70,9 @@ export default function Create() {
                                         <input type="year_built" required="required" name="year_built" id="year_built" />
                                     </div>
                                     <div className={styles.descriptionField}>
-                                        <label {...styles.label} htmlFor="description">More details </label>
-                                        <input type="description" required="required" name="description" id="description" />
+                                        <label {...styles.label}>More Details</label>
+                                        <textarea  type="description" required="required" name="description" id="description" ></textarea>
+                                       
                                     </div>
                                     <div className={styles.createSubmit}>
                                         <input type="submit" value="Create" className="aa-browse-btn" name="submit" id="submit" />

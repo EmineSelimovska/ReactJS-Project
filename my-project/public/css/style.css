@@ -1732,6 +1732,71 @@ img {
   font-size: 16px;
   color: rgb(255, 255, 255);
 }
+.button:hover {
+  background-color: #347097;
+  color: white;
+}
+
+
+.create-comment>.form>textarea {
+
+  width: 600px;
+  height: 100px;
+  margin-top: 22px;
+  margin-bottom: 28px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 5px;
+}
+
+.details-comments {
+  display: table-cell;
+}
+
+.create-comment {
+  margin-top: 60px;
+  position: relative;
+  text-align: center;
+  width: 700px;
+  height: auto;
+
+  padding: 40px;
+
+ 
+  
+}
+
+.create-comment>label {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 800;
+  line-height: normal;
+  color:#000;
+}
+
+.info-section>.details-comments li {
+  width: 400px;
+  display: inline-block;
+  position: static;
+  margin: 20px auto 25px auto;
+  
+
+  margin-left: 60px;
+
+  color: white;
+}
+
+.comment p {
+  padding: 16px;
+}
+
+
+.create-comment>.button:hover {
+
+  color: white;
+  cursor: pointer;
+}
 
 /*==================
  BLOG PAGE
