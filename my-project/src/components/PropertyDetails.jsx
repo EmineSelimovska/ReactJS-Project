@@ -13,11 +13,15 @@ export default function PropertyDetails() {
 
     const { propertyId } = useParams();
     const [property, setProperty] = useState({})
+    const [comments, setComments] = useState([])
 
     useEffect(() => {
 
         propertyService.getOne(propertyId)
             .then(result => setProperty(result));
+
+        commentService.getAll()
+        .then(setComments)
 
     }, [propertyId])
 
@@ -108,12 +112,12 @@ export default function PropertyDetails() {
                     <a href="#" className="button">Delete</a>
                 </div> */}
                     
-                    {/* <div className="details-comments">
+                    <div className="details-comments">
                         <h2>Comments:</h2>
                         <ul>
-                            {comments.map(({ _id, text, owner: { email } }) => (
+                            {comments.map(({ _id, text}) => (
                                 <li key={_id} className="comment">
-                                    <p>{email}: {text}</p>
+                                    <p>{text}</p>
                                 </li>
                             ))}
                         </ul>
@@ -121,7 +125,7 @@ export default function PropertyDetails() {
                         {comments.length === 0 && (
                             <p className="no-comment">No comments.</p>
                         )}
-                    </div> */}
+                    </div>
                     <div className="create-comment" >
                         <label>Add new comment:</label>
                         <form className="form" onSubmit={addCommentHandler}>

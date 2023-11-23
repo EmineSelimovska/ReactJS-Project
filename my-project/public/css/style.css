@@ -1751,6 +1751,7 @@ img {
 
 .details-comments {
   display: table-cell;
+
 }
 
 .create-comment {
@@ -1786,9 +1787,18 @@ img {
 
   color: white;
 }
+.details-comments h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
 
 .comment p {
   padding: 16px;
+  margin-left: 130px;
+  margin-right: 130px;
+  background-color: rgb(193, 225, 247);
 }
 
 
