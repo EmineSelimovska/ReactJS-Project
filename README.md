@@ -15,4 +15,5 @@ Information for my project
 ![](./screenshots/screen-create.png)
 8. Add navigation in Create page to Property list
 9.Add Property Details
+10. Add Comments
 
