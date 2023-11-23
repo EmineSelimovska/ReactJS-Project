@@ -79,6 +79,7 @@
   #create .createArea .createForm .squareMetersField label,
   #create .createArea .createForm .propertyImageField label,
   #create .createArea .createForm .statusField label,
+  #create .createArea .createForm .yearBuiltField label,
   #create .createArea .createForm .descriptionField label{
     color: #000;
     display: inline-block;
@@ -94,7 +95,8 @@
 #create .createArea .createForm .bathroomsField input[type="bathrooms"],
 #create .createArea .createForm .squareMetersField input[type="square_meters"], 
 #create .createArea .createForm .propertyImageField input[type="text"],
-#create .createArea .createForm .statusField input[type="status"]
+#create .createArea .createForm .statusField input[type="status"],
+#create .createArea .createForm .yearBuiltField input[type="year_built"]
  {
   border: none;
   color: #555;

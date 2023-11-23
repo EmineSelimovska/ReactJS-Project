@@ -1,0 +1,52 @@
+import { useEffect, useState } from "react";
+import * as propertyService from "../servises/propertyService";
+
+export default function ProperyListItem (){
+const [property, setProperty] = useState([]);
+  useEffect(() => {
+    propertyService.getAll()
+      .then(result => setProperty(result))
+
+
+  }, [])
+
+  return ( <div className="aa-properties-content-body">
+  <ul className="aa-properties-nav">
+    {property.map(prop => (
+      <li key={prop._id}>
+
+        <article className="aa-properties-item"  >
+          <div className="aa-properties-item-img" >
+            <img alt="img" src={prop.imgProperty} />
+          </div>
+
+          <div className="aa-tag">
+            {prop.status}
+          </div>
+
+          <div className="aa-properties-item-content" >
+            <div className="aa-properties-info">
+              <span>{prop.bedrooms} Beds</span>
+              <span>{prop.bathrooms} Baths</span>
+              <span>{prop.square_meters} SQ FT</span>
+              <span>{prop.year_built} year</span>
+            </div>
+            <div className="aa-properties-about">
+              <h3><a href="#">{prop.property_type}</a></h3>
+              <p>{prop.description}</p>
+            </div>
+            <div className="aa-properties-detial">
+              <span className="aa-price">
+                ${prop.price}
+              </span>
+              <a className="aa-secondary-btn" href="#">View Details</a>
+            </div>
+          </div>
+        </article>
+
+      </li>
+    ))}
+
+  </ul>
+</div>)
+}

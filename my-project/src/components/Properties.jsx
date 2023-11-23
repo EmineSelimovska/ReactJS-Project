@@ -4,6 +4,7 @@ import Menu from "./Menu-area";
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import * as propertyService from "../servises/propertyService";
+import ProperyListItem from "./PropertyListItem";
 
 
 export default function Properties() {
@@ -42,44 +43,7 @@ const [property, setProperty] = useState([]);
               <div className="col-md-8">
                 <div className="aa-properties-content">
 
-                  <div className="aa-properties-content-body">
-                    <ul className="aa-properties-nav">
-                      {property.map(prop => (
-                        <li key={prop._id}>
-
-                          <article className="aa-properties-item"  >
-                            <div className="aa-properties-item-img" >
-                              <img alt="img" src={prop.imgProperty} />
-                            </div>
-
-                            <div className="aa-tag">
-                              {prop.status}
-                            </div>
-
-                            <div className="aa-properties-item-content" >
-                              <div className="aa-properties-info">
-                                <span>{prop.bedrooms} Beds</span>
-                                <span>{prop.bathrooms} Baths</span>
-                                <span>{prop.square_meters} SQ FT</span>
-                              </div>
-                              <div className="aa-properties-about">
-                                <h3><a href="#">{prop.property_type}</a></h3>
-                                <p>{prop.description}</p>
-                              </div>
-                              <div className="aa-properties-detial">
-                                <span className="aa-price">
-                                  ${prop.price}
-                                </span>
-                                <a className="aa-secondary-btn" href="#">View Details</a>
-                              </div>
-                            </div>
-                          </article>
-
-                        </li>
-                      ))}
-
-                    </ul>
-                  </div>
+                 <ProperyListItem/>
 
                   <div className="aa-properties-content-bottom">
                     <nav>
@@ -134,10 +98,10 @@ const [property, setProperty] = useState([]);
                       </div>
                       <div className="aa-single-advance-search">
                         <select >
-                          <option >Status</option>
+                          <option >Year Built</option>
                           {property.map(crt => (
                             <option key={crt._id}
-                              value={crt.status}>{crt.status}</option>
+                              value={crt.year_built}>{crt.year_built}</option>
                           ))}
                         </select>
                       </div>
