@@ -1,16 +1,14 @@
 import PropertySearch from "./PropertySearch";
 import Header from "./Header";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link,} from "react-router-dom";
 import { useParams } from "react-router-dom";
 import * as propertyService from "../servises/propertyService"
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
-import NotFound from "./NotFound";
 import Menu from "./Menu-area";
 
 export default function PropertyDetails({match}){
-    const navigate = useNavigate()
     const {propertyId} = useParams();
     const [property, setProperty] = useState({})
   
@@ -75,7 +73,6 @@ export default function PropertyDetails({match}){
                                             <li><Link to="https://www.youtube.com"><i className="fa fa-youtube" /></Link></li>
                                         </ul>
                                     </div>
-                                    {/* Nearby properties */}
                                 </div>
                             </div>
                         </div>
