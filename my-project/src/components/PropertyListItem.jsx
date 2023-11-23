@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import * as propertyService from "../servises/propertyService";
+import { Link } from "react-router-dom";
 
 export default function ProperyListItem (){
 const [property, setProperty] = useState([]);
@@ -32,14 +33,14 @@ const [property, setProperty] = useState([]);
               <span>{prop.year_built} year</span>
             </div>
             <div className="aa-properties-about">
-              <h3><a href="#">{prop.property_type}</a></h3>
+              <h3><Link to={`/properties/${prop._id}`}>{prop.property_type}</Link></h3>
               <p>{prop.description}</p>
             </div>
             <div className="aa-properties-detial">
               <span className="aa-price">
                 ${prop.price}
               </span>
-              <a className="aa-secondary-btn" href="#">View Details</a>
+              <Link className="aa-secondary-btn" to={`/properties/${prop._id}`}>View Details</Link>
             </div>
           </div>
         </article>
