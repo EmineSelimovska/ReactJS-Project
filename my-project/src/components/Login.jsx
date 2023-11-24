@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
+import useForm from "../hooks/useForm"
 
 export default function Login() {
+    const {values, onChange, onSubmit} = useForm({
+        email: '',
+        password: '',
+    });
     return (
         <><section id="aa-signin">
             <div className="container" style={{ padding: '5em' }}>
@@ -13,19 +17,25 @@ export default function Login() {
                                     <Link className="aa-property-home" to="/">Home</Link>
                                     <h4>Sign in to your account</h4>
                                 </div>
-                                <form className="contactform">
+                                <form className="contactform" onSubmit={onSubmit}>
                                     <div className="aa-single-field">
                                         <label htmlFor="email">Email <span className="required">*</span></label>
-                                        <input type="email" required="required" aria-required="true"  name="email" />
+                                        <input 
+                                        type="email" 
+                                        required="required" 
+                                        id="email"
+                                        name="email" 
+                                        onChange={onChange}
+                                        value={values.email}/>
                                     </div>
                                     <div className="aa-single-field">
                                         <label htmlFor="password">Password <span className="required">*</span></label>
-                                        <input type="password" name="password" />
-                                    </div>
-                                    <div className="aa-single-field">
-                                        <label>
-                                            <input type="checkbox" /> Remember me
-                                        </label>
+                                        <input 
+                                        type="password" 
+                                        id="password-login"
+                                        name="password" 
+                                        onChange={onChange}
+                                        value={values.password}/>
                                     </div>
                                     <div className="aa-single-submit">
                                         <input type="submit" value="Send Message" className="aa-browse-btn" name="Submit" />
