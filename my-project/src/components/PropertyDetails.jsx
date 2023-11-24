@@ -20,7 +20,7 @@ export default function PropertyDetails() {
         propertyService.getOne(propertyId)
             .then(result => setProperty(result));
 
-        commentService.getAll()
+        commentService.getAll(propertyId)
         .then(setComments)
 
     }, [propertyId])
@@ -33,11 +33,12 @@ export default function PropertyDetails() {
     try{
         const newComment = await commentService.create(
             propertyId,
-            formData.get('comment'))
+            formData.get('comment')
+            )
     }catch(err){
         return err;
     }
- console.log(newComment);
+
    }
     
    return (
@@ -123,7 +124,7 @@ export default function PropertyDetails() {
                         </ul>
 
                         {comments.length === 0 && (
-                            <p className="no-comment">No comments.</p>
+                            <p className="no-comment" style={{marginLeft:'150px'}}>No comments.</p>
                         )}
                     </div>
                     <div className="create-comment" >
