@@ -3,10 +3,13 @@ import * as request from '../components/lib/request'
 const url = `http://localhost:3030/jsonstore/comments`
 
 
-export const getAll = async () => {
+export const getAll = async (propertyId) => {
+    // const query = new URLSearchParams({
+    //     where: `propertyId="${propertyId}"`
+    // })
  const result = await request.get(url)
 
- return Object.values(result);
+ return Object.values(result).filter(comment => comment.propertyId === propertyId);
 }
 
 
