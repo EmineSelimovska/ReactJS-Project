@@ -196,6 +196,13 @@ img {
   color: #fff;
   font-size: 15px;
 }
+#aa-header .aa-header-area .aa-header-right .aa-logout {
+  border-left: 1px solid #f8f8f8;
+  color: #fff;
+  margin-left: 5px;
+  padding-left: 10px;
+  font-size: 15px;
+}
 
 /*==================
  NAVBAR SECTION
