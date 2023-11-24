@@ -35,6 +35,8 @@ export default function PropertyDetails() {
             propertyId,
             formData.get('comment')
             )
+
+            setComments(state => [...state, newComment]);
     }catch(err){
         return err;
     }
