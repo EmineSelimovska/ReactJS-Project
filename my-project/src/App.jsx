@@ -14,6 +14,7 @@ import Preload from "./components/Preloader"
 import Register from "./components/Register"
 import PropertyDetails from "./components/PropertyDetails"
 import { useState } from "react"
+import AuthContext from "./contexts/authContext"
 function App() {
   const [auth, setAuth] = useState({});
 
@@ -22,29 +23,29 @@ function App() {
   }
 
   return (
-    <div>
-      <Preload />
-    
-      <Routes>
 
-        <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<Properties />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/properties/:propertyId" element={<PropertyDetails/>} />
+    <AuthContext.Provider value={ {loginSubmitHandler} }>
+      <div>
+        <Preload />
 
+        <Routes>
 
-
-        <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/properties" element={<Properties />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/properties/:propertyId" element={<PropertyDetails />} />
 
 
-      </Routes>
 
-     
-    </div>
+          <Route path="*" element={<NotFound />} />
 
+
+        </Routes>
+      </div>
+    </AuthContext.Provider>
   )
 }
 
