@@ -13,7 +13,13 @@ import Login from "./components/Login"
 import Preload from "./components/Preloader"
 import Register from "./components/Register"
 import PropertyDetails from "./components/PropertyDetails"
+import { useState } from "react"
 function App() {
+  const [auth, setAuth] = useState({});
+
+  const loginSubmitHandler = (values) => {
+    console.log(values);
+  }
 
   return (
     <div>
@@ -25,7 +31,7 @@ function App() {
         <Route path="/properties" element={<Properties />} />
         <Route path="/create" element={<Create />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login loginSubmitHandler={loginSubmitHandler} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/properties/:propertyId" element={<PropertyDetails/>} />
 

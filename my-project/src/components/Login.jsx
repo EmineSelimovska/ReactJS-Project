@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import useForm from "../hooks/useForm"
 
-export default function Login() {
-    const {values, onChange, onSubmit} = useForm({
-        email: '',
-        password: '',
+const LoginFormKyes = {
+    Email: 'email',
+    Password: 'password',
+};
+
+
+export default function Login({
+    loginSubmitHandler
+}) {
+    const {values, onChange, onSubmit} = useForm(loginSubmitHandler, {
+        [LoginFormKyes.Email]: '',
+        [LoginFormKyes.Password]: '',
     });
     return (
         <><section id="aa-signin">
@@ -24,18 +32,18 @@ export default function Login() {
                                         type="email" 
                                         required="required" 
                                         id="email"
-                                        name="email" 
+                                        name={LoginFormKyes.Email}
                                         onChange={onChange}
-                                        value={values.email}/>
+                                        value={values[LoginFormKyes.Email]}/>
                                     </div>
                                     <div className="aa-single-field">
                                         <label htmlFor="password">Password <span className="required">*</span></label>
                                         <input 
                                         type="password" 
                                         id="password-login"
-                                        name="password" 
+                                        name={LoginFormKyes.Password}
                                         onChange={onChange}
-                                        value={values.password}/>
+                                        value={values[LoginFormKyes.Password]}/>
                                     </div>
                                     <div className="aa-single-submit">
                                         <input type="submit" value="Send Message" className="aa-browse-btn" name="Submit" />
