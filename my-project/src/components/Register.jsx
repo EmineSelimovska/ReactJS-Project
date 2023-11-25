@@ -33,7 +33,7 @@ export default function Register(){
                   </div>
                   <form className="contactform"onSubmit={onSubmit}>                                                 
                     <div className="aa-single-field">
-                      <label for="username">Name <span className="required">*</span></label>
+                      <label htmlFor="username">Name <span className="required">*</span></label>
                       <input 
                       type="text" 
                       required="required" 
@@ -44,7 +44,7 @@ export default function Register(){
                       onChange={onChange}/>
                     </div>
                     <div className="aa-single-field">
-                      <label for="email">Email <span className="required">*</span></label>
+                      <label htmlFor="email">Email <span className="required">*</span></label>
                       <input 
                       type="email" 
                       required="required" 
@@ -55,7 +55,7 @@ export default function Register(){
                       onChange={onChange}/>
                     </div>
                     <div className="aa-single-field">
-                      <label for="password">Password <span className="required">*</span></label>
+                      <label htmlFor="password">Password <span className="required">*</span></label>
                       <input 
                       type="password" 
                       id="password"
@@ -64,7 +64,7 @@ export default function Register(){
                       onChange={onChange}/> 
                     </div>
                     <div className="aa-single-field">
-                      <label for="confirm-password">Confirm Password <span className="required">*</span></label>
+                      <label htmlFor="confirm-password">Confirm Password <span className="required">*</span></label>
                       <input 
                       type="password"
                       id="confirm-password" 
