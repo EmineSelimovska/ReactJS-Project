@@ -18,4 +18,6 @@ Information for my project
 10. Add Comments
 11. Add useForm and AuthContext
 12. Add Navigation in Header and Menu 
+13. Add Login form
+14. Add Register form
 
