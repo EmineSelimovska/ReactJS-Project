@@ -25,9 +25,14 @@ function App() {
     setAuth(result)
 
      navigate('/');
+  };
+
+  const registerSubmitHandler = async (values) => {
+     console.log(values);
   }
 
   const data = { loginSubmitHandler,
+    registerSubmitHandler,
      username: auth.username,
      email: auth.email,
      isAuthenticated: !!auth.email
