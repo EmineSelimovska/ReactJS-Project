@@ -19,7 +19,6 @@ export default function Register(){
    [RegisterFormKeys.Password]: '',
    [RegisterFormKeys.ConfirmPassword]: '',
   })
-  
    
   return(
         <section id="aa-signin">
