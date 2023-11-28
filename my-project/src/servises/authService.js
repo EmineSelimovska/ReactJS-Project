@@ -26,7 +26,9 @@ export const register = async (username,email, password) => {
 
    toast.success(err)
   }
-
-
  
 }
+
+export const logout = async () =>  await request.get(`${baseUrl}/logout`);
+ 
+ 

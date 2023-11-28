@@ -13,6 +13,7 @@ import Login from "./components/Login"
 import Preload from "./components/Preloader"
 import Register from "./components/Register"
 import PropertyDetails from "./components/PropertyDetails"
+import Logout from "./components/Logout"
 
 
 
@@ -36,12 +37,17 @@ function App() {
 
   }
 
+  const logoutHandler = () => {
+    setAuth({});
+  }
+
   const data = {
     loginSubmitHandler,
     registerSubmitHandler,
+    logoutHandler,
     username: auth.username,
     email: auth.email,
-    isAuthenticated: !!auth.email
+    isAuthenticated: !!auth.accessToken,
   }
 
   return (
@@ -59,7 +65,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/properties/:propertyId" element={<PropertyDetails />} />
-
+          <Route path="/logout" element={<Logout/>} />
 
 
           <Route path="*" element={<NotFound />} />
