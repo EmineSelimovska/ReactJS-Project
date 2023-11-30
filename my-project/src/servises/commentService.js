@@ -1,15 +1,16 @@
 import * as request from '../components/lib/request'
 
-const url = `http://localhost:3030/jsonstore/comments`
+const url = `http://localhost:3030/data/comments`
 
 
 export const getAll = async (propertyId) => {
-    // const query = new URLSearchParams({
-    //     where: `propertyId="${propertyId}"`
-    // })
- const result = await request.get(url)
+     const query = new URLSearchParams({
+        where: `propertyId="${propertyId}"`,
+        load: `owner=_ownerId:users`,
+    })
+ const result = await request.get(`${url}?${query}`)
 
- return Object.values(result).filter(comment => comment.propertyId === propertyId);
+ return result
 }
 
 

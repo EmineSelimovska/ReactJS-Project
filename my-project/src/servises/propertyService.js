@@ -1,11 +1,11 @@
 import * as request from "../components/lib/request";
 
 
-const url = `http://localhost:3030/jsonstore/property`
+const url = `http://localhost:3030/data/property`
 
 export const getAll = async () => {
     const result = await request.get(url);
-     return Object.values(result)
+     return result
 }
 
 export const getOne = async (propertyId) => {

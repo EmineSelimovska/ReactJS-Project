@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react"
-import HeadeLeft from "./HeaderLeft";
-import * as dateService from "../servises/dateService";
 import { Link } from "react-router-dom";
 import AuthContext from '../contexts/authContext'
 import { useContext } from 'react'
@@ -12,13 +9,6 @@ export default function Header(props) {
     email
   } = useContext(AuthContext)
 
-  const [contact, setContact] = useState([]);
-  console.log(contact);
-  useEffect(() => {
-    dateService.getContact()
-      .then(result => setContact(result))
-
-  }, [])
   return (
     <header id="aa-header">
       <div className="container">
@@ -27,28 +17,30 @@ export default function Header(props) {
             <div className="aa-header-area">
               <div className="row">
                 <div className="col-md-6 col-sm-6 col-xs-6">
-                  {contact.map(c => (
-                    <HeadeLeft
-                      key={c.contact_id}
-                      _id={c._id}
-                      phone={c.phone}
-                      email={c.email}
-                    />
-                  ))}
+                  <div className="aa-header-left">
+                    <div className="aa-telephone-no">
+                      <span className="fa fa-phone" />
+                      <span> +359 877 123 321</span>
+                    </div>
+                    <div className="aa-email hidden-xs">
+                      <span className="fa fa-envelope-o" /> 
+                      <span>msell@gmail.com</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-md-6 col-sm-6 col-xs-6">
                   <div className="aa-header-right">
                     {!isAuthenticated && (
                       <>
-                      <Link to="/register" className="aa-register">Register</Link>
-                      <Link to="/login" className="aa-login">Login</Link>
+                        <Link to="/register" className="aa-register">Register</Link>
+                        <Link to="/login" className="aa-login">Login</Link>
                       </>
                     )}
 
                     {isAuthenticated && (
                       <>
-                      <span style={{color: "white"}}>{username}</span>
-                      <Link to="/logout" className="aa-logout">Logout</Link>
+                        <span style={{ color: "white" }}>{username}</span>
+                        <Link to="/logout" className="aa-logout">Logout</Link>
                       </>
                     )}
 

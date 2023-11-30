@@ -1,4 +1,3 @@
-import { toast } from "react-toastify";
 
 const buildOptions = (data) => {
    const options = {};
@@ -32,6 +31,7 @@ export const request = async (method, url, data) => {
    }
    
    const result = await response.json();
+   
    if (!response.ok) {
       throw result;
    }
