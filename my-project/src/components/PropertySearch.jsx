@@ -8,9 +8,7 @@ export default function PropertySearch(){
       propertyService.getAll()
         .then(result => setProperty(result))
          .catch((err) => {
-          if(err){
-            toast.error(err.message)
-          }
+          return err.message
          })
   
     }, [])
