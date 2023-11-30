@@ -11,17 +11,17 @@ import { toast } from "react-toastify";
 
 export default function Properties() {
 
-const [property, setProperty] = useState([]);
+  const [property, setProperty] = useState([]);
   useEffect(() => {
     propertyService.getAll()
       .then(result => setProperty(result))
-       .catch((err) => {
-        if(err){
+      .catch((err) => {
+        if (err) {
           return err.message
         }
-        
-         
-       })
+
+
+      })
 
   }, [])
 
@@ -49,21 +49,19 @@ const [property, setProperty] = useState([]);
           <div className="container">
             <div className="row">
               <div className="col-md-8">
-               
+
                 <div className="aa-properties-content">
-
-                 <ProperyListItem/>
-
-                  
+               
+                    <ProperyListItem />
+                 
                 </div>
-
                 {property.length === 0 && (
-                  <p className="no-comment" style={{fontSize: "6em" , marginLeft:'150px' }}>No properties found</p>
+                 <p className="no-property" style={{fontSize: "7em" ,marginLeft:'150px'}}>No properties found</p>
                 )}
               </div>
 
               <div className="col-md-4">
-              <PropertySearch/>
+                <PropertySearch />
               </div>
             </div>
           </div>

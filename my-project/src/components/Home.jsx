@@ -38,10 +38,10 @@ export default function Home(props) {
         dateService.getAbout()
             .then(result => setAbout(result))
             .catch((err) => {
-              if(err){
+              
                 console.log(err.message);
                 navigate('/')
-              }
+              
             })
 
     }, [])

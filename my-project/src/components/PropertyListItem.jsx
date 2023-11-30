@@ -10,7 +10,8 @@ const [property, setProperty] = useState([]);
     propertyService.getAll()
       .then(result => setProperty(result))
         .catch((err) => {
-         navigate('/properties')
+           console.log(err.message);
+           
         })
 
   }, [])

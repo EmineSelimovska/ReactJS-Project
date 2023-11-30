@@ -17,6 +17,7 @@ export default function Logout(){
        toast.success('Logout Successful')
    })
      .catch(() => {
+      toast.error('Logout Unsuccessful');
      navigate('/')
      })
    }, []);

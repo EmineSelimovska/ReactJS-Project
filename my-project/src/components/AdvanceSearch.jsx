@@ -12,9 +12,8 @@ export default function AdvanceSearch(){
     propertyService.getAll()
     .then(result => setOption(result))
     .catch((err) => {
-        if(err){
+        console.log(err);
            navigate('/')
-        }
     })
    }, [])
    
