@@ -1,5 +1,4 @@
 const baseUrl = `http://localhost:3030/jsonstore/contact`;
-const propUrl = `http://localhost:3030/jsonstore/property`;
 const aboutUrl = `http://localhost:3030/jsonstore/about`;
 
 export const getContact = async () => {

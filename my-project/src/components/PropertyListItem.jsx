@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 import * as propertyService from "../servises/propertyService";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function ProperyListItem (){
+  const navigate = useNavigate()
 const [property, setProperty] = useState([]);
   useEffect(() => {
     propertyService.getAll()
       .then(result => setProperty(result))
-
+        .catch((err) => {
+         navigate('/properties')
+        })
 
   }, [])
 

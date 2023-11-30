@@ -6,8 +6,9 @@ import 'react-slideshow-image/dist/styles.css';
 import Header from "./Header";
 import Menu from "./Menu-area";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AdvanceSearch from "./AdvanceSearch";
+import { toast } from "react-toastify";
 
 const proprietes = {
     duration: 5000,
@@ -19,7 +20,7 @@ const proprietes = {
 
 
 export default function Home(props) {
-
+     const navigate = useNavigate()
     const [options, setOption] = useState([]);
     const [about, setAbout] = useState([]);
     console.log(options);
@@ -27,9 +28,21 @@ export default function Home(props) {
     useEffect(() => {
         propertyService.getAll()
             .then(result => setOption(result))
+            .catch((err) => {
+              if(err){
+                console.log(err.message);
+                navigate('/')
+              }
+            })
 
         dateService.getAbout()
             .then(result => setAbout(result))
+            .catch((err) => {
+              if(err){
+                console.log(err.message);
+                navigate('/')
+              }
+            })
 
     }, [])
 

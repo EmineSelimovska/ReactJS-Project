@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react"
 import * as propertyService from "../servises/propertyService";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AdvanceSearch(){
+    const navigate = useNavigate();
    const [options, setOption] = useState([]);
 
    useEffect(() => {
     propertyService.getAll()
     .then(result => setOption(result))
+    .catch((err) => {
+        if(err){
+           navigate('/')
+        }
+    })
    }, [])
    
     return(

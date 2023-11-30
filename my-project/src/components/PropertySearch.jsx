@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
 import * as propertyService from "../servises/propertyService";
+import { toast } from "react-toastify";
 
 export default function PropertySearch(){
     const [property, setProperty] = useState([]);
     useEffect(() => {
       propertyService.getAll()
         .then(result => setProperty(result))
-  
+         .catch((err) => {
+          if(err){
+            toast.error(err.message)
+          }
+         })
   
     }, [])
    

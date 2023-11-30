@@ -1,34 +1,43 @@
-import * as request from "../components/lib/request"
+import * as request from "../lib/request"
 import { toast } from 'react-toastify';
 
 const baseUrl = 'http://localhost:3030/users'
 
 export const login = async (email, password) => {
-  const result = await request.post(`${baseUrl}/login`, {
-    email,
-    password
-   });
+  try {
+    const result = await request.post(`${baseUrl}/login`, {
+      email,
+      password
+    });
 
-   return result;
+    return result;
+  } catch (err) {
+    if (err) {
+      toast.success(err.message)
+    }
+  }
+
 }
 
-export const register = async (username,email, password) => {
+export const register = async (username, email, password) => {
 
-  try{
+  try {
     const result = await request.post(`${baseUrl}/register`, {
-     username,
-     email,
-     password
+      username,
+      email,
+      password
     });
     toast.success('Register Successful');
     return result;
-  }catch(err){
+  } catch (err) {
+    if (err) {
+      toast.success(err.message)
+    }
 
-   toast.success(err)
   }
- 
+
 }
 
 export const logout = () => request.get(`${baseUrl}/logout`);
- 
- 
+
+

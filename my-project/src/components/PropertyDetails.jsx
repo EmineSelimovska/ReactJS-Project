@@ -8,6 +8,7 @@ import * as commentService from "../servises/commentService"
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import Menu from "./Menu-area";
+import { toast } from "react-toastify";
 
 export default function PropertyDetails() {
 
@@ -18,10 +19,20 @@ export default function PropertyDetails() {
     useEffect(() => {
 
         propertyService.getOne(propertyId)
-            .then(result => setProperty(result));
+            .then(result => setProperty(result))
+            .catch((err) => {
+                if(err){
+                    toast.error(err.message)
+                }
+            })
 
         commentService.getAll(propertyId)
         .then(setComments)
+        .catch((err) => {
+            if(err){
+                toast.error(err.message)
+            }
+        })
 
     }, [propertyId])
 
@@ -38,7 +49,9 @@ export default function PropertyDetails() {
 
             setComments(state => [...state, newComment]);
     }catch(err){
-        return err;
+        if(err){
+            toast.error(err.message)
+        }
     }
 
    }
