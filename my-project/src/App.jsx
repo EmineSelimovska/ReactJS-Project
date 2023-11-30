@@ -19,7 +19,11 @@ import Logout from "./components/Logout"
 
 function App() {
   const navigate = useNavigate()
-  const [auth, setAuth] = useState({});
+  const [auth, setAuth] = useState(() => {
+    localStorage.removeItem('accessToken')
+
+    return {}
+  });
 
   const loginSubmitHandler = async (values) => {
     const result = await authService.login(values.email, values.password);
@@ -49,7 +53,7 @@ function App() {
     username: auth.username,
     email: auth.email,
     userId: auth._id,
-    isAuthenticated: !!auth.accessToken,
+    isAuthenticated: !!auth.email,
   }
 
   return (
