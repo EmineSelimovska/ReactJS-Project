@@ -578,9 +578,9 @@ img {
   float: left;
   margin-top: -100px;
   min-height: 200px;
-  padding: 25px 20px;
+  padding: 25px 380px;
   position: relative;
-  width: 100%;
+  width: 180%;
 }
 #aa-advance-search .aa-advance-search-area .aa-advance-search-top {
   display: inline;
@@ -589,7 +589,7 @@ img {
 }
 #aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search {
   display: inline;
-  float: left;
+  float: center;
   width: 100%;
 }
 #aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search input[type="text"] {
@@ -609,7 +609,7 @@ img {
   padding: 5px;
   width: 100%;
 }
-#aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search .aa-search-btn {
+#aa-advance-search .aa-advance-search-area .aa-advance-search-top .aa-single-advance-search button {
   border: medium none;
   border-radius: 5px;
   color: #fff;

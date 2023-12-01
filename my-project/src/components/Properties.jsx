@@ -5,8 +5,9 @@ import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import * as propertyService from "../servises/propertyService";
 import ProperyListItem from "./PropertyListItem";
-import PropertySearch from "./PropertySearch";
+import PropertySearch from "./LatestProperty";
 import { toast } from "react-toastify";
+import LatestProperty from "./LatestProperty";
 
 
 export default function Properties() {
@@ -61,7 +62,7 @@ export default function Properties() {
               </div>
 
               <div className="col-md-4">
-                <PropertySearch />
+                <LatestProperty />
               </div>
             </div>
           </div>

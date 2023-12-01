@@ -1,4 +1,4 @@
-import PropertySearch from "./PropertySearch";
+import PropertySearch from "./LatestProperty";
 import Header from "./Header";
 
 import { Link, } from "react-router-dom";
