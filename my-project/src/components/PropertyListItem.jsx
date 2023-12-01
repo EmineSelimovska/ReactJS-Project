@@ -17,16 +17,17 @@ const [property, setProperty] = useState([]);
   }, [])
 
   return ( <div className="aa-properties-content-body">
-  <ul className="aa-properties-nav">
-    {property.map(prop => (
-      <li key={prop._id}>
-
-        <article className="aa-properties-item"  >
+   
+  <ul className="aa-properties-nav"  >
+  {property.map(prop => (
+      <li className="aa-properties-item" key={prop._id} >
+    
+        <article className="aa-properties-item" >
           <div className="aa-properties-item-img" >
             <img alt="img" src={prop.imgProperty} />
           </div>
 
-          <div className="aa-tag">
+          <div className="aa-tag ">
             {prop.status}
           </div>
 
@@ -53,5 +54,6 @@ const [property, setProperty] = useState([]);
     ))}
 
   </ul>
+  
 </div>)
 }

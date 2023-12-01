@@ -52,9 +52,9 @@ export default function Properties() {
               <div className="col-md-8">
 
                 <div className="aa-properties-content">
-               
+                 <div>
                     <ProperyListItem />
-                 
+                    </div>
                 </div>
                 {property.length === 0 && (
                  <p className="no-property" style={{fontSize: "7em" ,marginLeft:'150px'}}>No properties found</p>
