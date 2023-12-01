@@ -10,9 +10,7 @@ export const getAll = async () => {
 
     const result = await request.get(url);
     return result
-
-   
-        
+  
 }
 
 export const search = async (searchItem) => {
