@@ -2,6 +2,7 @@ import PropertySearch from "./LatestProperty";
 import Header from "./Header";
 
 import { Link, } from "react-router-dom";
+
 import { useParams } from "react-router-dom";
 import * as propertyService from "../servises/propertyService"
 import * as commentService from "../servises/commentService"
@@ -9,6 +10,7 @@ import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import Menu from "./Menu-area";
 import { toast } from "react-toastify";
+import LatestProperty from "./LatestProperty";
 
 export default function PropertyDetails() {
 
@@ -117,7 +119,7 @@ export default function PropertyDetails() {
                         {/* Start properties sidebar */}
                         <div className="col-md-4">
                             <aside className="aa-properties-sidebar">
-                                <PropertySearch />
+                                <LatestProperty />
                             </aside>
                         </div>
                     </div>
