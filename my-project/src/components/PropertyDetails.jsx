@@ -7,13 +7,14 @@ import { useParams } from "react-router-dom";
 import * as propertyService from "../servises/propertyService"
 import * as commentService from "../servises/commentService"
 import Footer from "./Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Menu from "./Menu-area";
 import { toast } from "react-toastify";
 import LatestProperty from "./LatestProperty";
+import AuthContext from "../contexts/authContext";
 
 export default function PropertyDetails() {
-
+    const {username} = useContext(AuthContext)
     const { propertyId } = useParams();
     const [property, setProperty] = useState({})
     const [comments, setComments] = useState([])
@@ -48,15 +49,18 @@ export default function PropertyDetails() {
             propertyId,
             formData.get('comment')
             )
-
-            setComments(state => [...state, newComment]);
+          
+            setComments(state => [...state,{...newComment, owner: { username }} ]);
+          //  newComment.owner = { username };
     }catch(err){
         if(err){
             toast.error(err.message)
         }
-    }
 
    }
+
+    }
+    
     
    return (
         <>
@@ -133,9 +137,9 @@ export default function PropertyDetails() {
                     <div className="details-comments">
                         <h2>Comments:</h2>
                         <ul>
-                            {comments.map(({ _id, text}) => (
+                            {comments.map(({ _id, text, owner: { username }}) => (
                                 <li key={_id} className="comment">
-                                    <p>{text}</p>
+                                    <p>{username}: {text}</p>
                                 </li>
                             ))}
                         </ul>

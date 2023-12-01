@@ -54,7 +54,7 @@ function App() {
     username: auth.username,
     email: auth.email,
     userId: auth._id,
-    isAuthenticated: !!auth.email,
+    isAuthenticated: !!auth.accessToken,
   }
 
   return (
