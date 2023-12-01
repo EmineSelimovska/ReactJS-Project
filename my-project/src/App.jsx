@@ -14,6 +14,7 @@ import Preload from "./components/Preloader"
 import Register from "./components/Register"
 import PropertyDetails from "./components/PropertyDetails"
 import Logout from "./components/Logout"
+import AdvanceSearch from "./components/AdvanceSearch"
 
 
 
@@ -71,6 +72,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/properties/:propertyId" element={<PropertyDetails />} />
+          <Route path="/search/:searchItem" element={<Properties/>} />
           <Route path="/logout" element={<Logout/>} />
 
 

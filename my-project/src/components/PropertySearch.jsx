@@ -16,46 +16,6 @@ export default function PropertySearch(){
    return(  <aside className="aa-properties-sidebar">
 
     <div className="aa-properties-single-sidebar">
-      <h3>Properties Search</h3>
-      <form >
-        <div className="aa-single-advance-search">
-          <input type="text" placeholder="Type Your Location" />
-        </div>
-        <div className="aa-single-advance-search">
-          <select >
-            <option >Property Type</option>
-            {property.map(crt => (
-              <option key={crt._id}
-                value={crt.property_type}>{crt.property_type}</option>
-            ))}
-          </select>
-        </div>
-        <div className="aa-single-advance-search">
-          <select >
-            <option >Square Meters</option>
-            {property.map(crt => (
-              <option key={crt._id}
-                value={crt.square_meters}>{crt.square_meters}</option>
-            ))}
-          </select>
-        </div>
-        <div className="aa-single-advance-search">
-          <select >
-            <option >Year Built</option>
-            {property.map(crt => (
-              <option key={crt._id}
-                value={crt.year_built}>{crt.year_built}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="aa-single-advance-search">
-          <input type="submit" defaultValue="Search" className="aa-search-btn" />
-        </div>
-      </form>
-    </div>
-
-    <div className="aa-properties-single-sidebar">
       <h3>Populer Properties</h3>
       <div className="media">
         <div className="media-left">
