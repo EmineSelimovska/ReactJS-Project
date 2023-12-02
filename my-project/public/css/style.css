@@ -53,6 +53,7 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 60%;
 }
 
 a {
@@ -1806,6 +1807,7 @@ img {
   padding: 16px;
   margin-left: 130px;
   margin-right: 130px;
+  width: 100%;
   background-color: rgb(193, 225, 247);
 }
 
