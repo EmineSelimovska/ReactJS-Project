@@ -16,13 +16,15 @@ import AuthContext from "../contexts/authContext";
 export default function PropertyDetails() {
     const {
         isAuthenticated,
+        userId,
         username,
         email
       } = useContext(AuthContext)
+      
     const { propertyId } = useParams();
     const [property, setProperty] = useState({})
     const [comments, setComments] = useState([])
-
+    const owner = property._ownerId === userId ;
     useEffect(() => {
 
         propertyService.getOne(propertyId)
@@ -130,7 +132,7 @@ export default function PropertyDetails() {
                     </div>
                 </div>
                 <div>
-                    {isAuthenticated && (
+                    { owner && (
                          <div className="buttons" style={{display:'flex', justifyContent:"center", alignItems: "center", gap:"2em", paddingTop: "1em"}}>
                          <a href="#" className="button">Edit</a>
                          <a href="#" className="button">Delete</a>
@@ -152,7 +154,7 @@ export default function PropertyDetails() {
                             <p className="no-comment" style={{marginLeft:'150px'}}>No comments.</p>
                         )}
                     </div>
-                    {isAuthenticated && (
+                    {isAuthenticated &&  (
                     <div className="create-comment" >
                         <label>Add new comment:</label>
                         <form className="form" onSubmit={addCommentHandler}>
