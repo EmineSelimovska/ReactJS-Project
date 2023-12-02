@@ -17,6 +17,12 @@ User Authentication
 2. Login: Authenticated users can log in securely.
 3. Logout: Users can log out of their accounts.
 
+The service is initialized with three users, which can be used for immediate testing:
+
+peter@abv.bg : 123456
+george@abv.bg : 123456
+admin@abv.bg : admin
+
 Property Management
 1. Home Page (search property, about and service part)
 2. Create Property: Authenticated users can list their properties for sale.
