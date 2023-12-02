@@ -14,7 +14,11 @@ import LatestProperty from "./LatestProperty";
 import AuthContext from "../contexts/authContext";
 
 export default function PropertyDetails() {
-    const {username} = useContext(AuthContext)
+    const {
+        isAuthenticated,
+        username,
+        email
+      } = useContext(AuthContext)
     const { propertyId } = useParams();
     const [property, setProperty] = useState({})
     const [comments, setComments] = useState([])
@@ -148,6 +152,7 @@ export default function PropertyDetails() {
                             <p className="no-comment" style={{marginLeft:'150px'}}>No comments.</p>
                         )}
                     </div>
+                    {isAuthenticated && (
                     <div className="create-comment" >
                         <label>Add new comment:</label>
                         <form className="form" onSubmit={addCommentHandler}>
@@ -155,7 +160,8 @@ export default function PropertyDetails() {
                             <input className="btn submit" type="submit" value="Add Comment" />
                         </form>
                     </div>
-                </div>
+                    )}
+                </div> 
             </section>
 
             <Footer />

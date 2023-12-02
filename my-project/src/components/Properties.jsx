@@ -50,15 +50,12 @@ export default function Properties() {
           <div className="container">
             <div className="row">
               <div className="col-md-8">
-
-                <div className="aa-properties-content">
-                 <div>
-                    <ProperyListItem />
+                
+                  <div className="aa-properties-content">
+                    <div>
+                      <ProperyListItem />
                     </div>
-                </div>
-                {property.length === 0 && (
-                 <p className="no-property" style={{fontSize: "7em" ,marginLeft:'150px'}}>No properties found</p>
-                )}
+                  </div>
               </div>
 
               <div className="col-md-4">

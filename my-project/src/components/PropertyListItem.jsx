@@ -16,7 +16,8 @@ const [property, setProperty] = useState([]);
 
   }, [])
 
-  return ( <div className="aa-properties-content-body">
+  return ( 
+  
    
   <ul className="aa-properties-nav"  >
   {property.map(prop => (
@@ -55,5 +56,5 @@ const [property, setProperty] = useState([]);
 
   </ul>
   
-</div>)
+)
 }
