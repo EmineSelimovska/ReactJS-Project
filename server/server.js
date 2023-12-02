@@ -1507,6 +1507,37 @@
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
     		}
     	},
+    	about: {
+    		"3564027f-adcd-4425-b2c0-1253d2387c0c": {
+    			_id: "3564027f-adcd-4425-b2c0-1253d2387c0c",
+    			welcome: "Welcome to Msell Real Estate, your trusted partner in the world of real estate in Plovdiv, Bulgaria. With a strong presence in the local real estate market, we have built a reputation for excellence and reliability.",
+    			mission: "Our mission is to provide exceptional real estate services to our clients, exceeding their expectations at every step. We aim to simplify the complex world of real estate, offering personalized solutions, and ensuring a smooth and stress-free experience for buyers, sellers, investors, and tenants.",
+    			setsUpApart: "What Sets Us Apart:",
+    			name1: "Local Expertise: We have an in-depth knowledge of the Plovdiv real estate market, allowing us to offer expert advice and guidance.",
+    			name2: "Client-Centric Approach: Your goals are our top priority. We take the time to understand your unique needs and work tirelessly to achieve your objectives.",
+    			name3: "Integrity and Trust: We believe in transparency and honesty. You can trust us to provide accurate information, fair deals, and unwavering support.",
+    			name4: "Innovation: We leverage the latest technology and market insights to provide innovative solutions and marketing strategies.",
+    			name5: "Community Involvement: We are proud to be a part of the Plovdiv community and actively contribute to its growth and development."
+    		},
+    		"3564027f-adcd-4425-b2c0-1253d2388c0c": {
+    			_id: "3564027f-adcd-4425-b2c0-1253d2388c0c",
+    			service: "Our Service",
+    			def: "What we offer!"
+    		},
+    		"3564027f-adcd-4425-b2c0-1253d2389c0c": {
+    			_id: "3564027f-adcd-4425-b2c0-1253d2389c0c",
+    			n1: "Residential Sales and Rentals",
+    			definition1: " This service involves helping clients buy, sell, or rent residential properties such as houses, apartments, and condominiums. We assist in finding the right residential property to meet your needs, whether you're looking to buy, sell, or rent a home.",
+    			n2: "Commercial Real Estate",
+    			definition2: "Our commercial real estate service specializes in buying, selling, or leasing commercial properties, including office spaces, retail spaces, and industrial properties. We assist businesses in finding the right commercial space to meet their operational needs.",
+    			n3: "Investment Properties",
+    			definition3: "We offer guidance and assistance in acquiring and managing investment properties, such as rental properties, vacation homes, and real estate investments. Our expertise helps clients make informed decisions for profitable real estate investments.",
+    			n4: "Property Management",
+    			definition4: "Property management services involve the day-to-day operation, maintenance, and oversight of rental properties on behalf of property owners. We handle tasks such as tenant screening, rent collection, maintenance, and property upkeep to ensure hassle-free property ownership.",
+    			n5: "Real Estate Consultation",
+    			definition5: "Our real estate consultation service provides expert advice and guidance on various real estate matters. Whether you have questions about buying, selling, investing, or any other real estate-related concerns, our consultation service offers insights and solutions."
+    		}
+    	},
     	property: {
     		"dd0991cd-75f8-4d28-83a4-771353bcde88": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

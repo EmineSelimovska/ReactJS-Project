@@ -1,5 +1,5 @@
 const baseUrl = `http://localhost:3030/jsonstore/contact`;
-const aboutUrl = `http://localhost:3030/jsonstore/about`;
+const aboutUrl = `http://localhost:3030/data/about`;
 
 export const getContact = async () => {
     try {
