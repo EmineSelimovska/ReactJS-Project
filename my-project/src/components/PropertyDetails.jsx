@@ -133,10 +133,13 @@ export default function PropertyDetails() {
                     </div>
                 </div>
                 <div>
-                    {/* <div className="buttons" style={{display:'flex', justifyContent:"center", alignItems: "center", gap:"2em", paddingTop: "1em"}}>
-                    <a href="#" className="button">Edit</a>
-                    <a href="#" className="button">Delete</a>
-                </div> */}
+                    {isAuthenticated && (
+                         <div className="buttons" style={{display:'flex', justifyContent:"center", alignItems: "center", gap:"2em", paddingTop: "1em"}}>
+                         <a href="#" className="button">Edit</a>
+                         <a href="#" className="button">Delete</a>
+                     </div>
+                    )}
+                    
                     
                     <div className="details-comments">
                         <h2>Comments:</h2>
