@@ -66,6 +66,8 @@ Project Structure
 14. Add Register form
 15. Add Logout form
 16. Add comments with username
+17. Add edit and delete buttons
+18. Add authentication for edin and delete buttons 
 
 
 
