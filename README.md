@@ -19,9 +19,9 @@ User Authentication
 
 The service is initialized with three users, which can be used for immediate testing:
 
-peter@abv.bg : 123456
-george@abv.bg : 123456
-admin@abv.bg : admin
+1. peter@abv.bg : 123456
+2. george@abv.bg : 123456
+3. admin@abv.bg : admin
 
 Property Management
 1. Home Page (search property, about and service part)
