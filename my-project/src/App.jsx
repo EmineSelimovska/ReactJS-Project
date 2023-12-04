@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Route, Routes, useNavigate } from "react-router-dom"
 
 import * as authService from "./servises/authService"
-import AuthContext from "./contexts/authContext"
+import {AuthProvider} from "./contexts/authContext"
 
 import Properties from "./components/Properties"
 import Home from "./components/Home"
@@ -14,7 +14,6 @@ import Preload from "./components/Preloader"
 import Register from "./components/Register"
 import PropertyDetails from "./components/PropertyDetails"
 import Logout from "./components/Logout"
-import AdvanceSearch from "./components/AdvanceSearch"
 
 
 
@@ -59,7 +58,7 @@ function App() {
 
   return (
 
-    <AuthContext.Provider value={data}>
+    <AuthProvider value={data}>
       <div>
         <Preload />
 
@@ -81,7 +80,7 @@ function App() {
 
         </Routes>
       </div>
-    </AuthContext.Provider>
+    </AuthProvider>
   )
 }
 
