@@ -1,7 +1,5 @@
-import { useState } from "react"
-import { Route, Routes, useNavigate } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 
-import * as authService from "./servises/authService"
 import {AuthProvider} from "./contexts/authContext"
 
 import Properties from "./components/Properties"
@@ -18,47 +16,8 @@ import Logout from "./components/Logout"
 
 
 function App() {
-  const navigate = useNavigate()
-  const [auth, setAuth] = useState(() => {
-    localStorage.removeItem('accessToken')
-
-    return {}
-  });
-
-  const loginSubmitHandler = async (values) => {
-    const result = await authService.login(values.email, values.password);
-    setAuth(result)
-    localStorage.setItem('accessToken', result.accessToken);
-    navigate('/')
-  };
-
-  const registerSubmitHandler = async (values) => {
-    const result = await authService.register(values.username,
-    values.email, values.password);
-    setAuth(result);
-    localStorage.setItem('accessToken', result.accessToken);
-    navigate('/')
-
-  }
-
-  const logoutHandler = () => {
-    setAuth({});
-    localStorage.removeItem('accessToken');
-  }
-
-  const data = {
-    loginSubmitHandler,
-    registerSubmitHandler,
-    logoutHandler,
-    username: auth.username,
-    email: auth.email,
-    userId: auth._id,
-    isAuthenticated: !!auth.accessToken,
-  }
-
   return (
-
-    <AuthProvider value={data}>
+    <AuthProvider>
       <div>
         <Preload />
 
