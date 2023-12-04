@@ -68,6 +68,7 @@ Project Structure
 16. Add comments with username
 17. Add edit and delete buttons
 18. Add authentication for edin and delete buttons 
+19. Add Persisted state
 
 
 
