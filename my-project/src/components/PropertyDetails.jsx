@@ -7,11 +7,22 @@ import { useParams } from "react-router-dom";
 import * as propertyService from "../servises/propertyService"
 import * as commentService from "../servises/commentService"
 import Footer from "./Footer";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useReducer, useState } from "react";
 import Menu from "./Menu-area";
 import { toast } from "react-toastify";
 import LatestProperty from "./LatestProperty";
 import AuthContext from "../contexts/authContext";
+
+const reducer = (state, action) => {
+    switch (action?.type) {
+        case 'GET_ALL_PROPERTY':
+             return [...action.payload];
+        case 'ADD_COMMENT':
+            return [...state, action.payload];
+        default:
+            return state;
+    }
+}
 
 export default function PropertyDetails() {
     const {
@@ -23,8 +34,11 @@ export default function PropertyDetails() {
       
     const { propertyId } = useParams();
     const [property, setProperty] = useState({})
-    const [comments, setComments] = useState([])
+   // const [comments, setComments] = useState([])
+   const [comments, dispatch] = useReducer(reducer, [])
     const owner = property._ownerId === userId ;
+   
+   
     useEffect(() => {
 
         propertyService.getOne(propertyId)
@@ -36,7 +50,12 @@ export default function PropertyDetails() {
             })
 
         commentService.getAll(propertyId)
-        .then(setComments)
+        .then(result => {
+            dispatch({
+                type: 'GET_ALL_PROPERTY',
+                payload: result,
+            })
+        })
         .catch((err) => {
             if(err){
                 toast.error(err.message)
@@ -55,9 +74,13 @@ export default function PropertyDetails() {
             propertyId,
             formData.get('comment')
             )
-          
-            setComments(state => [...state,{...newComment, owner: { username }} ]);
-          //  newComment.owner = { username };
+            newComment.owner = { username };
+           // setComments(state => [...state,{...newComment, owner: { username }} ]);
+           dispatch({
+            type: 'ADD_COMMENT',
+            payload: newComment
+           })
+          //  
     }catch(err){
         if(err){
             toast.error(err.message)

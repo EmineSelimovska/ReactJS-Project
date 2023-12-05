@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import * as propertyService from "../servises/propertyService";
 import ProperyListItem from "./PropertyListItem";
-import PropertySearch from "./LatestProperty";
 import { toast } from "react-toastify";
 import LatestProperty from "./LatestProperty";
 
