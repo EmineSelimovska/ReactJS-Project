@@ -1,4 +1,3 @@
-import PropertySearch from "./LatestProperty";
 import Header from "./Header";
 
 import { Link, } from "react-router-dom";
@@ -16,7 +15,7 @@ import AuthContext from "../contexts/authContext";
 const reducer = (state, action) => {
     switch (action?.type) {
         case 'GET_ALL_PROPERTY':
-             return [...action.payload];
+            return [...action.payload];
         case 'ADD_COMMENT':
             return [...state, action.payload];
         default:
@@ -30,68 +29,69 @@ export default function PropertyDetails() {
         userId,
         username,
         email
-      } = useContext(AuthContext)
-      
+    } = useContext(AuthContext)
+
     const { propertyId } = useParams();
     const [property, setProperty] = useState({})
-   // const [comments, setComments] = useState([])
-   const [comments, dispatch] = useReducer(reducer, [])
-    const owner = property._ownerId === userId ;
-   
-   
+    // const [comments, setComments] = useState([])
+    const [comments, dispatch] = useReducer(reducer, [])
+    const owner = property._ownerId === userId;
+
+
     useEffect(() => {
 
         propertyService.getOne(propertyId)
             .then(result => setProperty(result))
             .catch((err) => {
-                if(err){
+                if (err) {
                     toast.error(err.message)
                 }
             })
 
         commentService.getAll(propertyId)
-        .then(result => {
-            dispatch({
-                type: 'GET_ALL_PROPERTY',
-                payload: result,
+            .then(result => {
+                dispatch({
+                    type: 'GET_ALL_PROPERTY',
+                    payload: result,
+                })
             })
-        })
-        .catch((err) => {
-            if(err){
-                toast.error(err.message)
-            }
-        })
+            .catch((err) => {
+                if (err) {
+                    toast.error(err.message)
+                }
+            })
 
     }, [propertyId])
 
 
-   const addCommentHandler = async (e) => {
-    e.preventDefault();
+    const addCommentHandler = async (e) => {
+        e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
-    try{
-        const newComment = await commentService.create(
-            propertyId,
-            formData.get('comment')
+        const formData = new FormData(e.currentTarget);
+        try {
+            const newComment = await commentService.create(
+                propertyId,
+                formData.get('comment')
             )
             newComment.owner = { username };
-           // setComments(state => [...state,{...newComment, owner: { username }} ]);
-           dispatch({
-            type: 'ADD_COMMENT',
-            payload: newComment
-           })
-          //  
-    }catch(err){
-        if(err){
-            toast.error(err.message)
-        }
+            // setComments(state => [...state,{...newComment, owner: { username }} ]);
+            dispatch({
+                type: 'ADD_COMMENT',
+                payload: newComment
+            })
+        } catch (err) {
+            if (err) {
+                toast.error(err.message)
+            }
 
-   }
+        }
+        
+        e.target.reset();
 
     }
-    
-    
-   return (
+
+
+    return (
         <>
             <Header />
 
@@ -155,18 +155,18 @@ export default function PropertyDetails() {
                     </div>
                 </div>
                 <div>
-                    { owner && (
-                         <div className="buttons" style={{display:'flex', justifyContent:"center", alignItems: "center", gap:"2em", paddingTop: "1em"}}>
-                         <a href="#" className="button">Edit</a>
-                         <a href="#" className="button">Delete</a>
-                     </div>
+                    {owner && (
+                        <div className="buttons" style={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: "2em", paddingTop: "1em" }}>
+                            <a href="#" className="button">Edit</a>
+                            <a href="#" className="button">Delete</a>
+                        </div>
                     )}
-                    
-                    
+
+
                     <div className="details-comments">
                         <h2>Comments:</h2>
                         <ul>
-                            {comments.map(({ _id, text, owner: { username }}) => (
+                            {comments.map(({ _id, text, owner: { username } }) => (
                                 <li key={_id} className="comment">
                                     <p>{username}: {text}</p>
                                 </li>
@@ -174,19 +174,19 @@ export default function PropertyDetails() {
                         </ul>
 
                         {comments.length === 0 && (
-                            <p className="no-comment" style={{marginLeft:'150px'}}>No comments.</p>
+                            <p className="no-comment" style={{ marginLeft: '150px' }}>No comments.</p>
                         )}
                     </div>
-                    {isAuthenticated &&  (
-                    <div className="create-comment" >
-                        <label>Add new comment:</label>
-                        <form className="form" onSubmit={addCommentHandler}>
-                            <textarea name="comment" placeholder="Comment......"></textarea>
-                            <input className="btn submit" type="submit" value="Add Comment" />
-                        </form>
-                    </div>
+                    {isAuthenticated && (
+                        <div className="create-comment" >
+                            <label>Add new comment:</label>
+                            <form className="form" onSubmit={addCommentHandler}>
+                                <textarea name="comment" placeholder="Comment......"></textarea>
+                                <input className="btn submit" type="submit" value="Add Comment" />
+                            </form>
+                        </div>
                     )}
-                </div> 
+                </div>
             </section>
 
             <Footer />
