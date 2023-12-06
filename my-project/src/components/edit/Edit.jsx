@@ -9,32 +9,47 @@ import { useEffect, useState } from 'react';
 export default function Edit() {
     const navigate = useNavigate();
     const { propertyId } = useParams();
-    const [property, setProperty] = useState({});
-    const onCreateSubmitHadler = async (values) => {
+    const [property, setProperty] = useState({
+        property_type: '',
+        city: '',
+        price: '',
+        bedrooms: '',
+        bathrooms: '',
+        square_meters: '',
+        imgProperty: '',
+        status: '',
+        year_built: '',
+        description: ''
+    });
 
-        useEffect(() => {
-            propertyService.getOne(propertyId)
-                .then(result => {
-                    setProperty(result);
-                })
-                .catch((err) => {
-                    toast.error(err.message);
-                })
-        }, [propertyId])
+    useEffect(() => {
+    propertyService.getOne(propertyId)
+    .then(result => {
+        setProperty(result)
+    })
+    }, [propertyId])
+   
+    const onEditSubmitHadler = async (e) => {
+        e.preventDefault();
+
+        const values = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
-            await propertyService.create(values);
+            await propertyService.edit(propertyId, values);
             navigate('/properties')
         } catch (err) {
             if (err) {
                 toast.error(err.message);
             }
         }
-
-
     }
 
-    const { values, onChange, onSubmit } = useForm(onCreateSubmitHadler, property)
+    const onChange = (e) => {
+        setProperty(state => ({
+            ...state,
+            [e.target.name]: e.target.value
+        }))
+    }
 
     return (
         <section id={styles.edit}>
@@ -47,14 +62,14 @@ export default function Edit() {
                                     <Link className={styles.editHome} to="/properties">Property</Link>
                                     <h4 className={styles.h4}>Edit property</h4>
                                 </div>
-                                <form className="createform" onSubmit={onSubmit}>
+                                <form className="createform" onSubmit={onEditSubmitHadler}>
                                     <div className={styles.propertyTypeField}>
-                                        <label  {...styles.label} htmlFor="propery_type">Property Type </label>
+                                        <label  {...styles.label} htmlFor="property_type">Property Type </label>
                                         <input
                                             type="property_type"
                                             required="required"
                                             name="property_type"
-                                            value={values.propety_type}
+                                            value={property.property_type}
                                             onChange={onChange}
                                             id="property_type" />
                                     </div>
@@ -63,7 +78,7 @@ export default function Edit() {
                                         <input type="city"
                                             required="required"
                                             name="city"
-                                            value={values.city}
+                                            value={property.city}
                                             onChange={onChange}
                                             id="city" />
                                     </div>
@@ -72,7 +87,7 @@ export default function Edit() {
                                         <input type="price"
                                             required="required"
                                             name="price"
-                                            value={values.price}
+                                            value={property.price}
                                             onChange={onChange}
                                             id="price" />
                                     </div>
@@ -81,7 +96,7 @@ export default function Edit() {
                                         <input type="bedrooms"
                                             required="required"
                                             name="bedrooms"
-                                            value={values.bedrooms}
+                                            value={property.bedrooms}
                                             onChange={onChange}
                                             id="bedrooms" />
                                     </div>
@@ -90,7 +105,7 @@ export default function Edit() {
                                         <input type="bathrooms"
                                             required="required"
                                             name="bathrooms"
-                                            value={values.bathrooms}
+                                            value={property.bathrooms}
                                             onChange={onChange}
                                             id="bathrooms" />
                                     </div>
@@ -99,7 +114,7 @@ export default function Edit() {
                                         <input type="square_meters"
                                             required="required"
                                             name="square_meters"
-                                            value={values.square_meters}
+                                            value={property.square_meters}
                                             onChange={onChange}
                                             id="square_meters" />
                                     </div>
@@ -107,7 +122,7 @@ export default function Edit() {
                                         <label {...styles.label} htmlFor="imgProperty">Image </label>
                                         <input type="text"
                                             name="imgProperty"
-                                            value={values.imgProperty}
+                                            value={property.imgProperty}
                                             onChange={onChange}
                                             id="imgProperty" />
                                     </div>
@@ -116,7 +131,7 @@ export default function Edit() {
                                         <input type="status"
                                             required="required"
                                             name="status"
-                                            value={values.status}
+                                            value={property.status}
                                             onChange={onChange}
                                             id="status" />
                                     </div>
@@ -125,7 +140,7 @@ export default function Edit() {
                                         <input type="year_built"
                                             required="required"
                                             name="year_built"
-                                            value={values.year_built}
+                                            value={property.year_built}
                                             onChange={onChange}
                                             id="year_built" />
                                     </div>
@@ -134,7 +149,7 @@ export default function Edit() {
                                         <textarea type="description"
                                             required="required"
                                             name="description"
-                                            value={values.description}
+                                            value={property.description}
                                             onChange={onChange}
                                             id="description" ></textarea>
 

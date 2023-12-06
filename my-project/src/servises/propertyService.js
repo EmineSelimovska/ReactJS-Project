@@ -28,3 +28,8 @@ export const create = async (propertyDate) => {
     const result = await request.post(url, propertyDate);
     return result;
 }
+
+export const edit = async (propertyId, propertyDate) => {
+    const result = await request.put(`${url}/${propertyId}`, propertyDate);
+    return result;
+}

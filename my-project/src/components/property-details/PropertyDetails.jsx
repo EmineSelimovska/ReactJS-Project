@@ -11,6 +11,8 @@ import Menu from "../menu-area/Menu-area";
 import { toast } from "react-toastify";
 import LatestProperty from "../latest-property/LatestProperty";
 import AuthContext from "../../contexts/authContext";
+import { pathToUrl } from "../../utils/pathUtils";
+
 
 const reducer = (state, action) => {
     switch (action?.type) {
@@ -157,7 +159,7 @@ export default function PropertyDetails() {
                 <div>
                     {owner && (
                         <div className="buttons" style={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: "2em", paddingTop: "1em" }}>
-                            <Link to="/properties/:propertyId/edit" className="button">Edit</Link>
+                            <Link to={pathToUrl("/properties/:propertyId/edit", {propertyId})} className="button">Edit</Link>
                             <Link href="/properties/:propertyId/delete" className="button">Delete</Link>
                         </div>
                     )}
