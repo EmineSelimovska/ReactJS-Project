@@ -12,6 +12,7 @@ import Preload from "./components/preloader/Preloader"
 import Register from "./components/register/Register"
 import PropertyDetails from "./components/property-details/PropertyDetails"
 import Logout from "./components/logout/Logout"
+import Edit from "./components/edit/Edit"
 
 
 
@@ -30,6 +31,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/properties/:propertyId" element={<PropertyDetails />} />
+          <Route path="/properties/:propertyId/edit" element={<Edit />} />
+
           <Route path="/search/:searchItem" element={<Properties/>} />
           <Route path="/logout" element={<Logout/>} />
 

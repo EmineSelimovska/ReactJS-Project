@@ -1,0 +1,159 @@
+#edit {
+  background-image: url("https://bregroup.com/wp-content/uploads/2018/12/banner-property-1440x440.jpg");
+  background-position: center center;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+  width: 100%;
+
+}
+
+#edit:before {
+  background-color: rgba(0, 0, 0, 0.8);
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#edit .editArea {
+  display: inline;
+  float: center;
+  padding: 20% 20%;
+  width: 120%;
+}
+
+#edit .editArea .editForm {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline;
+  padding: 50px;
+  float: left;
+  width: 150%;
+}
+
+#edit .editArea .editForm .formTitle {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+
+
+#edit .editArea .editForm .formTitle .editHome {
+  color: #111010;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#edit .editArea .editForm .formTitle h4 {
+  color: #0c0c0c;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+#edit .editArea .editForm .propertyTypeField {
+  display: inline;
+  float: left;
+  width: 100%;
+
+  margin-bottom: 3px;
+}
+
+#edit .editArea .editForm .propertyTypeField label,
+#edit .editArea .editForm .cityField label,
+#edit .editArea .editForm .priceField label,
+#edit .editArea .editForm .bedroomsField label,
+#edit .editArea .editForm .bathroomsField label,
+#edit .editArea .editForm .squareMetersField label,
+#edit .editArea .editForm .propertyImageField label,
+#edit .editArea .editForm .statusField label,
+#edit .editArea .editForm .yearBuiltField label,
+#edit .editArea .editForm .descriptionField label {
+  color: #0c0b0b;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+
+}
+
+#edit .editArea .editForm .propertyTypeField input[type="property_type"],
+#edit .editArea .editForm .cityField input[type="city"],
+#edit .editArea .editForm .priceField input[type="price"],
+#edit .editArea .editForm .bedroomsField input[type="bedrooms"],
+#edit .editArea .editForm .bathroomsField input[type="bathrooms"],
+#edit .editArea .editForm .squareMetersField input[type="square_meters"],
+#edit .editArea .editForm .propertyImageField input[type="text"],
+#edit .editArea .editForm .statusField input[type="status"],
+#edit .editArea .editForm .yearBuiltField input[type="year_built"] {
+  border: none;
+  color: #555;
+  margin-bottom: 10px;
+  height: 35px;
+  padding: 5px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#edit .editArea .editForm .descriptionField textarea[type="description"] {
+  border: none;
+  color: #555;
+  margin-bottom: 10px;
+  height: 75px;
+  padding: 5px;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#edit .editArea .editForm .editSubmit {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+
+#edit .editArea .editForm .editSubmit input[type="submit"] {
+  color: #0e0d0d;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 6px 12px;
+  width: 150px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#edit .editArea .editForm .editSubmit input[type="submit"]:hover {
+  background-color: rgb(95, 156, 235);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
+}
