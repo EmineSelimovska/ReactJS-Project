@@ -2,7 +2,6 @@ import { Link, useParams } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import * as propertyService from '../../servises/propertyService';
 import styles from './Edit.module.css'
-import useForm from '../../hooks/useForm';
 import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 
