@@ -69,7 +69,7 @@ Project Structure
 17. Add edit and delete buttons
 18. Add authentication for edin and delete buttons 
 19. Add Persisted state
-
+20. Add Edit page
 
 
 
