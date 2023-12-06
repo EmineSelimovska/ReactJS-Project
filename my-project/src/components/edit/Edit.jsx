@@ -155,7 +155,7 @@ export default function Edit() {
 
                                     </div>
                                     <div className={styles.editSubmit}>
-                                        <input type="submit" value="Create" className="aa-browse-btn" name="submit" id="submit" />
+                                        <input type="submit" value="Edit" className="aa-browse-btn" name="submit" id="submit" />
                                     </div>
                                 </form>
                             </div>
