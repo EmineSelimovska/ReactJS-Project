@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as propertyService from "../servises/propertyService";
+import * as propertyService from "../../servises/propertyService";
 import { toast } from "react-toastify";
 
 export default function LatestProperty(){

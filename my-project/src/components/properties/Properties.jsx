@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import Header from "./Header";
-import Menu from "./Menu-area";
-import Footer from "./Footer";
+import Header from "../header/Header";
+import Menu from "../menu-area/Menu-area";
+import Footer from "../footer/Footer";
 import { useEffect, useState } from "react";
-import * as propertyService from "../servises/propertyService";
-import ProperyListItem from "./PropertyListItem";
+import * as propertyService from "../../servises/propertyService";
+import ProperyListItem from "../property-list-item/PropertyListItem";
 import { toast } from "react-toastify";
-import LatestProperty from "./LatestProperty";
+import LatestProperty from "../latest-property/LatestProperty";
 
 
 export default function Properties() {

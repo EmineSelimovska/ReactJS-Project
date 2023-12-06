@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as propertyService from "../servises/propertyService";
+import * as propertyService from "../../servises/propertyService";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 

@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import * as authService from '../servises/authService';
+import * as authService from '../../servises/authService';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import AuthContext from "../contexts/authContext";
+import AuthContext from "../../contexts/authContext";
 
 
 

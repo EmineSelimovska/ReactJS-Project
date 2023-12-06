@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react"
-import * as propertyService from "../servises/propertyService";
-import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 
 AdvanceSearch.defaultProps = {

@@ -2,16 +2,16 @@ import { Route, Routes } from "react-router-dom"
 
 import {AuthProvider} from "./contexts/authContext"
 
-import Properties from "./components/Properties"
-import Home from "./components/Home"
-import Create from "./components/Create"
-import Contact from "./components/Contact"
-import NotFound from "./components/NotFound"
-import Login from "./components/Login"
-import Preload from "./components/Preloader"
-import Register from "./components/Register"
-import PropertyDetails from "./components/PropertyDetails"
-import Logout from "./components/Logout"
+import Properties from "./components/properties/Properties"
+import Home from "./components/home/Home"
+import Create from "./components/create/Create"
+import Contact from "./components/contact/Contact"
+import NotFound from "./components/not-found/NotFound"
+import Login from "./components/login/Login"
+import Preload from "./components/preloader/Preloader"
+import Register from "./components/register/Register"
+import PropertyDetails from "./components/property-details/PropertyDetails"
+import Logout from "./components/logout/Logout"
 
 
 

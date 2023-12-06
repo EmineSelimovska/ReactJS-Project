@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import useForm from "../hooks/useForm"
+import useForm from "../../hooks/useForm"
 import { useContext } from "react";
-import AuthContext from "../contexts/authContext";
+import AuthContext from "../../contexts/authContext";
 
 const LoginFormKyes = {
     Email: 'email',

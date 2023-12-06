@@ -1,16 +1,16 @@
-import Header from "./Header";
+import Header from "../header/Header";
 
 import { Link, } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
-import * as propertyService from "../servises/propertyService"
-import * as commentService from "../servises/commentService"
-import Footer from "./Footer";
+import * as propertyService from "../../servises/propertyService"
+import * as commentService from "../../servises/commentService"
+import Footer from "../footer/Footer";
 import { useContext, useEffect, useReducer, useState } from "react";
-import Menu from "./Menu-area";
+import Menu from "../menu-area/Menu-area";
 import { toast } from "react-toastify";
-import LatestProperty from "./LatestProperty";
-import AuthContext from "../contexts/authContext";
+import LatestProperty from "../latest-property/LatestProperty";
+import AuthContext from "../../contexts/authContext";
 
 const reducer = (state, action) => {
     switch (action?.type) {
@@ -157,8 +157,8 @@ export default function PropertyDetails() {
                 <div>
                     {owner && (
                         <div className="buttons" style={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: "2em", paddingTop: "1em" }}>
-                            <a href="#" className="button">Edit</a>
-                            <a href="#" className="button">Delete</a>
+                            <Link to="/properties/:propertyId/edit" className="button">Edit</Link>
+                            <Link href="/properties/:propertyId/delete" className="button">Delete</Link>
                         </div>
                     )}
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import * as propertyService from '../servises/propertyService';
+import * as propertyService from '../../servises/propertyService';
 import styles from "./Create.module.css"
 
 

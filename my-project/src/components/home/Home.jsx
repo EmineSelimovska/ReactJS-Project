@@ -1,13 +1,13 @@
-import * as dateService from "../servises/dateService";
-import * as propertyService from '../servises/propertyService'
+import * as dateService from "../../servises/dateService";
+import * as propertyService from '../../servises/propertyService'
 import React, { useEffect, useState } from "react"
 import { Slide } from "react-slideshow-image"
 import 'react-slideshow-image/dist/styles.css';
-import Header from "./Header";
-import Menu from "./Menu-area";
-import Footer from "./Footer";
+import Header from "../header/Header";
+import Menu from "../menu-area/Menu-area";
+import Footer from "../footer/Footer";
 import { Link, useNavigate } from "react-router-dom";
-import AdvanceSearch from "./AdvanceSearch";
+import AdvanceSearch from "../search/AdvanceSearch";
 import { toast } from "react-toastify";
 
 const proprietes = {
