@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import * as propertyService from '../../servises/propertyService';
 import styles from "./Create.module.css"
+import { toast } from "react-toastify";
 
 
 export default function Create() {
@@ -15,7 +16,9 @@ export default function Create() {
             await propertyService.create(propertyDate);
             navigate('/properties')
         } catch (err) {
-            return err
+            if(err){
+                toast.error(err.message);
+            }
         }
 
 
