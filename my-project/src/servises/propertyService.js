@@ -24,6 +24,18 @@ export const getOne = async (propertyId) => {
     return result;
 }
 
+export const getLatest = async () => {
+   // const query = new URLSearchParams({
+         //  sortBy: `sortBy=_createdOn%20desc`,
+          //   offset: 0,
+          //  pageSize: 3,
+//});
+  const query = encodeURI(`offset=0&pageSize=3`);
+    const result = await request.get(`${url}?sortBy=_createdOn%20desc&${query}`);
+
+    return result;
+}
+
 export const create = async (propertyDate) => {
     const result = await request.post(url, propertyDate);
     return result;
@@ -31,5 +43,10 @@ export const create = async (propertyDate) => {
 
 export const edit = async (propertyId, propertyDate) => {
     const result = await request.put(`${url}/${propertyId}`, propertyDate);
+    return result;
+}
+
+export const remove = async(propertyId) => {
+    const result = await request.remove(`${url}/${propertyId}`);
     return result;
 }

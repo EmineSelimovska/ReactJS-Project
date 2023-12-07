@@ -1,6 +1,6 @@
 import Header from "../header/Header";
 
-import { Link, } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 import * as propertyService from "../../servises/propertyService"
@@ -9,7 +9,7 @@ import Footer from "../footer/Footer";
 import { useContext, useEffect, useReducer, useState } from "react";
 import Menu from "../menu-area/Menu-area";
 import { toast } from "react-toastify";
-import LatestProperty from "../latest-property/LatestProperty";
+import LatestProperty from "../properties/latest-property/LatestProperty";
 import AuthContext from "../../contexts/authContext";
 import { pathToUrl } from "../../utils/pathUtils";
 
@@ -38,7 +38,7 @@ export default function PropertyDetails() {
     // const [comments, setComments] = useState([])
     const [comments, dispatch] = useReducer(reducer, [])
     const owner = property._ownerId === userId;
-
+   const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -90,6 +90,18 @@ export default function PropertyDetails() {
 
         e.target.reset();
 
+    }
+
+    const deleteButtonHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${property.property_type}`);
+
+        if (hasConfirmed) {
+
+            await propertyService.remove(propertyId);
+         
+            navigate('/properties')
+           
+        }
     }
 
     return (
@@ -159,7 +171,7 @@ export default function PropertyDetails() {
                     {owner && (
                         <div className="buttons" style={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: "2em", paddingTop: "1em" }}>
                             <Link to={pathToUrl("/properties/:propertyId/edit", { propertyId })} className="button">Edit</Link>
-                            <Link href="/properties/:propertyId/delete" className="button">Delete</Link>
+                            <button style={{ border: "#59abe3" }} className="button" onClick={deleteButtonHandler} >Delete</button>
                         </div>
                     )}
 

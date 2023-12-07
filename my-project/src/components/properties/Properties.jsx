@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 import * as propertyService from "../../servises/propertyService";
 import ProperyListItem from "../property-list-item/PropertyListItem";
 import { toast } from "react-toastify";
-import LatestProperty from "../latest-property/LatestProperty";
+import LatestProperty from "./latest-property/LatestProperty";
+import withAuth from "../../HOC/withAuth";
 
 
-export default function Properties() {
+function Properties() {
 
   const [property, setProperty] = useState([]);
+ 
+
   useEffect(() => {
     propertyService.getAll()
       .then(result => setProperty(result))
@@ -19,9 +22,9 @@ export default function Properties() {
         if (err) {
           return err.message
         }
-
-
       })
+
+   
 
   }, [])
 
@@ -49,17 +52,21 @@ export default function Properties() {
           <div className="container">
             <div className="row">
               <div className="col-md-8">
-                
-                  <div className="aa-properties-content">
-                    <div>
-                      <ProperyListItem />
-                    </div>
+
+                <div className="aa-properties-content">
+                  <div>
+                    <ProperyListItem />
                   </div>
+                </div>
               </div>
 
               <div className="col-md-4">
-                <LatestProperty />
-              </div>
+              
+                   
+                    <LatestProperty />
+                   
+                  </div>
+               
             </div>
           </div>
         </section>
@@ -68,3 +75,7 @@ export default function Properties() {
     </>
   )
 }
+
+const enhanceProperties = withAuth(Properties)
+
+export default enhanceProperties

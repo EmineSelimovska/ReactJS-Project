@@ -29,7 +29,7 @@ export default function AdvanceSearch({ searchRoute, defaultRoute }) {
                                     <div className="aa-single-advance-search">
                                         <input
                                             type="text"
-                                            placeholder="Search property"
+                                            placeholder="Search..."
                                             onChange={e => setOption(e.target.value)}
                                             onKeyUp={e => e.key === 'Enter' && search()}
                                             value={options}

@@ -1,60 +1,42 @@
-import { useEffect, useState } from "react";
-import * as propertyService from "../../servises/propertyService";
-import { toast } from "react-toastify";
+import * as propertyService from "../../../servises/propertyService";
+import { Link } from "react-router-dom";
+import { pathToUrl } from "../../../utils/pathUtils";
+import { useEffect , useState} from "react";
 
-export default function LatestProperty(){
-    const [property, setProperty] = useState([]);
-    useEffect(() => {
-      propertyService.getAll()
-        .then(result => setProperty(result))
-         .catch((err) => {
-          return err.message
-         })
+export default function LatestProperty() {
+  const [latestProperty, setLatestProperty] = useState([]);
+
+  useEffect(() => {
+    propertyService.getLatest()
+      .then(result => setLatestProperty(result))
+  }, [])
+  return (
+
+    <aside className="aa-properties-sidebar">
+     
+        <div className="aa-properties-single-sidebar">
+          <h3>Latest Properties</h3>
+          {latestProperty.map(latest =>
+          <div className="media" key={latest._id}>
+            <div className="media-left">
+
+              <img className="media-object" src={latest.imgProperty} alt="img" />
+
+            </div>
+            <div className="media-body">
+              <h4 className="media-heading"><Link to={pathToUrl("/properties/:propertyId", { propertyId:latest._id })}>{latest.property_type}</Link></h4>
+              <p>{latest.description}</p>
+              <span>${latest.price}</span>
+            </div>
+          </div>
+              )}
+        </div>
   
-    }, [])
-   
-   return(  <aside className="aa-properties-sidebar">
+      {!latestProperty.length && <p className="no-articles">No games yet</p>}
+    </aside>
 
-    <div className="aa-properties-single-sidebar">
-      <h3>Latest Properties</h3>
-      <div className="media">
-        <div className="media-left">
-          <a href="#">
-            <img className="media-object" src="img/item/1.jpg" alt="img" />
-          </a>
-        </div>
-        <div className="media-body">
-          <h4 className="media-heading"><a href="#">This is Title</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <span>$65000</span>
-        </div>
-      </div>
-      <div className="media">
-        <div className="media-left">
-          <a href="#">
-            <img className="media-object" src="img/item/1.jpg" alt="img" />
-          </a>
-        </div>
-        <div className="media-body">
-          <h4 className="media-heading"><a href="#">This is Title</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <span>$65000</span>
-        </div>
-      </div>
-      <div className="media">
-        <div className="media-left">
-          <a href="#">
-            <img className="media-object" src="img/item/1.jpg" alt="img" />
-          </a>
-        </div>
-        <div className="media-body">
-          <h4 className="media-heading"><a href="#">This is Title</a></h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <span>$65000</span>
-        </div>
-      </div>
-    </div>
-  </aside>)
+
+  )
 }
 
 
