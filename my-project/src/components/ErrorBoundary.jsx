@@ -27,7 +27,7 @@ export default class ErrorBoundary extends Component {
     render() {
         if(this.state.hasError){
             return (
-                <h1>404</h1>
+                <h1 style={{margin: '4em'}}>404</h1>
             )
         }
        return this.props.children;
