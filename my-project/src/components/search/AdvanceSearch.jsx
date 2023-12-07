@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom";
+// import * as propertyService from '../../servises/propertyService'
 
 AdvanceSearch.defaultProps = {
     searchRoute: '/search/',
@@ -11,6 +12,7 @@ export default function AdvanceSearch({ searchRoute, defaultRoute }) {
     const { searchItem } = useParams();
 
     useEffect(() => {
+        
         setOption(searchItem ?? '')
     }, [searchItem])
 

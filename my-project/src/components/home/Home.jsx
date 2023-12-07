@@ -426,46 +426,6 @@ export default function Home(props) {
     </div>
   </section> */}
 
-            {/* <section id="aa-agents">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="aa-agents-area">
-                                <div className="aa-title">
-                                    <h2>Our Agents</h2>
-                                    <span />
-
-                                </div>
-                                <div className="aa-agents-content"  >
-
-                                    {options.map(op => (
-                                        <ul className="aa-agents-slider" key={op.listing_agent.agent_id}>
-                                            <li >
-                                                <div className="aa-single-agents" >
-                                                    <div className="aa-agents-img">
-                                                        <img src={op.listing_agent.imgAgent} alt="" />
-                                                    </div>
-                                                    <div className="aa-agetns-info" >
-                                                        <h4 >{op.listing_agent.name}</h4>
-                                                        <span>{op.listing_agent.contact.email}</span>
-                                                        <div className="aa-agent-social">
-                                                            <Link to="https://www.facebook.com"><i className="fa fa-facebook" /></Link>
-                                                            <Link to="https://twitter.com"><i className="fa fa-twitter" /></Link>
-                                                            <Link to="https://www.linkedin.com"><i className="fa fa-linkedin" /></Link>
-                                                            <Link to="https://www.google.com/account/about/?hl=bg"><i className="fa fa-google-plus" /></Link>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    ))}
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
 
             <Footer />
         </>
