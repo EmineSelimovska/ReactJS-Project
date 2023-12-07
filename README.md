@@ -71,6 +71,7 @@ Project Structure
 19. Add Persisted state
 20. Add Edit page
 21. Add Auth Guard
+22. Add Latest Property
 
 
 
