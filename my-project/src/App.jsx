@@ -13,11 +13,13 @@ import Register from "./components/register/Register"
 import PropertyDetails from "./components/property-details/PropertyDetails"
 import Logout from "./components/logout/Logout"
 import Edit from "./components/edit/Edit"
+import ErrorBoundary from "./components/ErrorBoundary"
 
 
 
 function App() {
   return (
+    <ErrorBoundary>
     <AuthProvider>
       <div>
         <Preload />
@@ -43,6 +45,7 @@ function App() {
         </Routes>
       </div>
     </AuthProvider>
+    </ErrorBoundary>
   )
 }
 

@@ -87,11 +87,10 @@ export default function PropertyDetails() {
             }
 
         }
-        
+
         e.target.reset();
 
     }
-
 
     return (
         <>
@@ -159,7 +158,7 @@ export default function PropertyDetails() {
                 <div>
                     {owner && (
                         <div className="buttons" style={{ display: 'flex', justifyContent: "center", alignItems: "center", gap: "2em", paddingTop: "1em" }}>
-                            <Link to={pathToUrl("/properties/:propertyId/edit", {propertyId})} className="button">Edit</Link>
+                            <Link to={pathToUrl("/properties/:propertyId/edit", { propertyId })} className="button">Edit</Link>
                             <Link href="/properties/:propertyId/delete" className="button">Delete</Link>
                         </div>
                     )}
