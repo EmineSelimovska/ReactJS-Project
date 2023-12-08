@@ -13,16 +13,6 @@ export const getAll = async () => {
   
 }
 
-export const search = async () => {
-//  const query = new URLSearchParams({
-//    // where: searchItem
-//    sortBy: `sortBy=property_type desc,_createdOn`,
-//  })
-const query = encodeURI(`sortBy=val%20desc%2C_createdOn`);
-     const propertyDate  = await request.get(`${url}/search?${query}`)
-     return propertyDate
-}
-
 export const getOne = async (propertyId) => {
     const result = await request.get(`${url}/${propertyId}`);
     return result;

@@ -1,13 +1,13 @@
 import * as dateService from "../../servises/dateService";
 import * as propertyService from '../../servises/propertyService'
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useReducer } from "react"
 import { Slide } from "react-slideshow-image"
 import 'react-slideshow-image/dist/styles.css';
 import Header from "../header/Header";
 import Menu from "../menu-area/Menu-area";
 import Footer from "../footer/Footer";
-import { Link, useNavigate } from "react-router-dom";
-import AdvanceSearch from "../search/AdvanceSearch";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
 import { toast } from "react-toastify";
 
 const proprietes = {
@@ -17,7 +17,6 @@ const proprietes = {
     indicators: true,
     arrows: true
 }
-
 
 export default function Home(props) {
      const navigate = useNavigate()
@@ -43,8 +42,10 @@ export default function Home(props) {
                 navigate('/')
               
             })
+            
 
     }, [])
+    
 
 
     console.log(about);
@@ -99,7 +100,6 @@ export default function Home(props) {
 
             </section>
                
-               <AdvanceSearch/>
           
 
             <section id="aa-about-us">
