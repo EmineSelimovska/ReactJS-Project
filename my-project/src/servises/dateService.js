@@ -13,7 +13,7 @@ export const getContact = async () => {
 
 
 }
-export const create = async (propertyDate) => {
+export const sent = async (propertyDate) => {
     const response = await fetch(baseUrl, {
         propertyDate
     });
