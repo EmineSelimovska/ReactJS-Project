@@ -24,7 +24,7 @@ The service is initialized with three users, which can be used for immediate tes
 3. admin@abv.bg : admin
 
 Property Management
-1. Home Page (search property, about and service part)
+1. Home Page ( about and service part)
 2. Create Property: Authenticated users can list their properties for sale.
 3. Edit Property: Users can modify property details.
 4. Delete Property: Users can remove properties from the listing.
