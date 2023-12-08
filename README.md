@@ -72,6 +72,7 @@ Project Structure
 20. Add Edit page
 21. Add Auth Guard
 22. Add Latest Property
+23. Add Map to Contact page
 
 
 
