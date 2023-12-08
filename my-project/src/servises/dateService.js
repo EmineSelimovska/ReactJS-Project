@@ -1,17 +1,27 @@
 const baseUrl = `http://localhost:3030/data/contact`;
 const aboutUrl = `http://localhost:3030/data/about`;
 
- export const getContact = async () => {
- 
-        const response = await fetch(baseUrl);
-        const result = await response.json();
+export const getContact = async () => {
 
-        const data = Object.values(result);
+    const response = await fetch(baseUrl);
+    const result = await response.json();
 
-        return data;
-    
+    const data = Object.values(result);
+
+    return data;
 
 
+
+}
+export const create = async (propertyDate) => {
+    const response = await fetch(baseUrl, {
+        propertyDate
+    });
+    const result = await response.json();
+
+    const data = Object.values(result);
+
+    return data;
 }
 
 export const getAbout = async () => {
