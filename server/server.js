@@ -1538,6 +1538,16 @@
     			definition5: "Our real estate consultation service provides expert advice and guidance on various real estate matters. Whether you have questions about buying, selling, investing, or any other real estate-related concerns, our consultation service offers insights and solutions."
     		}
     	},
+        contact: {
+            "3754027f-adcd-4425-b2c0-1253d2387c1c":{
+               _id: "3754027f-adcd-4425-b2c0-1253d2387c1c",
+                tel: "+359 877 123 321",
+                email: "msell@gmail.com",
+                address: "4000 Plovdiv 159 Osvobozhdenie Blvd",
+                info: "Msell Real Estate, your trusted partner in the world of real estate. With a strong presence in the local real estate market, we have built a reputation for excellence and reliability. If you have any questions please do not hesitate to contact us."
+            }
+
+        },
     	property: {
     		"dd0991cd-75f8-4d28-83a4-771353bcde88": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
