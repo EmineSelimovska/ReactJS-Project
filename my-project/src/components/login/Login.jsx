@@ -1,21 +1,60 @@
 import { Link } from "react-router-dom";
 import useForm from "../../hooks/useForm"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AuthContext from "../../contexts/authContext";
 
-const LoginFormKyes = {
-    Email: 'email',
-    Password: 'password',
+const formLogin = {
+    email: '',
+    password: '',
 };
 
 
 export default function Login() {
-    
     const { loginSubmitHandler } = useContext(AuthContext)
-    const {values, onChange, onSubmit} = useForm(loginSubmitHandler, {
-        [LoginFormKyes.Email]: '',
-        [LoginFormKyes.Password]: '',
-    });
+    const [forValues, setFomValues] = useState(formLogin);
+   
+    const [errors, setErrors] = useState({});
+
+    
+  const resetHandler = () => {
+    setFomValues(formRegister);
+    setErrors({});
+  }
+
+    function validateEmail(email) {
+        const emailRegex = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
+        return emailRegex.test(email);
+
+    }
+
+    const validEmail = () => {
+        if (!validateEmail(values.email)) {
+            setErrors(state => ({
+                ...state,
+                email: 'Email is invalid '
+            }))
+        } else {
+            if (errors.email) {
+                setErrors(state => ({ ...state, email: '' }));
+            }
+        }
+    }
+
+
+    const validPassword = () => {
+        if (values.password.length < 6) {
+            setErrors(state => ({
+                ...state,
+                password: 'Password is too short! '
+            }))
+        } else {
+            if (errors.password) {
+                setErrors(state => ({ ...state, password: '' }));
+            }
+        }
+    }
+
+     const { values, onChange, onSubmit } = useForm(loginSubmitHandler, forValues);
     return (
         <><section id="aa-signin">
             <div className="container" style={{ padding: '5em' }}>
@@ -30,22 +69,30 @@ export default function Login() {
                                 <form className="contactform" onSubmit={onSubmit}>
                                     <div className="aa-single-field">
                                         <label htmlFor="email">Email <span className="required">*</span></label>
-                                        <input 
-                                        type="email" 
-                                        required="required" 
-                                        id="email"
-                                        name={LoginFormKyes.Email}
-                                        onChange={onChange}
-                                        value={values[LoginFormKyes.Email]}/>
+                                        <input
+                                            type="email"
+                                            required="required"
+                                            id="email"
+                                            name="email"
+                                            onChange={onChange}
+                                            value={values.email}
+                                            onBlur={validEmail} />
+                                        {errors.email && (
+                                            <p >{errors.email}</p>
+                                        )}
                                     </div>
                                     <div className="aa-single-field">
                                         <label htmlFor="password">Password <span className="required">*</span></label>
-                                        <input 
-                                        type="password" 
-                                        id="password-login"
-                                        name={LoginFormKyes.Password}
-                                        onChange={onChange}
-                                        value={values[LoginFormKyes.Password]}/>
+                                        <input
+                                            type="password"
+                                            id="password-login"
+                                            name="password"
+                                            onChange={onChange}
+                                            value={values.password}
+                                            onBlur={validPassword} />
+                                            {errors.password && (
+                                            <p >{errors.password}</p>
+                                        )}
                                     </div>
                                     <div className="aa-single-submit">
                                         <input type="submit" value="Send Message" className="aa-browse-btn" name="Submit" />
