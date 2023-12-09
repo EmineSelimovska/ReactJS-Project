@@ -20,26 +20,35 @@ export default function Edit() {
         year_built: '',
         description: ''
     });
+    const [errors, setErrors] = useState({});
+
+
+  
 
     useEffect(() => {
-    propertyService.getOne(propertyId)
-    .then(result => {
-        setProperty(result)
-    })
+        propertyService.getOne(propertyId)
+            .then(result => {
+                setProperty(result)
+            })
+            .catch((err) => {
+                toast.error(err.message)
+            })
     }, [propertyId])
-   
-    const onEditSubmitHadler = async (e) => {
-        e.preventDefault();
 
+    const onEditSubmitHadler = async (e) => {
+
+        e.preventDefault()
         const values = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
             await propertyService.edit(propertyId, values);
             navigate('/properties')
         } catch (err) {
-            if (err) {
-                toast.error(err.message);
-            }
+
+            setHasServerError(true);
+            setServerError(err.message);
+            toast.error(err.message);
+
         }
     }
 
@@ -48,6 +57,142 @@ export default function Edit() {
             ...state,
             [e.target.name]: e.target.value
         }))
+    }
+
+    const propertyTypeValidator = () => {
+        if (property.property_type.length < 5) {
+            setErrors(state => ({
+                ...state,
+                property_type: 'The pattern must be a minimum of 5 characters',
+            }));
+        } else {
+            if (errors.property_type) {
+                setErrors(state => ({ ...state, property_type: '' }));
+            }
+        }
+    }
+
+    const cityValidator = () => {
+        if (property.city.length < 6) {
+            setErrors(state => ({
+                ...state,
+                city: 'The pattern must be a minimum of 6 characters',
+            }));
+        } else {
+            if (errors.city) {
+                setErrors(state => ({ ...state, city: '' }));
+            }
+        }
+    }
+
+    const priceValidator = () => {
+        if (Number(property.price) <= 0) {
+            setErrors(state => ({
+                ...state,
+                price: 'Price is invalid',
+            }));
+        } else {
+            if (errors.price) {
+                setErrors(state => ({ ...state, price: '' }));
+            }
+        }
+    }
+
+    const bedroomsValidator = () => {
+        if (Number(property.bedrooms) < 1) {
+            setErrors(state => ({
+                ...state,
+                bedrooms: 'Bedrooms is invalid',
+            }));
+        } else {
+            if (errors.bedrooms) {
+                setErrors(state => ({ ...state, bedrooms: '' }));
+            }
+        }
+    }
+
+    const bathroomsValidator = () => {
+        if (Number(property.bathrooms) < 1) {
+            setErrors(state => ({
+                ...state,
+                bathrooms: 'Bathrooms is invalid',
+            }));
+        } else {
+            if (errors.bathrooms) {
+                setErrors(state => ({ ...state, bathrooms: '' }));
+            }
+        }
+    }
+
+
+    const square_metersValidator = () => {
+        if (Number(property.square_meters) < 50) {
+            setErrors(state => ({
+                ...state,
+                square_meters: 'Square meters should not be less than 50!',
+            }));
+        } else {
+            if (errors.square_meters) {
+                setErrors(state => ({ ...state, square_meters: '' }));
+            }
+        }
+    }
+
+    function imgPropertyValid(imgProperty) {
+        const img = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
+        return img.test(imgProperty)
+    }
+
+    const imgPropertyValidator = () => {
+        if (!imgPropertyValid(property.imgProperty)) {
+            setErrors(state => ({
+                ...state,
+                imgProperty: 'Add image!',
+            }));
+        } else {
+            if (errors.imgProperty) {
+                setErrors(state => ({ ...state, imgProperty: '' }));
+            }
+        }
+    }
+
+    const statusValidator = () => {
+        if (property.status.length < 7) {
+            setErrors(state => ({
+                ...state,
+                status: 'Status is invalid!',
+            }));
+        } else {
+            if (errors.status) {
+                setErrors(state => ({ ...state, status: '' }));
+            }
+        }
+    }
+
+    const year_builtValidator = () => {
+        if (Number(property.year_built) < 1900) {
+            setErrors(state => ({
+                ...state,
+                year_built: 'Year built should not be less than 1900!',
+            }));
+        } else {
+            if (errors.year_built) {
+                setErrors(state => ({ ...state, year_built: '' }));
+            }
+        }
+    }
+
+    const descriptionValidator = () => {
+        if (property.description.length < 10) {
+            setErrors(state => ({
+                ...state,
+                description: 'Description is too short!',
+            }));
+        } else {
+            if (errors.description) {
+                setErrors(state => ({ ...state, description: '' }));
+            }
+        }
     }
 
     return (
@@ -70,7 +215,10 @@ export default function Edit() {
                                             name="property_type"
                                             value={property.property_type}
                                             onChange={onChange}
-                                            id="property_type" />
+                                            id="property_type"
+                                            onBlur={propertyTypeValidator} />
+                                        {errors.property_type && (
+                                            <p>{errors.property_type}</p>)}
                                     </div>
                                     <div className={styles.cityField}>
                                         <label {...styles.label} htmlFor="city">City</label>
@@ -79,7 +227,10 @@ export default function Edit() {
                                             name="city"
                                             value={property.city}
                                             onChange={onChange}
-                                            id="city" />
+                                            id="city"
+                                            onBlur={cityValidator} />
+                                        {errors.city && (
+                                            <p>{errors.city}</p>)}
                                     </div>
                                     <div className={styles.priceField}>
                                         <label {...styles.label} htmlFor="price">Price </label>
@@ -88,7 +239,10 @@ export default function Edit() {
                                             name="price"
                                             value={property.price}
                                             onChange={onChange}
-                                            id="price" />
+                                            id="price"
+                                            onBlur={priceValidator} />
+                                        {errors.price && (
+                                            <p>{errors.price}</p>)}
                                     </div>
                                     <div className={styles.bedroomsField}>
                                         <label {...styles.label} htmlFor="bedrooms">Bedrooms </label>
@@ -97,7 +251,10 @@ export default function Edit() {
                                             name="bedrooms"
                                             value={property.bedrooms}
                                             onChange={onChange}
-                                            id="bedrooms" />
+                                            id="bedrooms"
+                                            onBlur={bedroomsValidator} />
+                                        {errors.bedrooms && (
+                                            <p>{errors.bedrooms}</p>)}
                                     </div>
                                     <div className={styles.bathroomsField}>
                                         <label {...styles.label} htmlFor="bathrooms">Bathrooms </label>
@@ -106,7 +263,10 @@ export default function Edit() {
                                             name="bathrooms"
                                             value={property.bathrooms}
                                             onChange={onChange}
-                                            id="bathrooms" />
+                                            id="bathrooms"
+                                            onBlur={bathroomsValidator} />
+                                        {errors.bathrooms && (
+                                            <p>{errors.bathrooms}</p>)}
                                     </div>
                                     <div className={styles.squareMetersField}>
                                         <label {...styles.label} htmlFor="square_meters">Square Meters </label>
@@ -115,7 +275,10 @@ export default function Edit() {
                                             name="square_meters"
                                             value={property.square_meters}
                                             onChange={onChange}
-                                            id="square_meters" />
+                                            id="square_meters"
+                                            onBlur={square_metersValidator} />
+                                        {errors.square_meters && (
+                                            <p>{errors.square_meters}</p>)}
                                     </div>
                                     <div className={styles.propertyImageField}>
                                         <label {...styles.label} htmlFor="imgProperty">Image </label>
@@ -123,7 +286,10 @@ export default function Edit() {
                                             name="imgProperty"
                                             value={property.imgProperty}
                                             onChange={onChange}
-                                            id="imgProperty" />
+                                            id="imgProperty"
+                                            onBlur={imgPropertyValidator} />
+                                        {errors.imgProperty && (
+                                            <p>{errors.imgProperty}</p>)}
                                     </div>
                                     <div className={styles.statusField}>
                                         <label {...styles.label} htmlFor="status">Status </label>
@@ -132,7 +298,10 @@ export default function Edit() {
                                             name="status"
                                             value={property.status}
                                             onChange={onChange}
-                                            id="status" />
+                                            id="status"
+                                            onBlur={statusValidator} />
+                                        {errors.status && (
+                                            <p>{errors.status}</p>)}
                                     </div>
                                     <div className={styles.yearBuiltField}>
                                         <label {...styles.label} htmlFor="year_built">Year Built </label>
@@ -141,7 +310,10 @@ export default function Edit() {
                                             name="year_built"
                                             value={property.year_built}
                                             onChange={onChange}
-                                            id="year_built" />
+                                            id="year_built"
+                                            onBlur={year_builtValidator} />
+                                        {errors.year_built && (
+                                            <p>{errors.year_built}</p>)}
                                     </div>
                                     <div className={styles.descriptionField}>
                                         <label {...styles.label}>More Details</label>
@@ -150,11 +322,19 @@ export default function Edit() {
                                             name="description"
                                             value={property.description}
                                             onChange={onChange}
-                                            id="description" ></textarea>
+                                            id="description"
+                                            onBlur={descriptionValidator}></textarea>
+                                        {errors.description && (
+                                            <p>{errors.description}</p>)}
 
                                     </div>
                                     <div className={styles.editSubmit}>
-                                        <input type="submit" value="Edit" className="aa-browse-btn" name="submit" id="submit" />
+                                    <button className={styles.editSubmit} type="submit"
+                                            disabled={(Object.values(errors).some(x => x)
+                                                || (Object.values(property).some(x => x == '')))}
+
+                                        >Edit</button>
+                                        {/* <input type="submit" value="Edit" className="aa-browse-btn" name="submit" id="submit" /> */}
                                     </div>
                                 </form>
                             </div>

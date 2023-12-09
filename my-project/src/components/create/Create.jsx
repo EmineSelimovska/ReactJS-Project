@@ -309,7 +309,11 @@ export default function Create() {
 
                                     </div>
                                     <div className={styles.createSubmit}>
-                                        <input type="submit" value="Create" className="aa-browse-btn" name="submit" id="submit" />
+                                    <button className={styles.createSubmit} type="submit"
+                                            disabled={(Object.values(errors).some(x => x)
+                                                || (Object.values(values).some(x => x == '')))}
+
+                                        >Edit</button>
                                     </div>
                                 </form>
                             </div>
