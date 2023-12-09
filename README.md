@@ -9,7 +9,7 @@ Technologies Used
 3. CSS
 4. React Router (for navigation)
 5. Toast notifications library (react-toastify)
-6. 
+6. Map with leaflet
 
 User Authentication
 
@@ -31,8 +31,6 @@ Property Management
 
 Comments
 1. Add Comment: Authenticated users can leave comments on property listings.
-2. Edit Comment: Users can edit their comments.
-3. Delete Comment: Users can remove their comments.
 
 Contact Page with Google Map
 1. Contact Form: A contact form for users to reach out to the site administrator.
