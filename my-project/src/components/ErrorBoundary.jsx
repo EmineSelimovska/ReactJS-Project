@@ -9,25 +9,25 @@ export default class ErrorBoundary extends Component {
             hasError: false,
         }
     }
-    static getDrivedStateFromError(err) {
+    static getDerivedStateFromError(err) {
         console.log('GetDrivedStateFromError');
         return{
             hasError:true,
         }
     }
 
-    componentDidCatch(error, errorIfo) {
+    componentDidCatch(error, errorInfo) {
         console.log('componentDidCatch');
         //Todo logging
         
-        toast.error(error)
+        toast.error(errorInfo)
     }
 
 
     render() {
         if(this.state.hasError){
             return (
-                <h1 style={{margin: '4em'}}>404</h1>
+                <h1 style={{margin: '4em'}}>Oop error!</h1>
             )
         }
        return this.props.children;
