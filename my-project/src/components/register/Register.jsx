@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../contexts/authContext";
-import * as authService from '../../servises/authService'
 import useForm from "../../hooks/useForm";
 import { formRegister } from "../../utils/formRegister";
 import { useState } from "react";
@@ -15,10 +14,10 @@ const RegisterFormKeys = {
 }
 
 export default function Register() {
+  const { registerSubmitHandler } = useContext(AuthContext);
   const [forValues, setFomValues] = useState(formRegister);
   const [errors, setErrors] = useState({});
-  // const [hasError, setHasError] = useState(false);
-  // const [serverError, setServerError] = useState({});
+
 
   const resetHandler = () => {
     setFomValues(formRegister);
@@ -28,7 +27,7 @@ export default function Register() {
   function validateEmail(email) {
     const emailRegex = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
     return emailRegex.test(email);
-  
+
   }
 
   const validEmail = () => {
@@ -83,7 +82,7 @@ export default function Register() {
     }
   }
 
-  const { registerSubmitHandler } = useContext(AuthContext);
+
 
   const { values, onChange, onSubmit } = useForm(registerSubmitHandler, forValues)
 
@@ -125,7 +124,7 @@ export default function Register() {
                       id="email"
                       name="email"
                       onChange={onChange}
-                      onBlur={validateEmail} />
+                      onBlur={validEmail} />
                     {errors.email && (
                       <p>{errors.email}</p>
                     )}
@@ -160,7 +159,6 @@ export default function Register() {
                     disabled={(Object.values(errors).some(x => x)
                       || (Object.values(values).some(x => x == '')))}
                   >Submit</button>
-
                 </form>
               </div>
             </div>
