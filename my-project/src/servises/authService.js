@@ -3,29 +3,18 @@ import { toast } from 'react-toastify';
 
 const baseUrl = 'http://localhost:3030/users'
 
-export const login = async (email, password) => {
-  const result = await request.post(`${baseUrl}/login`, {
-    email,
-    password
-   });
+export const login = async (userData) => {
+  const result = await request.post(`${baseUrl}/login`, userData);
 
    return result;
 }
 
-export const register = async (username,email, password) => {
+export const register = async (userData) => {
 
-  try{
-    const result = await request.post(`${baseUrl}/register`, {
-     username,
-     email,
-     password
-    });
+    const result = await request.post(`${baseUrl}/register`, userData);
     toast.success('Register Successful');
     return result;
-  }catch(err){
-
-   toast.error(err.message)
-  }
+ 
  
 }
 
