@@ -71,6 +71,7 @@ Project Structure
 21. Add Auth Guard
 22. Add Latest Property
 23. Add Map to Contact page
+24. Add Validator for edit , create, login, register
 
 
 
