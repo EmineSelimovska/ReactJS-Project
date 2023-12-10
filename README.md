@@ -28,6 +28,7 @@ Property Management
 2. Create Property: Authenticated users can list their properties for sale.
 3. Edit Property: Users can modify property details.
 4. Delete Property: Users can remove properties from the listing.
+5. Latest property: Sort by latest added property.
 
 Comments
 1. Add Comment: Authenticated users can leave comments on property listings.
