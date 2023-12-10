@@ -68,6 +68,7 @@ Project Structure
 18. Add authentication for edin and delete buttons 
 19. Add Persisted state
 20. Add Edit page
+![](./screenshots/screen-edit.png)
 21. Add Auth Guard
 22. Add Latest Property
 23. Add Map to Contact page
