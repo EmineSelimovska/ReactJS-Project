@@ -95,7 +95,7 @@ export default function Login() {
                                         )}
                                     </div>
                                     <div className="aa-single-submit">
-                                        <input type="submit" value="Send Message" className="aa-browse-btn" name="Submit" />
+                                        <input type="submit" value="Login" className="aa-browse-btn" name="Submit" />
                                         <p>Don't Have A Account Yet? <Link to="/register">CREATE NOW!</Link></p>
                                     </div>
                                 </form>

@@ -313,7 +313,7 @@ export default function Create() {
                                             disabled={(Object.values(errors).some(x => x)
                                                 || (Object.values(values).some(x => x == '')))}
 
-                                        >Edit</button>
+                                        >Create</button>
                                     </div>
                                 </form>
                             </div>

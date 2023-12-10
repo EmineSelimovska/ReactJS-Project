@@ -25,7 +25,6 @@ export default function Footer(){
                     <div className="aa-footer-right">
                       <Link to="/">Home</Link>
                       <Link to="/properties">Properties</Link>
-                      <Link to="/blog">Blog</Link>
                       <Link to="/contact">Contact</Link>
                     </div>
                   </div>

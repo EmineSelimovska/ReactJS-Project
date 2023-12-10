@@ -158,7 +158,7 @@ export default function Register() {
                   <button className="aa-single-submit" type="submit"
                     disabled={(Object.values(errors).some(x => x)
                       || (Object.values(values).some(x => x == '')))}
-                  >Submit</button>
+                  >Register</button>
                 </form>
               </div>
             </div>
