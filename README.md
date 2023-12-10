@@ -71,6 +71,7 @@ Project Structure
 ![](./screenshots/screen-edit.png)
 21. Add Auth Guard
 22. Add Latest Property
+![](./screenshots/screen-latest-property.png)
 23. Add Map to Contact page
 24. Add Validator for edit , create, login, register
 
