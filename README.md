@@ -76,6 +76,7 @@ Project Structure
 23. Add Map to Contact page
 ![](./screenshots/screen-contact-map.png)
 24. Add Validator for edit , create, login, register
+![](./screenshots/screen-validation.png)
 
 
 
