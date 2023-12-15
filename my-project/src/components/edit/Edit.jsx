@@ -3,10 +3,19 @@ import { useNavigate } from "react-router-dom";
 import * as propertyService from '../../servises/propertyService';
 import styles from './Edit.module.css'
 import { toast } from 'react-toastify';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import AuthContext from '../../contexts/authContext';
+import NotFound from '../not-found/NotFound';
+import Create from '../create/Create';
 
 export default function Edit() {
     const navigate = useNavigate();
+    const {
+        isAuthenticated,
+        userId,
+        username,
+        email
+    } = useContext(AuthContext);
     const { propertyId } = useParams();
     const [property, setProperty] = useState({
         property_type: '',
@@ -22,8 +31,9 @@ export default function Edit() {
     });
     const [errors, setErrors] = useState({});
 
+    const isOwnerGuard = property._ownerId === userId;
 
-  
+
 
     useEffect(() => {
         propertyService.getOne(propertyId)
@@ -196,7 +206,9 @@ export default function Edit() {
     }
 
     return (
-        <section id={styles.edit}>
+        <>
+        {isOwnerGuard && (
+            <section id={styles.edit}>
             <div className={styles.container}>
                 <div className="row" >
                     <div className="col-md-12">
@@ -329,7 +341,7 @@ export default function Edit() {
 
                                     </div>
                                     <div className={styles.editSubmit}>
-                                    <button className={styles.editSubmit} type="submit"
+                                        <button className={styles.editSubmit} type="submit"
                                             disabled={(Object.values(errors).some(x => x)
                                                 || (Object.values(property).some(x => x == '')))}
 
@@ -343,5 +355,12 @@ export default function Edit() {
                 </div>
             </div>
         </section>
+        )}
+        {!isOwnerGuard && (
+            <><p style={{ fontSize: '25px', color: 'rgb(95, 156, 235)', marginLeft: '150px', padding: '250px' }}>Not found this page!</p>
+            <Link style={{margin: '500px', paddingTop: '100px', color: 'rgb(95, 156, 235)'}} to='/properties'> Back to Property</Link></>
+        )
+        }
+        </>
     )
 }

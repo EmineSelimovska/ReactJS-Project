@@ -17,7 +17,6 @@ import ErrorBoundary from "./components/ErrorBoundary"
 import AuthGuard from "./components/guards/AuthGuard"
 import AuthUserGuard from "./components/guards/AuthUserGuard"
 
-
 function App() {
   return (
     <ErrorBoundary>
