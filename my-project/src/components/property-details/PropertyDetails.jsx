@@ -68,7 +68,9 @@ export default function PropertyDetails() {
 
     const addCommentHandler = async (e) => {
         e.preventDefault();
-
+     
+         
+       
         const formData = new FormData(e.currentTarget);
         try {
             const newComment = await commentService.create(
@@ -87,10 +89,12 @@ export default function PropertyDetails() {
             }
 
         }
-
         e.target.reset();
 
+      
+       
     }
+    
 
     const deleteButtonHandler = async () => {
         const hasConfirmed = confirm(`Are you sure you want to delete ${property.property_type}`);
@@ -180,9 +184,11 @@ export default function PropertyDetails() {
                         <h2>Comments:</h2>
                         <ul>
                             {comments.map(({ _id, text, owner: { username } }) => (
-                                <li key={_id} className="comment">
+                                text && (
+                                    <li key={_id} className="comment">
                                     <p>{username}: {text}</p>
                                 </li>
+                                ) 
                             ))}
                         </ul>
 
