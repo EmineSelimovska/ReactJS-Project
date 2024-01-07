@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.23.3",
     "@react-google-maps/api": "^2.19.2",
     "firebase": "^10.7.1",
+    "firebase-tools": "^13.0.2",
     "google-map-react": "^2.2.1",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
