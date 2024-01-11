@@ -4,8 +4,6 @@ import * as request from "../lib/request";
 
 const url = `http://localhost:3030/data/property`
 
-
-
 export const getAll = async () => {
 
     const result = await request.get(url);
